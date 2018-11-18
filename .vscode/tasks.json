@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/Authentification/Authentification.csproj"
+                "${workspaceFolder}/Authentication/Authentication.csproj"
             ],
             "problemMatcher": "$msCompile"
         }

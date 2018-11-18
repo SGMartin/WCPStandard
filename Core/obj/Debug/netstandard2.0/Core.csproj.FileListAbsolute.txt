@@ -1,0 +1,9 @@
+/home/santiago/C#/WCPStandard/Core/bin/Debug/netstandard2.0/Core.deps.json
+/home/santiago/C#/WCPStandard/Core/bin/Debug/netstandard2.0/Core.dll
+/home/santiago/C#/WCPStandard/Core/bin/Debug/netstandard2.0/Core.pdb
+/home/santiago/C#/WCPStandard/Core/obj/Debug/netstandard2.0/Core.csprojAssemblyReference.cache
+/home/santiago/C#/WCPStandard/Core/obj/Debug/netstandard2.0/Core.csproj.CoreCompileInputs.cache
+/home/santiago/C#/WCPStandard/Core/obj/Debug/netstandard2.0/Core.AssemblyInfoInputs.cache
+/home/santiago/C#/WCPStandard/Core/obj/Debug/netstandard2.0/Core.AssemblyInfo.cs
+/home/santiago/C#/WCPStandard/Core/obj/Debug/netstandard2.0/Core.dll
+/home/santiago/C#/WCPStandard/Core/obj/Debug/netstandard2.0/Core.pdb

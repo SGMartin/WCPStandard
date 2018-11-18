@@ -1,0 +1,14 @@
+/home/santiago/C#/WCPStandard/Authentication/bin/Debug/netcoreapp2.1/Authentication.deps.json
+/home/santiago/C#/WCPStandard/Authentication/bin/Debug/netcoreapp2.1/Authentication.runtimeconfig.json
+/home/santiago/C#/WCPStandard/Authentication/bin/Debug/netcoreapp2.1/Authentication.runtimeconfig.dev.json
+/home/santiago/C#/WCPStandard/Authentication/bin/Debug/netcoreapp2.1/Authentication.dll
+/home/santiago/C#/WCPStandard/Authentication/bin/Debug/netcoreapp2.1/Authentication.pdb
+/home/santiago/C#/WCPStandard/Authentication/bin/Debug/netcoreapp2.1/Core.dll
+/home/santiago/C#/WCPStandard/Authentication/bin/Debug/netcoreapp2.1/Core.pdb
+/home/santiago/C#/WCPStandard/Authentication/obj/Debug/netcoreapp2.1/Authentication.csprojAssemblyReference.cache
+/home/santiago/C#/WCPStandard/Authentication/obj/Debug/netcoreapp2.1/Authentication.csproj.CoreCompileInputs.cache
+/home/santiago/C#/WCPStandard/Authentication/obj/Debug/netcoreapp2.1/Authentication.AssemblyInfoInputs.cache
+/home/santiago/C#/WCPStandard/Authentication/obj/Debug/netcoreapp2.1/Authentication.AssemblyInfo.cs
+/home/santiago/C#/WCPStandard/Authentication/obj/Debug/netcoreapp2.1/Authentication.csproj.CopyComplete
+/home/santiago/C#/WCPStandard/Authentication/obj/Debug/netcoreapp2.1/Authentication.dll
+/home/santiago/C#/WCPStandard/Authentication/obj/Debug/netcoreapp2.1/Authentication.pdb

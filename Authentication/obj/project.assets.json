@@ -193,6 +193,15 @@
           "lib/netstandard1.0/_._": {}
         }
       },
+      "MySqlConnector/0.47.1": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp2.1/MySqlConnector.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/MySqlConnector.dll": {}
+        }
+      },
       "NETStandard.Library/2.0.3": {
         "type": "package",
         "dependencies": {
@@ -206,6 +215,19 @@
         },
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
+        }
+      },
+      "Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "MySqlConnector": "0.47.1"
+        },
+        "compile": {
+          "bin/placeholder/Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Core.dll": {}
         }
       }
     }
@@ -553,6 +575,22 @@
         "version.txt"
       ]
     },
+    "MySqlConnector/0.47.1": {
+      "sha512": "bwEjq0yLcf6SKCS64/kjql8RC/mFP9n7tGVqqShMW2QgoBJr9tflEWy8S0jupMk4oMPqjqjooMQqqwzZROwPug==",
+      "type": "package",
+      "path": "mysqlconnector/0.47.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/MySqlConnector.dll",
+        "lib/net461/MySqlConnector.dll",
+        "lib/netcoreapp2.1/MySqlConnector.dll",
+        "lib/netstandard1.3/MySqlConnector.dll",
+        "lib/netstandard2.0/MySqlConnector.dll",
+        "mysqlconnector.0.47.1.nupkg.sha512",
+        "mysqlconnector.nuspec"
+      ]
+    },
     "NETStandard.Library/2.0.3": {
       "sha512": "st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
       "type": "package",
@@ -680,10 +718,16 @@
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
+    },
+    "Core/1.0.0": {
+      "type": "project",
+      "path": "../Core/Core.csproj",
+      "msbuildProject": "../Core/Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
+      "Core >= 1.0.0",
       "Microsoft.NETCore.App >= 2.1.0"
     ]
   },
@@ -694,11 +738,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/santiago/C#/WCPStandard/Authentification/Authentification.csproj",
-      "projectName": "Authentification",
-      "projectPath": "/home/santiago/C#/WCPStandard/Authentification/Authentification.csproj",
+      "projectUniqueName": "/home/santiago/C#/WCPStandard/Authentication/Authentication.csproj",
+      "projectName": "Authentication",
+      "projectPath": "/home/santiago/C#/WCPStandard/Authentication/Authentication.csproj",
       "packagesPath": "/home/santiago/.nuget/packages/",
-      "outputPath": "/home/santiago/C#/WCPStandard/Authentification/obj/",
+      "outputPath": "/home/santiago/C#/WCPStandard/Authentication/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/share/dotnet/sdk/NuGetFallbackFolder"
@@ -714,7 +758,11 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "/home/santiago/C#/WCPStandard/Core/Core.csproj": {
+              "projectPath": "/home/santiago/C#/WCPStandard/Core/Core.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

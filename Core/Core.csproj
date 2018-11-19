@@ -8,4 +8,10 @@
     <PackageReference Include="MySqlConnector" Version="0.47.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="ServerConfig.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

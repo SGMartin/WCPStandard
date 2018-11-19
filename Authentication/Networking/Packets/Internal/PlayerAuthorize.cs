@@ -26,7 +26,7 @@ namespace Authentication.Networking.Packets.Internal {
                 Append(session.SessionID);
                 Append(session.ID);
                 Append(session.Name);
-                Append(session.Displayname);
+               // Append(session.DisplayName);
                 Append(session.AccessLevel);
         }
 

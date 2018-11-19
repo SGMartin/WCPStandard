@@ -10,7 +10,7 @@ namespace Authentication.Networking.Packets
 {
     class Launcher : Core.Networking.OutPacket {
         public Launcher()
-            : base((ushort)Networking.PacketsList.Launcher) {
+            : base((ushort)Networking.PacketList.Launcher) {
              //   Append(AuthConfig.Format);              // Format
              //    Append(AuthConfig.Launcher);            // Launcher Version
              //    Append(AuthConfig.Updater);             // Updater Version

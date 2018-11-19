@@ -6,8 +6,7 @@ namespace Authentication
     {
         public static byte MAXIMUM_SERVER_COUNT = 10;
         public static string[] AUTH_DATABASE;
-        public static byte SERVER_LOGGER = 1;
-        public static byte PACKET_LOGGER = 1;
+
        
         public static bool Read()
         {          
@@ -27,8 +26,6 @@ namespace Authentication
                 };
 
                 MAXIMUM_SERVER_COUNT     = Convert.ToByte(XMLConfig.Read("AuthenticationServer", "Server", "MaximumGameServers"));
-                SERVER_LOGGER            = Convert.ToByte(XMLConfig.Read("AuthenticationServer", "Server", "LogActivity"));
-                PACKET_LOGGER            = Convert.ToByte(XMLConfig.Read("AuthenticationServer", "Server", "LogPackets"));
 
                 if (MAXIMUM_SERVER_COUNT > 10)
                     MAXIMUM_SERVER_COUNT = 10;

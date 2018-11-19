@@ -10,8 +10,6 @@ using System;
 using System.Collections.Generic;
 using MySql.Data.MySqlClient;
 
-using Core.Databases;
-
 namespace Core.Databases
 {
 
@@ -38,10 +36,11 @@ namespace Core.Databases
         }
 
 
-        public override bool Open() {
-            connection = new MySqlConnection(this.connectionString);
-            try {
-                connection.Open(); return true;
+        public bool Open()
+        {
+            try
+            {
+                Database.Connection.Open(); return true;
             } catch { return false; }
         }
 

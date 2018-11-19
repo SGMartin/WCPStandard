@@ -24,19 +24,21 @@ namespace Authentication
 
             if (!Config.Read())
             {
-               // Log.Instance.WriteError("Failed to load the configuration file.");
+                // Log.Instance.WriteError("Failed to load the configuration file.");
+                Console.WriteLine("Failed to load the configuration file.");
                 Console.ReadKey();
                 return;
             }
 
-/*
+
             if (!Databases.Init()) {
-             //   Log.Instance.WriteError("Failed to initilize all database connections.");
+                //   Log.Instance.WriteError("Failed to initilize all database connections.");
+                Console.WriteLine("Failed to initialize all database connections.");
                 Console.ReadKey();
                 return;
             }
 
-*/
+
             if (!new Networking.GameServerListener((int)Core.Networking.Constants.Ports.Internal).Start()) {
                 return;
             }

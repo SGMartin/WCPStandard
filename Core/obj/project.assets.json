@@ -695,28 +695,30 @@
     ]
   },
   "packageFolders": {
-    "/home/santiago/.nuget/packages/": {},
-    "/usr/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "C:\\Users\\Santiago\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/santiago/C#/WCPStandard/Core/Core.csproj",
+      "projectUniqueName": "C:\\Users\\Santiago\\source\\repos\\WCPStandard2\\Core\\Core.csproj",
       "projectName": "Core",
-      "projectPath": "/home/santiago/C#/WCPStandard/Core/Core.csproj",
-      "packagesPath": "/home/santiago/.nuget/packages/",
-      "outputPath": "/home/santiago/C#/WCPStandard/Core/obj/",
+      "projectPath": "C:\\Users\\Santiago\\source\\repos\\WCPStandard2\\Core\\Core.csproj",
+      "packagesPath": "C:\\Users\\Santiago\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Santiago\\source\\repos\\WCPStandard2\\Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/home/santiago/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Santiago\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

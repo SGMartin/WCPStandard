@@ -1,7 +1,5 @@
 /*
-
-                This class is just a socket to listen for incoming connections. Foreach new connection, an user instance is created.
-                Every user has his own socket to handle communication between the client and the server.
+            This socket works exactly like ServerListener, but it listens to new GAME servers attempting to connect to the Authentication server
 
  */
 
@@ -11,12 +9,13 @@ using System.Net;
 using System.Net.Sockets;
 
 namespace Authentication.Networking {
-    class ServerListener {
+    class GameServerListener {
+        
         private readonly int bindPort;
 
         private Socket socket;
 
-        public ServerListener(int port) {
+        public GameServerListener(int port) {
             this.bindPort = port;
         }
 
@@ -39,7 +38,7 @@ namespace Authentication.Networking {
         private void OnAcceptConnection(IAsyncResult iAr) {
             try {
                 Socket s = socket.EndAccept(iAr);
-                Entities.User usr = new Entities.User(s);
+                Entities.Server gs = new Entities.Server(s);
             } catch { }
 
             if (socket != null)

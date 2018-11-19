@@ -36,6 +36,15 @@ namespace Core.Databases
 
                 Database = new Database(connectionData);
         }
+
+
+        public override bool Open() {
+            connection = new MySqlConnection(this.connectionString);
+            try {
+                connection.Open(); return true;
+            } catch { return false; }
+        }
+
        public void AsyncQuery(string query)
        {
            try

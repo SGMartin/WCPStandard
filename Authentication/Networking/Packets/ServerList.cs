@@ -41,12 +41,12 @@ namespace Authentication.Networking.Packets {
         }
 
         public ServerList(ErrorCodes errorCode)
-            : base((ushort)PacketsList.ServerList) {
+            : base((ushort)PacketList.ServerList) {
                 Append((uint)errorCode);
         }
 
         public ServerList(Entities.User u)
-            : base((ushort)PacketsList.ServerList) {
+            : base((ushort)PacketList.ServerList) {
                 Append(Core.Networking.Constants.ERROR_OK);
                 Append(u.ID);         // UserId
                 Append(0);              // Unknown
@@ -63,7 +63,7 @@ namespace Authentication.Networking.Packets {
                 Append(serverList.Count);               // Server count
                 foreach (Entities.Server server in serverList) {
                     Append(server.ID);                  // Server ID
-                    Append(server.Displayname);         // Server Name
+                    Append(server.ServerName);         // Server Name
                     Append(server.IP);                  // Server IP
                     Append((int)Core.Networking.Constants.Ports.Game); // Server Port
                     Append(server.TotalPlayerCount);        // Server Player count. Maximum 3600

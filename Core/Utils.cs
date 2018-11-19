@@ -43,7 +43,7 @@ namespace Core
             byte lvl = 0;
             do
             {
-                if (Exp < Constants.EXPTable[lvl]) break;
+                if (Exp < GameConstants.EXPTable[lvl]) break;
                 ++lvl;
             } while (lvl < 101);
             return lvl;
@@ -51,7 +51,7 @@ namespace Core
 
         public static ulong GetExpForLevel(int Level)
         {
-            if (Level > 0) return Constants.EXPTable[Level - 1];
+            if (Level > 0) return GameConstants.EXPTable[Level - 1];
             return 0;
         }
 

@@ -11,7 +11,7 @@ using System.Text;
 
 namespace Core
 {
-    public class Constants
+    public class GameConstants
     {
 
         //TODO: Check whose of these actually work.

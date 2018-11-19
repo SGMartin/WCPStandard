@@ -6,7 +6,7 @@
 
 
 
-namespace Core.Packets {
+namespace Core.Networking.Packets {
 
     using Networking;
     

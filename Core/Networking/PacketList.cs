@@ -3,11 +3,11 @@
 
 namespace Core.Networking
 {
-   enum PacketList : ushort
+   public enum PacketList : ushort
    {
-       ServerAuthorization = 0x1000,  // <- Internal packet a.k.a. used between the Auth and Game server
+       ServerAuthentication = 0x1000,  // <- Internal packet a.k.a. used between the Auth and Game server
        Ping  = 0x1100,               //  <- Internal packet
        Connection = 0x1200,
-       PlayerAuthorization = 0x1300
+       PlayerAuthentication = 0x1300
    }
 }

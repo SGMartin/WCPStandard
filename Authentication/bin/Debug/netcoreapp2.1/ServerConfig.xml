@@ -11,7 +11,7 @@
     <Port>3306</Port>
     <UserName>root</UserName>
     <UserPassword></UserPassword>
-    <DatabaseName>masterserver</DatabaseName>
+    <DatabaseName>wcps-authentication</DatabaseName>
     </Database>
     <Server>
       <MaximumGameServers>10</MaximumGameServers>

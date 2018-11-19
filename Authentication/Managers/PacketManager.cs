@@ -22,13 +22,13 @@ namespace Authentication.Managers {
             _externalPacketList.Clear();
 
             // Server Packets//
-           // AddInternal(Core.Networking.PacketList.ServerAuthentication, new Handlers.Internal.Authorization());
-           // AddInternal(Core.Networking.PacketList.Ping, new Handlers.Internal.Ping());
-           // AddInternal(Core.Networking.PacketList.PlayerAuthentication, new Handlers.Internal.PlayerAuthorization());
+           AddInternal(Core.Networking.PacketList.ServerAuthentication, new Networking.Handlers.Internal.ServerAuthorization());
+           AddInternal(Core.Networking.PacketList.Ping,                 new Networking.Handlers.Internal.Ping());
+           AddInternal(Core.Networking.PacketList.PlayerAuthentication, new Networking.Handlers.Internal.PlayerAuthorization());
 
             // Game Packets //
-           // AddExternal(Authentication.Networking.PacketList.ServerList, new Handlers.PlayerLogin());
-           // AddExternal(Authentication.Networking.PacketList.Nickname, new Handlers.Nickname());
+           AddExternal(Authentication.Networking.PacketList.ServerList, new Networking.Handlers.PlayerLogin());
+          // AddExternal(Authentication.Networking.PacketList.Nickname,   new Networking.Handlers.Nickname());
         }
 
         private void AddInternal(Core.Networking.PacketList packetType, PacketHandler handler) {

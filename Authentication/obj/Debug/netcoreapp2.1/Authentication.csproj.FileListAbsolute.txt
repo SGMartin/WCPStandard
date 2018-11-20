@@ -26,4 +26,4 @@ C:\Users\Santiago\source\repos\WCPStandard2\Authentication\bin\Debug\netcoreapp2
 C:\Users\Santiago\source\repos\WCPStandard2\Authentication\bin\Debug\netcoreapp2.1\Core.dll
 C:\Users\Santiago\source\repos\WCPStandard2\Authentication\bin\Debug\netcoreapp2.1\Core.pdb
 C:\Users\Santiago\source\repos\WCPStandard2\Authentication\obj\Debug\netcoreapp2.1\Authentication.csproj.CopyComplete
-C:\Users\Santiago\source\repos\WCPStandard2\Authentication\bin\Debug\netcoreapp2.1\ServerConfig.xml
+C:\Users\Santiago\source\repos\WCPStandard2\Authentication\bin\Debug\netcoreapp2.1\CFG\Authentication.cfg

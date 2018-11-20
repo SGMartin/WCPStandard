@@ -5,7 +5,7 @@
  */
 
 using System;
-using System.Collections;
+using Serilog;
 using System.Collections.Concurrent;
 
 namespace Authentication.Managers
@@ -14,8 +14,10 @@ namespace Authentication.Managers
     {
         public readonly ConcurrentDictionary<uint, Entities.Session> Sessions;
 
-        public SessionManager() {
+        public SessionManager()
+        {
             Sessions = new ConcurrentDictionary<uint, Entities.Session>();
+
         }
 
         public void Add(Entities.User u) {

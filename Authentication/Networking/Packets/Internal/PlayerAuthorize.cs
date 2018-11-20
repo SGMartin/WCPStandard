@@ -26,8 +26,8 @@ namespace Authentication.Networking.Packets.Internal {
                 Append(session.SessionID);
                 Append(session.ID);
                 Append(session.Name);
-               // Append(session.DisplayName);
-                Append(session.AccessLevel);
+                Append(session.UserDisplayName);
+                Append((byte)session.AccessLevel);
         }
 
         public PlayerAuthentication(Core.Networking.ErrorCodes errorCode, uint targetId)

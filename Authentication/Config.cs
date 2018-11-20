@@ -1,40 +1,39 @@
-using Core.IO;
+/*
+ * 
+ *                                 
+ *                                
+ */
+
 using System;
+
 namespace Authentication
 {
     public class Config
     {
-        public static byte MAXIMUM_SERVER_COUNT = 10;
-        public static string[] AUTH_DATABASE;
+        public static string[] AUTH_DATABASE = new string[] { "localhost", "3306", "root", "", "wcps-authentication"};
 
+        public static int SERILOGLEVEL = 1; 
+        public static string GAMESERVERKEY = "wcps-auth";
+
+        public static int  MAXIMUM_SERVER_COUNT = 10;
+        public static bool ENABLEOLDLAUNCHER = true;
+        public static bool ENABLENICKCHANGE = false;
+
+        public static int FORMAT = 0;
+        public static int LAUNCHER = 0;
+        public static int CLIENT = 0;
+        public static int UPDATER = 0;
+        public static int SUB = 0;
+        public static int OPTION = 0;
+        public static string URL = "http://www.google.es";
+
+
+        public static bool Read(string fileToRead)
+        {
+           
+
+                return true;
        
-        public static bool Read()
-        {          
-            bool result = false;
-
-            try
-            {
-                ConfigParser XMLConfig = new ConfigParser("ServerConfig");
-
-                Config.AUTH_DATABASE = new string[]
-                {
-                    XMLConfig.Read("AuthenticationServer", "Database", "Host"),
-                    XMLConfig.Read("AuthenticationServer", "Database", "Port"),
-                    XMLConfig.Read("AuthenticationServer", "Database", "UserName"),
-                    XMLConfig.Read("AuthenticationServer", "Database", "UserPassword"),
-                    XMLConfig.Read("AuthenticationServer", "Database", "DatabaseName")
-                };
-
-                MAXIMUM_SERVER_COUNT     = Convert.ToByte(XMLConfig.Read("AuthenticationServer", "Server", "MaximumGameServers"));
-
-                if (MAXIMUM_SERVER_COUNT > 10)
-                    MAXIMUM_SERVER_COUNT = 10;
-
-                result = true;
-            }
-            catch {}
-  
-            return result;
         }
     }
 }

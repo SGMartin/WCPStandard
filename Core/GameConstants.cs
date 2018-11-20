@@ -25,6 +25,14 @@ namespace Core
         Development
         }
 
+        public enum Rights : byte
+        {
+            Blocked = 0,
+            Regular,
+            Administrator = 3,
+            Developer = 5
+        }
+
 
         public const sbyte maxChannelsCount = 3;
 

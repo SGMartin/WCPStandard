@@ -10,14 +10,15 @@ namespace Authentication.Networking.Packets
 {
     class Launcher : Core.Networking.OutPacket {
         public Launcher()
-            : base((ushort)Networking.PacketList.Launcher) {
-             //   Append(AuthConfig.Format);              // Format
-             //    Append(AuthConfig.Launcher);            // Launcher Version
-             //    Append(AuthConfig.Updater);             // Updater Version
-             //    Append(AuthConfig.Client);              // Client Version
-             //    Append(AuthConfig.Sub);                 // Sub Version
-             //    Append(AuthConfig.Option);              // Option
-             //    Append(AuthConfig.URL);                 // URL
+            : base((ushort)Networking.PacketList.Launcher)
+        {     
+                Append(Config.FORMAT);              // Format
+                Append(Config.LAUNCHER);            // Launcher Version
+                Append(Config.UPDATER);             // Updater Version
+                Append(Config.CLIENT);              // Client Version
+                Append(Config.SUB);                 // Sub Version
+                Append(Config.OPTION);              // Option
+                Append(Config.URL);                 // URL
         }
     }
 }

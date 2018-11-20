@@ -12,13 +12,14 @@ using System.Collections;
 using Core;
 
 namespace Authentication.Managers {
-    class ServerManager {
-        private byte MAX_SERVERS = Config.MAXIMUM_SERVER_COUNT; //TODO: Is the second page usable?
+    class ServerManager
+    {
+        private int MAX_SERVERS = Config.MAXIMUM_SERVER_COUNT;
 
         private Hashtable servers = new Hashtable();
 
-        public byte Add(Authentication.Entities.Server s, string name, string ip, int port, Core.GameConstants.ServerTypes type) {
-
+        public byte Add(Authentication.Entities.Server s, string name, string ip, int port, Core.GameConstants.ServerTypes type)
+        {
             byte serverId = 0;
 
             for (byte i = 1; i <= MAX_SERVERS; i++) {

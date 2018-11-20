@@ -3,6 +3,9 @@ using System.Linq;
 using System.Collections.Generic;
 using MySql.Data.MySqlClient;
 
+using Core;
+using Serilog;
+
 namespace Authentication.Networking.Handlers
 {
     class PlayerLogin : Networking.PacketHandler
@@ -12,7 +15,7 @@ namespace Authentication.Networking.Handlers
             string inputUserName = GetString(2);
             string inputPassword = GetString(3);
 
-            bool forceDisconnect = true;
+            bool isSettingNewNickName = false;
 
             //valid UserName?
             if (inputUserName.Length >= 3 && Core.Utils.isAlphaNumeric(inputUserName))
@@ -21,7 +24,7 @@ namespace Authentication.Networking.Handlers
                 if (inputPassword.Length >= 3)
                 {
                     MySqlDataReader reader = Databases.Auth.Select(
-                      new string[] { "id", "username", "status", "displayname", "password", "passwordsalt" },
+                      new string[] { "ID", "username", "displayname", "password", "salt", "rights"},
                        "users",
                       new Dictionary<string, object>() {
                         { "username", inputUserName }
@@ -33,10 +36,17 @@ namespace Authentication.Networking.Handlers
                         //The  user does exist:  retrieve data
                         uint id = reader.GetUInt32(0);
                         string dbUserName = inputUserName;
-                        byte status = reader.GetByte(2); //0 = global network account ban
-                        string displayname = reader.GetString(3);
-                        string dbPassword = reader.GetString(4);
-                        string dbPasswordSalt = reader.GetString(5);
+                        string displayname = reader.GetString(2);
+                        string dbPassword = reader.GetString(3);
+                        string dbPasswordSalt = reader.GetString(4);
+                        GameConstants.Rights dbRights;
+
+                        try { dbRights = (GameConstants.Rights)reader.GetByte(5); }
+                        catch
+                        { Log.Error("User " + dbUserName + " rights could not be parsed. Blocking user.");
+                            dbRights = GameConstants.Rights.Blocked;
+                        }
+                       
 
 
                         //We hash password typed  by the player and check it against  the one stored in the DB
@@ -51,13 +61,31 @@ namespace Authentication.Networking.Handlers
                             //TODO: Improve this. What if a GameServer does not update this?
                             if (IsOnline == 0)
                             {
-                                if (status > 0)
+                                //TODO: Add ban time? Delegate it to game servers?
+                                //TODO: Add gameserver blacklisting
+                                if (dbRights == GameConstants.Rights.Blocked)
+                                    user.Send(new Packets.ServerList(Packets.ServerList.ErrorCodes.Banned));
+                                else
                                 {
-                                    user.OnAuthorize(id, dbUserName, displayname, status);
-                                    user.Send(new Packets.ServerList(user));
-                                }
-                                else { user.Send(new Packets.ServerList(Packets.ServerList.ErrorCodes.Banned)); }
+                                    //Authenticate player
+                                    user.OnAuthorize(id, dbUserName, displayname);
 
+                                    //check if the player has a NickName
+                                    if (user.DisplayName.Length > 0)
+                                        user.Send(new Packets.ServerList(user));
+
+                                    else
+                                    {
+                                        if (Config.ENABLENICKCHANGE) //can they set their nickname ingame ???
+                                        {
+                                            isSettingNewNickName = true;
+                                            user.Send(new Packets.ServerList(Packets.ServerList.ErrorCodes.NewNickname));
+                                        }
+                                        else { user.Send(new Packets.ServerList(Packets.ServerList.ErrorCodes.IlligalNickname)); }
+
+                                    }
+                                }
+                               
                             }
                             else { user.Send(new Packets.ServerList(Packets.ServerList.ErrorCodes.AlreadyLoggedIn)); }
 
@@ -76,7 +104,10 @@ namespace Authentication.Networking.Handlers
             else { user.Send(new Packets.ServerList(Packets.ServerList.ErrorCodes.EnterIDError)); }
 
 
-            if (forceDisconnect)
+            //people who successfully logged on can be safely disconnected... 
+            //the client will show the server list and they will be redirected by the client.
+            //keep the socket for those who are setting up nickname
+            if (!isSettingNewNickName)
                 user.Disconnect();
         }
     }

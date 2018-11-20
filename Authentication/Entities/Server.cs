@@ -10,7 +10,7 @@ using System.Net;
 using System.Net.Sockets;
 
 using Core;
-
+using Serilog;
 
 namespace Authentication.Entities {
     public class Server : Core.Entities.Entity {
@@ -45,7 +45,7 @@ namespace Authentication.Entities {
         private bool isAuthorized = false;
 
         public Server(Socket socket)
-            : base(0, "Unknown", 1) {
+            : base(0, "Unknown", Core.GameConstants.Rights.Regular) {
             this.socket = socket;
             isDisconnect = false;
             this.socket.BeginReceive(buffer, 0, buffer.Length, SocketFlags.None, new AsyncCallback(OnDataReceived), null);
@@ -89,14 +89,14 @@ namespace Authentication.Entities {
 
                             // Handle the packet instantly.
                             Core.Networking.InPacket inPacket = new Core.Networking.InPacket(newPacket, this);
-                           //TODO: REMOVE ThIS ServerLogger.Instance.AppendPacket(newPacket);
                             if (inPacket.Id > 0) {
                                 Networking.PacketHandler pHandler = Managers.PacketManager.Instance.FindInternal(inPacket);
                                 if (pHandler != null) {
                                     try 
                                     {
                                         pHandler.Handle(inPacket);
-                                    } catch { /* TODO: LOG THIS Disconnect();*/ }
+                                    }
+                                    catch (Exception e) { Log.Error(e.ToString()); }
                                 }
                             }
 
@@ -149,7 +149,8 @@ namespace Authentication.Entities {
         {
             this.roomCount = currentCount;
         }
-        public void Disconnect() {
+        public void Disconnect()
+        {
             if (isDisconnect) return;
             isDisconnect = true;
 

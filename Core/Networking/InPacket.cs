@@ -8,9 +8,8 @@
 
 
 using System;
-using System.Linq;
+using Serilog;
 using System.Text;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace Core.Networking {
@@ -29,7 +28,8 @@ namespace Core.Networking {
             this.OriginalBuffer = inBuffer;
 
             this.fullPacket = Encoding.UTF8.GetString(inBuffer);
-            Console.WriteLine(" IN :: " + fullPacket.Remove(fullPacket.Length -1));
+            Log.Debug(" IN :: " + fullPacket.Remove(fullPacket.Length - 1));
+
             string[] tempBlocks = this.fullPacket.Split(' ');
 
             if (!long.TryParse(tempBlocks[0], out this.ticks)) {

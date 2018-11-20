@@ -21,9 +21,13 @@
 
 namespace Authentication.Networking 
 {
-    public enum PacketList : ushort {
-        ServerList = 0x1100,
+    public enum PacketList : ushort
+    {
+
+        Launcher = 0x1010,
+        ServerList = 0x1100,      
         Nickname = 0x1101,
-        Launcher = 0x1010
+        Test     = 0x1102
+
     }
 }

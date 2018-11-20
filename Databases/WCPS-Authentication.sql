@@ -1,4 +1,4 @@
-*
+/*
 SQLyog Community v12.5.0 (64 bit)
 MySQL - 10.1.29-MariaDB : Database - wcps-authentication
 *********************************************************************
@@ -16,15 +16,19 @@ CREATE DATABASE /*!32312 IF NOT EXISTS*/`wcps-authentication` /*!40100 DEFAULT C
 
 USE `wcps-authentication`;
 
-/*Table structure for table `data_server_statistics` */
+/*Table structure for table `server-statistics` */
 
-DROP TABLE IF EXISTS `data_server_statistics`;
+DROP TABLE IF EXISTS `server-statistics`;
 
-CREATE TABLE `data_server_statistics` (
-  `total_players` bigint(20) unsigned DEFAULT NULL,
-  `current_players` bigint(20) unsigned DEFAULT NULL,
-  `peak_players` bigint(20) unsigned DEFAULT NULL
+CREATE TABLE `server-statistics` (
+  `ID` smallint(6) NOT NULL,
+  `name` varchar(20) DEFAULT NULL,
+  `type` tinyint(4) DEFAULT NULL,
+  `users_online` bigint(20) DEFAULT NULL,
+  PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `server-statistics` */
 
 /*Table structure for table `users` */
 
@@ -32,11 +36,18 @@ DROP TABLE IF EXISTS `users`;
 
 CREATE TABLE `users` (
   `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `user_name` varchar(20) DEFAULT NULL,
-  `user_password` char(64) DEFAULT NULL,
-  `user_salt` char(10) DEFAULT NULL,
+  `username` varchar(20) DEFAULT NULL,
+  `displayname` char(16) DEFAULT NULL,
+  `password` char(64) DEFAULT NULL,
+  `salt` char(10) DEFAULT NULL,
+  `rights` tinyint(10) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+/*Data for the table `users` */
+
+insert  into `users`(`ID`,`username`,`displayname`,`password`,`salt`,`rights`) values 
+(1,'test','WCPS','B94B7E2F9546BA176839730DD30FDF659338A07F8F313E12F7E117E0752172DA','asd',1);
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

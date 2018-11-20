@@ -1,0 +1,44 @@
+2018-11-21 00:00:01.792 +01:00 [DBG] OUT :: -1840788437 4608 994214687 77 
+2018-11-21 00:00:01.811 +01:00 [DBG]  IN :: 2454178867 4352 3039034213 0 test test 0 0
+2018-11-21 00:00:01.933 +01:00 [DBG] OUT :: -1840788296 4352 72000 
+2018-11-21 00:00:11.395 +01:00 [DBG]  IN :: 2454188454 4353 DarkRaptorrrrrrr
+2018-11-21 00:00:11.845 +01:00 [DBG] OUT :: -1840778390 4352 1 1 0 test NULL DarkRaptorrrrrrr 1 1 0 1 1,11025 0 -1 -1 -1 -1 0 0 
+2018-11-21 00:01:06.994 +01:00 [INF] Binding a socket listener to port: 5012.
+2018-11-21 00:01:07.072 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
+2018-11-21 00:01:07.099 +01:00 [INF] Binding a socket listener to port: 5330.
+2018-11-21 00:01:07.100 +01:00 [INF] The socket is successfully binded to the port!
+2018-11-21 00:01:07.100 +01:00 [DBG] Server started
+2018-11-21 00:01:07.101 +01:00 [INF] Emulator loaded in 726,5717 milliseconds!
+2018-11-21 00:01:27.687 +01:00 [DBG] OUT :: -1840702546 4608 112574539 77 
+2018-11-21 00:01:27.694 +01:00 [DBG]  IN :: 2454264750 4352 1305096357 0 test test 0 0
+2018-11-21 00:01:27.810 +01:00 [DBG] OUT :: -1840702421 4352 74110 
+2018-11-21 00:14:43.234 +01:00 [INF] Binding a socket listener to port: 5012.
+2018-11-21 00:14:43.304 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
+2018-11-21 00:14:43.305 +01:00 [INF] Binding a socket listener to port: 5330.
+2018-11-21 00:14:43.306 +01:00 [INF] The socket is successfully binded to the port!
+2018-11-21 00:14:43.307 +01:00 [DBG] Server started
+2018-11-21 00:14:43.307 +01:00 [INF] Emulator loaded in 736,2216 milliseconds!
+2018-11-21 00:27:16.464 +01:00 [INF] Binding a socket listener to port: 5012.
+2018-11-21 00:27:16.540 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
+2018-11-21 00:27:16.541 +01:00 [INF] Binding a socket listener to port: 5330.
+2018-11-21 00:27:16.542 +01:00 [INF] The socket is successfully binded to the port!
+2018-11-21 00:27:16.543 +01:00 [DBG] Server started
+2018-11-21 00:27:16.544 +01:00 [INF] Emulator loaded in 753,9319 milliseconds!
+2018-11-21 00:27:33.553 +01:00 [DBG] OUT :: -1839136687 4608 387935083 77 
+2018-11-21 00:27:33.561 +01:00 [DBG]  IN :: 2455830612 4352 194042481 0 test test 0 0
+2018-11-21 00:27:33.693 +01:00 [DBG] OUT :: -1839136546 4352 74110 
+2018-11-21 00:27:47.038 +01:00 [DBG] OUT :: -1839123203 4608 553983717 77 
+2018-11-21 00:27:47.039 +01:00 [DBG]  IN :: 2455844098 4352 1624939333 0 test test 0 0
+2018-11-21 00:27:47.042 +01:00 [DBG] OUT :: -1839123187 4352 1 1 0 test NULL DarkRaptor 2 1 0 1 1,11025 0 -1 -1 -1 -1 0 0 
+2018-11-21 00:37:56.170 +01:00 [INF] Binding a socket listener to port: 5012.
+2018-11-21 00:37:56.240 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
+2018-11-21 00:37:56.241 +01:00 [INF] Binding a socket listener to port: 5330.
+2018-11-21 00:37:56.242 +01:00 [INF] The socket is successfully binded to the port!
+2018-11-21 00:37:56.242 +01:00 [DBG] Server started
+2018-11-21 00:37:56.243 +01:00 [INF] Emulator loaded in 644,5699 milliseconds!
+2018-11-21 00:38:04.819 +01:00 [DBG] OUT :: -1838505421 4608 211999608 77 
+2018-11-21 00:38:04.826 +01:00 [DBG]  IN :: 2456461886 4352 1266104208 0 test test 0 0
+2018-11-21 00:38:04.977 +01:00 [DBG] OUT :: -1838505250 4352 73050 
+2018-11-21 00:38:28.002 +01:00 [DBG] OUT :: -1838482234 4608 567038802 77 
+2018-11-21 00:38:28.003 +01:00 [DBG]  IN :: 2456485059 4352 2019673917 0 test test 0 0
+2018-11-21 00:38:28.010 +01:00 [DBG] OUT :: -1838482218 4352 1 1 0 test NULL DarkRaptor 1 1 0 1 1,11025 0 -1 -1 -1 -1 0 0 

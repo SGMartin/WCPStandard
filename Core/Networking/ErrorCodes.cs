@@ -14,6 +14,7 @@ namespace Core.Networking
         Success = 1,
         Update  = 2,
         EndConnection = 3,
+        InvalidServerType = 4,
         InvalidKeyOrSession = 0x100,
         InvalidSessionMatch = 0x110,     // <- Connection key or session is valid but some data does not match.
         EntityAlreadyAuthorized = 0x120, // <- Game server or user attempting to get Authentication is already authorized.

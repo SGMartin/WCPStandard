@@ -27,8 +27,9 @@ namespace Authentication.Managers {
            AddInternal(Core.Networking.PacketList.PlayerAuthentication, new Networking.Handlers.Internal.PlayerAuthorization());
 
             // Game Packets //
-           AddExternal(Authentication.Networking.PacketList.ServerList, new Networking.Handlers.PlayerLogin());
-          // AddExternal(Authentication.Networking.PacketList.Nickname,   new Networking.Handlers.Nickname());
+           AddExternal(PacketList.Launcher,   new Networking.Handlers.OldLauncher());
+           AddExternal(PacketList.ServerList, new Networking.Handlers.PlayerLogin());
+           AddExternal(PacketList.Nickname,   new Networking.Handlers.NewNickName());
         }
 
         private void AddInternal(Core.Networking.PacketList packetType, PacketHandler handler) {

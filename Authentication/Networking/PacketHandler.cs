@@ -8,7 +8,6 @@
 
 
 using System;
-
 namespace Authentication.Networking {
     public abstract class PacketHandler {
         private Core.Networking.InPacket inPacket;

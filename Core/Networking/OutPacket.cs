@@ -11,6 +11,7 @@
 
 using System;
 using System.Text;
+using Serilog;
 using Core.Networking;
 
 namespace Core.Networking {
@@ -134,7 +135,7 @@ namespace Core.Networking {
 
         public string Build() {
             string strOutput = builder.ToString();
-            Console.WriteLine("OUT :: " + strOutput);
+            Log.Debug("OUT :: " + strOutput);
             return string.Concat(strOutput, (char)(0x0A));
         }
 

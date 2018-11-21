@@ -14,6 +14,25 @@ Player Info
 /find <player name>
 Will display like this
 ID, IP, Prem, Exp, Dinar, Kill, Death, Scale(CQC,UBAN,BG)
+
+Visibles con DEV
+0 = Entire
+1 = Adult
+2 = Clan
+3 = Empty, no se ve nada
+4 = Test
+5 = Development
+6 = Server sin cartelito
+
+Visibles con adm & user
+0 = Entire
+1 = Adult
+
+
+Visibles para todos
+Con ID 21-29 los servers se muestran como trainee
+
+
              */
 
 using System;
@@ -56,20 +75,23 @@ namespace Authentication.Networking.Packets {
                 Append(u.SessionID);      // Session ID
                 Append(1);              // Unknown?
                 Append(0);              // Unknown?
-                Append(u.AccessLevel);  //1 = user Admin is 3, DEV is 5
+                Append((byte)u.AccessLevel);  //1 = user Admin is 3, DEV is 5
                 Append(1.11025);        // PF_20
-             
-                ArrayList serverList = Managers.ServerManager.Instance.GetAllAuthorized();
-                Append(serverList.Count);               // Server count
-                foreach (Entities.Server server in serverList) {
-                    Append(server.ID);                  // Server ID
-                    Append(server.ServerName);         // Server Name
-                    Append(server.IP);                  // Server IP
-                    Append((int)Core.Networking.Constants.Ports.Game); // Server Port
-                    Append(server.TotalPlayerCount);        // Server Player count. Maximum 3600
-                    Append((byte)server.Type);          // Server Type
-                }
-                
+                                        
+               ArrayList serverList = Managers.ServerManager.Instance.GetAllAuthorized();
+ 
+               Append(serverList.Count);               // Server count
+               foreach (Entities.Server server in serverList)
+            {
+                Append(server.ID);                  // Server ID
+                Append(server.ServerName);         // Server Name
+                Append(server.IP);                  // Server IP
+                Append((int)Core.Networking.Constants.Ports.Game); // Server Port
+                Append(server.TotalPlayerCount);        // Server Player count. Maximum 3600
+                Append((byte)server.Type);          // Server Type
+             }
+               
+
                 Fill(4, -1);
               //  Append(-1); // ID
                // Append(-1); // Name

@@ -102,7 +102,7 @@ namespace Authentication.Networking.Handlers.Internal
                             Session session = Managers.SessionManager.Instance.Get(targetId);
                             if (session != null)
                             {
-                                if (!session.IsActivated && session.Name == username && session.AccessLevel == accessLevel)
+                                if (!session.IsActivated && session.Name == username && (byte)session.AccessLevel == accessLevel)
                                 {
                                     session.Activate((byte)s.ID);
                                     s.Send(new Packets.Internal.PlayerAuthentication(session));

@@ -16,4 +16,4 @@ C:\Users\Santiago\source\repos\WCPStandard2\Core\obj\Debug\netstandard2.0\Core.p
 C:\Users\Santiago\source\repos\WCPStandard2\Core\bin\Debug\netstandard2.0\Core.deps.json
 C:\Users\Santiago\source\repos\WCPStandard2\Core\bin\Debug\netstandard2.0\Core.dll
 C:\Users\Santiago\source\repos\WCPStandard2\Core\bin\Debug\netstandard2.0\Core.pdb
-C:\Users\Santiago\source\repos\WCPStandard2\Core\bin\Debug\netstandard2.0\ServerConfig.xml
+C:\Users\Santiago\source\repos\WCPStandard2\Core\bin\Debug\netstandard2.0\CFG\Authentication.cfg

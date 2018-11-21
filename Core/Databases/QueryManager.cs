@@ -3,7 +3,8 @@
                 and compatible with .NET Core 2.0.
 
                 The new QueryManager replaces the old MySQL class.
-                Also read: https://msdn.microsoft.com/en-us/magazine/jj991977.aspx
+                Also read: https://msdn.microsoft.com/en-us/magazine/jj991977.aspx, 
+                           https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql-server-connection-pooling
  */
 
 using System;
@@ -40,7 +41,7 @@ namespace Core.Databases
         {
             try
             {
-                Database.Connection.Open(); return true;
+                Database.Connection.OpenAsync(); return true;
             } catch { return false; }
         }
 
@@ -51,6 +52,8 @@ namespace Core.Databases
                var commandQuery = Database.Connection.CreateCommand() as MySqlCommand;
                commandQuery.CommandText = query;
                commandQuery.ExecuteNonQueryAsync();
+
+               Database.Connection.Close();
            }
            catch
            {

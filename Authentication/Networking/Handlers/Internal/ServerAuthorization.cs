@@ -3,6 +3,7 @@
  *                  It is added to the server pool when the conditions are met.  On a successful  authentication,  a packet is sent.        
  */
 
+using Serilog;
 
 namespace Authentication.Networking.Handlers.Internal
 {
@@ -19,29 +20,54 @@ namespace Authentication.Networking.Handlers.Internal
                 int port = GetInt(4);
                 byte type = GetByte(5);
 
-                Core.GameConstants.ServerTypes enumType = Core.GameConstants.ServerTypes.Normal;
-
-                if (System.Enum.IsDefined(typeof(Core.GameConstants.ServerTypes), type))
+                if (globalKey == Config.GAMESERVERKEY) //attempt to match server keys
                 {
-                    enumType = (Core.GameConstants.ServerTypes)type;
+                    Core.GameConstants.ServerTypes serverType;
+
+                    //check for an existing server type. TODO: research the list for usable stuff and update wiki
+                    if (System.Enum.IsDefined(typeof(Core.GameConstants.ServerTypes), type))
+                    {
+                        serverType = (Core.GameConstants.ServerTypes)type;
+                   
+                        //check if name is already in use, reject server if affirmative
+                           foreach(Entities.Server authorizedServer in Managers.ServerManager.Instance.GetAllAuthorized())
+                            {
+                                if(authorizedServer.ServerName == serverName)
+                                {
+                                    s.Send(new Packets.Internal.Authorize(Core.Networking.ErrorCodes.EntityAlreadyAuthorized));
+                                    Log.Information("Rejected server " + serverName + " . Name already in use");
+                                    s.Disconnect();
+                                    return;
+                                }
+                            }
+
+                        byte serverId = Managers.ServerManager.Instance.Add(s, serverName, ipAddress, port, serverType);
+
+                        if(serverId > 0)
+                        {
+                            s.Send(new Packets.Internal.Authorize(serverId));
+                            Log.Information("New server registered as :" + serverName);
+                        }    
+                        else
+                        {
+                            s.Send(new Packets.Internal.Authorize(Core.Networking.ErrorCodes.ServerLimitReached));
+                             s.Disconnect();
+                        }
+                    }
+                    else
+                    {
+                        s.Send(new Packets.Internal.Authorize(Core.Networking.ErrorCodes.InvalidServerType));
+                        s.Disconnect();
+                    }
+
                 }
                 else
                 {
-                    s.Disconnect(); return;
-                }
-
-                byte serverId = Managers.ServerManager.Instance.Add(s, serverName, ipAddress, port, enumType);
-                if (serverId > 0)
-                {
-                    s.Send(new Packets.Internal.Authorize(serverId));
-                 
-                }
-                else
-                {
-                    s.Send(new Packets.Internal.Authorize(Core.Networking.ErrorCodes.ServerLimitReached));
+                    s.Send(new Packets.Internal.Authorize(Core.Networking.ErrorCodes.InvalidKeyOrSession));
+                    Log.Information("Rejecting server " + serverName + ": invalid key");
                     s.Disconnect();
                 }
-
+                    
             }
             else
             {

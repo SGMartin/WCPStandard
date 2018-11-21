@@ -5,7 +5,7 @@
 
  */
 
-
+using Serilog;
 using System;
 using System.Net;
 using System.Net.Sockets;
@@ -30,7 +30,8 @@ namespace Authentication.Entities {
         private string displayName = "Player";
 
         public User(Socket socket)
-            : base(0, "Unknown", 0) {
+            : base(0, "Unknown", Core.GameConstants.Rights.Regular)
+        {
             this.socket = socket;
             isDisconnect = false;
             this.socket.BeginReceive(buffer, 0, buffer.Length, SocketFlags.None, new AsyncCallback(OnDataReceived), null);
@@ -43,24 +44,25 @@ namespace Authentication.Entities {
             this.displayName = displayname;
             Managers.SessionManager.Instance.Add(this);
             this.isAuthorized = true;
-            this.AccessLevel = 1;
+            this.AccessLevel = Core.GameConstants.Rights.Regular;
         }
 
-        public void OnAuthorize(uint id, string name, string displayname, byte _accesslevel)
+        public void OnAuthorize(uint id, string name, string displayname, Core.GameConstants.Rights rights)
         {
             this.ID = id;
             this.Name = name;
             this.displayName = displayname;
-            this.AccessLevel = _accesslevel;
+            this.AccessLevel = rights;
             Managers.SessionManager.Instance.Add(this);
             this.isAuthorized = true;          
         }
 
-        public void UpdateDisplayname(string displayname) {
+        public void UpdateDisplayname(string displayname)
+        {
             this.displayName = displayname;
             Session s = Managers.SessionManager.Instance.Get(this.sessionId);
             if (s != null) {
-                //s.UpdateDisplayname(displayname);
+                s.UpdateSessionDisplayName(displayname);
             }
         }
 
@@ -97,7 +99,6 @@ namespace Authentication.Entities {
 
                             // Handle the packet instantly.
                             Core.Networking.InPacket inPacket = new Core.Networking.InPacket(newPacket, this);
-                          //TODO: LOG THIS  ServerLogger.Instance.AppendPacket(newPacket);
                             if (inPacket != null)
                             {
                                 if (inPacket.Id > 0)
@@ -109,9 +110,7 @@ namespace Authentication.Entities {
                                         {
                                             pHandler.Handle(inPacket);
                                         }
-                                        catch (Exception e) 
-                                        { //TODO: LOG THIS //Log.Instance.WriteError(e.ToString()); 
-                                        }
+                                        catch (Exception e) { Log.Error(e.ToString());}
                                     }
                                 }
                             }

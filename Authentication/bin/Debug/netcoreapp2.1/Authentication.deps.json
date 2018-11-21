@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "4f0f78aa7f5887bd3b7904b1f332db575a54f1bd"
+    "signature": "0accd71160d4bf9f7bada4c9ad0212e98dfa2837"
   },
   "compilationOptions": {},
   "targets": {
@@ -11,10 +11,19 @@
           "Core": "1.0.0",
           "Serilog": "2.7.1",
           "Serilog.Sinks.Console": "3.1.1",
-          "Serilog.Sinks.File": "4.0.0"
+          "Serilog.Sinks.File": "4.0.0",
+          "ini-parser": "2.5.2"
         },
         "runtime": {
           "Authentication.dll": {}
+        }
+      },
+      "ini-parser/2.5.2": {
+        "runtime": {
+          "lib/net20/INIFileParser.dll": {
+            "assemblyVersion": "2.5.2.0",
+            "fileVersion": "2.5.2.0"
+          }
         }
       },
       "MySqlConnector/0.47.1": {
@@ -215,7 +224,8 @@
           "MySqlConnector": "0.47.1",
           "Serilog": "2.7.1",
           "Serilog.Sinks.Console": "3.1.1",
-          "Serilog.Sinks.File": "4.0.0"
+          "Serilog.Sinks.File": "4.0.0",
+          "ini-parser": "2.5.2"
         },
         "runtime": {
           "Core.dll": {}
@@ -228,6 +238,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "ini-parser/2.5.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4tTkVV6xAPuit4vwHeLdcwmLO2kRtWRE7TXKga5QQOdt2DPdtq00ADeXHOzO7hkNtcZpT7GbsvBd6jOiwGz0JQ==",
+      "path": "ini-parser/2.5.2",
+      "hashPath": "ini-parser.2.5.2.nupkg.sha512"
     },
     "MySqlConnector/0.47.1": {
       "type": "package",

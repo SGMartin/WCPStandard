@@ -10,7 +10,35 @@ namespace Authentication
 {
     public class Config
     {
-        public static string[] AUTH_DATABASE = new string[] { "localhost", "3306", "root", "", "wcps-authentication"};
+        //public static string[] AUTH_DATABASE = new string[] { "localhost", "3306", "root", "", "wcps-authentication"};
+
+        public static string AUTH_CONNECTION = string.Concat("Server=",
+               "localhost",
+               ";Port=",
+               "3306",
+               ";Uid=",
+               "root",
+               ";Pwd=",
+               "",
+               ";Database=",
+               "wcps-authentication",
+               ";");
+
+        /*
+         
+         string connectionData = string.Concat(
+              "Server=",
+               host,
+               ";Port=",
+               port,
+               ";Uid=",
+               user,
+               ";Pwd=",
+               password,
+               ";Database=",
+               database,
+               ";"); 
+         */
 
         public static int SERILOGLEVEL = 1; 
         public static string GAMESERVERKEY = "wcps-auth";

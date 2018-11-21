@@ -2,12 +2,14 @@
                 This Emulator uses MysqlConnector 0.47.1, an ADO.net based API instead of the Oracle one. It is faster, fully asynchronous
                 and compatible with .NET Core 2.0.
 
-                The new QueryManager replaces the old MySQL class.
+                Best read ever and the true reason for replacing the old class and database workflow: 
+                https://stackoverflow.com/questions/9705637/executereader-requires-an-open-and-available-connection-the-connections-curren/9707060#9707060
+
                 Also read: https://msdn.microsoft.com/en-us/magazine/jj991977.aspx, 
                            https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql-server-connection-pooling
  */
-
-using System;
+ /*
+using System.Data;
 using System.Collections.Generic;
 using MySql.Data.MySqlClient;
 
@@ -16,52 +18,89 @@ namespace Core.Databases
 
     public class QueryManager
     {
-        public Database Database{ get; private set;}
-
-        public QueryManager(string host, int port, string user, string password, string database)
+        
+        public QueryManager()
         {
-           string connectionData = string.Concat(
-               "Server=",
-                host,
-                ";Port=",
-                port,
-                ";Uid=",
-                user,
-                ";Pwd=",
-                password,
-                ";Database=",
-                database,
-                ";");
-
-                Database = new Database(connectionData);
+           
         }
 
 
-        public bool Open()
-        {
-            try
-            {
-                Database.Connection.OpenAsync(); return true;
-            } catch { return false; }
-        }
-
-       public void AsyncQuery(string query)
+       public void AsyncQuery(string connectionData, string query)
        {
-           try
-           {  
-               var commandQuery = Database.Connection.CreateCommand() as MySqlCommand;
-               commandQuery.CommandText = query;
-               commandQuery.ExecuteNonQueryAsync();
 
-               Database.Connection.Close();
-           }
-           catch
-           {
-               //TODO: Log this
-           }
-          
+            using (MySqlConnection connection = new MySqlConnection(connectionData)) //cierra la conexión de manera implícita al terminar
+            {
+                try
+                {
+                    connection.OpenAsync();
+
+                    var commandQuery = connection.CreateCommand() as MySqlCommand;
+                    commandQuery.CommandText = query;
+                    commandQuery.ExecuteNonQueryAsync();
+
+                }
+                catch
+                {
+                    //TODO: log this
+                }
+            }        
        }
 
+
+        public DataTable Select(string connectionData, string[] keys, string table, Dictionary<string, object> values)
+        {
+            string query = string.Concat("SELECT ", string.Join(",", keys), " FROM ", table);
+            string valuesString = string.Empty;
+
+            if (values.Count > 0)
+            {
+                byte index = 0;
+                foreach (KeyValuePair<string, object> entry in values)
+                {
+                    if (index == 0)
+                    {
+                        valuesString = string.Concat(valuesString, entry.Key, "=@", entry.Key);
+                        index++;
+                    }
+                    else
+                    {
+                        valuesString = string.Concat(valuesString, " AND ", entry.Key, "=@", entry.Key);
+                    }
+                }
+                query = string.Concat(query, " WHERE ", valuesString);
+            }
+
+            using (MySqlConnection connection = new MySqlConnection(connectionData)) //cierra la conexión de manera implícita al terminar
+            {
+                try
+                {
+                    var commandQuery = connection.CreateCommand() as MySqlCommand;
+                    commandQuery.CommandText = query;
+
+                    foreach(KeyValuePair<string, object> entry in values)
+                    {
+                        commandQuery.Parameters.AddWithValue("@" + entry.Key, entry.Value);
+                    }
+
+                    connection.OpenAsync();
+                    DataTable Result = new DataTable();
+
+                    using(MySqlDataReader reader = commandQuery.ExecuteReader()) //Async this?
+                    {
+                        Result.Load(reader);
+                        return Result;
+                    }
+                }
+                catch
+                {
+                    //TODO: log this
+                    return null;
+                }
+            }
+  
+        }
+        */
+        /*
         //Synchronous version of AsyncQuery. Most queries should be asynchcronous nonetheless
        public void Query(string query)
        {
@@ -185,42 +224,8 @@ namespace Core.Databases
             }
         }
 
-            //This method used to be synch... same as above
-        public MySqlDataReader Select(string[] keys, string table, Dictionary<string, object> values) 
-        {
-            string query = string.Concat("SELECT ", string.Join(",", keys), " FROM ", table);
-            string valuesString = string.Empty;
-
-            if (values.Count > 0) {
-                byte index = 0;
-                foreach (KeyValuePair<string, object> entry in values) {
-                    if (index == 0) {
-                        valuesString = string.Concat(valuesString, entry.Key, "=@", entry.Key);
-                        index++;
-                    } else {
-                        valuesString = string.Concat(valuesString, " AND ", entry.Key, "=@", entry.Key);
-                    }
-                }
-                query = string.Concat(query, " WHERE ", valuesString);
-            }
-
-            try 
-            {
-
-                var commandQuery         = Database.Connection.CreateCommand() as MySqlCommand;
-                commandQuery.CommandText = query;
-
-                foreach (KeyValuePair<string, object> entry in values) {
-                     commandQuery.Parameters.AddWithValue("@" + entry.Key, entry.Value);
-                }
-
-                return commandQuery.ExecuteReader();
-
-            } catch { }
-
-        return null;
-
-         }
-
-    }
+       
+         
+   /}
 }
+*/

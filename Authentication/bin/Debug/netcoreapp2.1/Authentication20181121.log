@@ -1,138 +1,318 @@
-2018-11-21 00:00:01.792 +01:00 [DBG] OUT :: -1840788437 4608 994214687 77 
-2018-11-21 00:00:01.811 +01:00 [DBG]  IN :: 2454178867 4352 3039034213 0 test test 0 0
-2018-11-21 00:00:01.933 +01:00 [DBG] OUT :: -1840788296 4352 72000 
-2018-11-21 00:00:11.395 +01:00 [DBG]  IN :: 2454188454 4353 DarkRaptorrrrrrr
-2018-11-21 00:00:11.845 +01:00 [DBG] OUT :: -1840778390 4352 1 1 0 test NULL DarkRaptorrrrrrr 1 1 0 1 1,11025 0 -1 -1 -1 -1 0 0 
-2018-11-21 00:01:06.994 +01:00 [INF] Binding a socket listener to port: 5012.
-2018-11-21 00:01:07.072 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
-2018-11-21 00:01:07.099 +01:00 [INF] Binding a socket listener to port: 5330.
-2018-11-21 00:01:07.100 +01:00 [INF] The socket is successfully binded to the port!
-2018-11-21 00:01:07.100 +01:00 [DBG] Server started
-2018-11-21 00:01:07.101 +01:00 [INF] Emulator loaded in 726,5717 milliseconds!
-2018-11-21 00:01:27.687 +01:00 [DBG] OUT :: -1840702546 4608 112574539 77 
-2018-11-21 00:01:27.694 +01:00 [DBG]  IN :: 2454264750 4352 1305096357 0 test test 0 0
-2018-11-21 00:01:27.810 +01:00 [DBG] OUT :: -1840702421 4352 74110 
-2018-11-21 00:14:43.234 +01:00 [INF] Binding a socket listener to port: 5012.
-2018-11-21 00:14:43.304 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
-2018-11-21 00:14:43.305 +01:00 [INF] Binding a socket listener to port: 5330.
-2018-11-21 00:14:43.306 +01:00 [INF] The socket is successfully binded to the port!
-2018-11-21 00:14:43.307 +01:00 [DBG] Server started
-2018-11-21 00:14:43.307 +01:00 [INF] Emulator loaded in 736,2216 milliseconds!
-2018-11-21 00:27:16.464 +01:00 [INF] Binding a socket listener to port: 5012.
-2018-11-21 00:27:16.540 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
-2018-11-21 00:27:16.541 +01:00 [INF] Binding a socket listener to port: 5330.
-2018-11-21 00:27:16.542 +01:00 [INF] The socket is successfully binded to the port!
-2018-11-21 00:27:16.543 +01:00 [DBG] Server started
-2018-11-21 00:27:16.544 +01:00 [INF] Emulator loaded in 753,9319 milliseconds!
-2018-11-21 00:27:33.553 +01:00 [DBG] OUT :: -1839136687 4608 387935083 77 
-2018-11-21 00:27:33.561 +01:00 [DBG]  IN :: 2455830612 4352 194042481 0 test test 0 0
-2018-11-21 00:27:33.693 +01:00 [DBG] OUT :: -1839136546 4352 74110 
-2018-11-21 00:27:47.038 +01:00 [DBG] OUT :: -1839123203 4608 553983717 77 
-2018-11-21 00:27:47.039 +01:00 [DBG]  IN :: 2455844098 4352 1624939333 0 test test 0 0
-2018-11-21 00:27:47.042 +01:00 [DBG] OUT :: -1839123187 4352 1 1 0 test NULL DarkRaptor 2 1 0 1 1,11025 0 -1 -1 -1 -1 0 0 
-2018-11-21 00:37:56.170 +01:00 [INF] Binding a socket listener to port: 5012.
-2018-11-21 00:37:56.240 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
-2018-11-21 00:37:56.241 +01:00 [INF] Binding a socket listener to port: 5330.
-2018-11-21 00:37:56.242 +01:00 [INF] The socket is successfully binded to the port!
-2018-11-21 00:37:56.242 +01:00 [DBG] Server started
-2018-11-21 00:37:56.243 +01:00 [INF] Emulator loaded in 644,5699 milliseconds!
-2018-11-21 00:38:04.819 +01:00 [DBG] OUT :: -1838505421 4608 211999608 77 
-2018-11-21 00:38:04.826 +01:00 [DBG]  IN :: 2456461886 4352 1266104208 0 test test 0 0
-2018-11-21 00:38:04.977 +01:00 [DBG] OUT :: -1838505250 4352 73050 
-2018-11-21 00:38:28.002 +01:00 [DBG] OUT :: -1838482234 4608 567038802 77 
-2018-11-21 00:38:28.003 +01:00 [DBG]  IN :: 2456485059 4352 2019673917 0 test test 0 0
-2018-11-21 00:38:28.010 +01:00 [DBG] OUT :: -1838482218 4352 1 1 0 test NULL DarkRaptor 1 1 0 1 1,11025 0 -1 -1 -1 -1 0 0 
-2018-11-21 00:52:59.964 +01:00 [FTL] Failed to connect to the database
-2018-11-21 00:53:21.647 +01:00 [FTL] Failed to connect to the database
-2018-11-21 00:55:22.034 +01:00 [FTL] Failed to connect to the database
-2018-11-21 00:55:40.327 +01:00 [FTL] Failed to connect to the database
-2018-11-21 00:56:25.342 +01:00 [INF] Binding a socket listener to port: 5012.
-2018-11-21 00:56:25.405 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
-2018-11-21 00:56:25.406 +01:00 [INF] Binding a socket listener to port: 5330.
-2018-11-21 00:56:25.407 +01:00 [INF] The socket is successfully binded to the port!
-2018-11-21 00:56:25.407 +01:00 [DBG] Server started
-2018-11-21 00:56:25.408 +01:00 [INF] Emulator loaded in 525,7246 milliseconds!
-2018-11-21 00:59:04.559 +01:00 [INF] Binding a socket listener to port: 5012.
-2018-11-21 00:59:04.629 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
-2018-11-21 00:59:04.630 +01:00 [INF] Binding a socket listener to port: 5330.
-2018-11-21 00:59:04.631 +01:00 [INF] The socket is successfully binded to the port!
-2018-11-21 00:59:04.632 +01:00 [DBG] Server started
-2018-11-21 00:59:04.632 +01:00 [INF] Emulator loaded in 668,0301 milliseconds!
-2018-11-21 00:59:31.577 +01:00 [FTL] Failed to connect to the database
-2018-11-21 00:59:38.388 +01:00 [FTL] Failed to connect to the database
-2018-11-21 00:59:43.115 +01:00 [INF] Binding a socket listener to port: 5012.
-2018-11-21 00:59:43.182 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
-2018-11-21 00:59:43.183 +01:00 [INF] Binding a socket listener to port: 5330.
-2018-11-21 00:59:43.184 +01:00 [INF] The socket is successfully binded to the port!
-2018-11-21 00:59:43.185 +01:00 [DBG] Server started
-2018-11-21 00:59:43.186 +01:00 [INF] Emulator loaded in 657,6483 milliseconds!
-2018-11-21 01:00:00.534 +01:00 [DBG] OUT :: -1837189703 4608 363321439 77 
-2018-11-21 01:00:00.542 +01:00 [DBG]  IN :: 2457777593 4352 1725274100 0 test test 0 0
-2018-11-21 01:00:00.736 +01:00 [DBG] OUT :: -1837189500 4352 1 1 0 test NULL WCPS 1 1 0 1 1,11025 0 -1 -1 -1 -1 0 0 
-2018-11-21 01:01:42.610 +01:00 [DBG] OUT :: -1837087625 4608 736784604 77 
-2018-11-21 01:01:42.611 +01:00 [DBG]  IN :: 2457879668 4352 1948410429 0 test test 0 0
-2018-11-21 01:01:42.612 +01:00 [DBG] OUT :: -1837087625 4352 1 1 0 test NULL WCPS 2 1 0 1 1,11025 0 -1 -1 -1 -1 0 0 
-2018-11-21 01:04:11.274 +01:00 [DBG] OUT :: -1836938968 4608 703470098 77 
-2018-11-21 01:04:11.275 +01:00 [DBG]  IN :: 2458028343 4352 967892012 0 test test 0 0
-2018-11-21 01:04:11.276 +01:00 [DBG] OUT :: -1836938953 4352 1 1 0 test NULL WCPS 3 1 0 1 1,11025 0 -1 -1 -1 -1 0 0 
-2018-11-21 01:10:20.997 +01:00 [INF] Binding a socket listener to port: 5012.
-2018-11-21 01:10:21.062 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
-2018-11-21 01:10:21.066 +01:00 [INF] Binding a socket listener to port: 5330.
-2018-11-21 01:10:21.068 +01:00 [INF] The socket is successfully binded to the port!
-2018-11-21 01:10:21.072 +01:00 [DBG] Server started
-2018-11-21 01:10:21.073 +01:00 [INF] Emulator loaded in 648,9699 milliseconds!
-2018-11-21 01:10:35.013 +01:00 [DBG] OUT :: -1836555218 4608 660926541 77 
-2018-11-21 01:10:35.026 +01:00 [DBG]  IN :: 2458412077 4352 2306244713 0 test test 0 0
-2018-11-21 01:10:35.202 +01:00 [DBG] OUT :: -1836555031 4352 1 1 0 test NULL WCPS 1 1 0 1 1,11025 0 -1 -1 -1 -1 0 0 
-2018-11-21 01:13:03.147 +01:00 [DBG] OUT :: -1836407093 4608 689792986 77 
-2018-11-21 01:13:03.148 +01:00 [DBG]  IN :: 2458560209 4352 2696685706 0 test test 0 0
-2018-11-21 01:13:05.287 +01:00 [ERR] System.NullReferenceException: Object reference not set to an instance of an object.
-   at Authentication.Networking.Handlers.PlayerLogin.Process(User user) in C:\Users\Santiago\source\repos\WCPStandard2\Authentication\Networking\Handlers\PlayerLogin.cs:line 34
-   at Authentication.Networking.PacketHandler.Handle(InPacket inPacket) in C:\Users\Santiago\source\repos\WCPStandard2\Authentication\Networking\PacketHandler.cs:line 20
-   at Authentication.Entities.User.OnDataReceived(IAsyncResult iAr) in C:\Users\Santiago\source\repos\WCPStandard2\Authentication\Entities\User.cs:line 111
-2018-11-21 01:21:07.944 +01:00 [INF] Binding a socket listener to port: 5012.
-2018-11-21 01:21:08.025 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
-2018-11-21 01:21:08.038 +01:00 [INF] Binding a socket listener to port: 5330.
-2018-11-21 01:21:08.039 +01:00 [INF] The socket is successfully binded to the port!
-2018-11-21 01:21:08.041 +01:00 [DBG] Server started
-2018-11-21 01:21:08.041 +01:00 [INF] Emulator loaded in 774,1115 milliseconds!
-2018-11-21 01:21:20.429 +01:00 [DBG] OUT :: -1835909812 4608 114049925 77 
-2018-11-21 01:21:20.436 +01:00 [DBG]  IN :: 2459057487 4352 1025845194 0 test test 0 0
-2018-11-21 01:21:20.559 +01:00 [DBG] OUT :: -1835909671 4352 1 1 0 test NULL WCPS 1 1 0 1 1,11025 0 -1 -1 -1 -1 0 0 
-2018-11-21 01:23:45.530 +01:00 [DBG] OUT :: -1835764703 4608 424104419 77 
-2018-11-21 01:23:45.531 +01:00 [DBG]  IN :: 2459202599 4352 1081070578 0 test test 0 0
-2018-11-21 01:23:45.618 +01:00 [ERR] System.NullReferenceException: Object reference not set to an instance of an object.
-   at Authentication.Networking.Handlers.PlayerLogin.Process(User user) in C:\Users\Santiago\source\repos\WCPStandard2\Authentication\Networking\Handlers\PlayerLogin.cs:line 34
-   at Authentication.Networking.PacketHandler.Handle(InPacket inPacket) in C:\Users\Santiago\source\repos\WCPStandard2\Authentication\Networking\PacketHandler.cs:line 20
-   at Authentication.Entities.User.OnDataReceived(IAsyncResult iAr) in C:\Users\Santiago\source\repos\WCPStandard2\Authentication\Entities\User.cs:line 111
-2018-11-21 01:32:20.373 +01:00 [INF] Binding a socket listener to port: 5012.
-2018-11-21 01:32:20.493 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
-2018-11-21 01:32:20.495 +01:00 [INF] Binding a socket listener to port: 5330.
-2018-11-21 01:32:20.495 +01:00 [INF] The socket is successfully binded to the port!
-2018-11-21 01:32:20.496 +01:00 [DBG] Server started
-2018-11-21 01:32:20.496 +01:00 [INF] Emulator loaded in 1307,1218 milliseconds!
-2018-11-21 01:32:37.544 +01:00 [DBG] OUT :: -1835232687 4608 755601618 77 
-2018-11-21 01:32:37.550 +01:00 [DBG]  IN :: 2459734605 4352 1564043503 0 test test 0 0
-2018-11-21 01:32:37.680 +01:00 [DBG] OUT :: -1835232562 4352 72000 
-2018-11-21 01:32:41.067 +01:00 [DBG]  IN :: 2459738124 4353 Darkraptor
-2018-11-21 01:32:41.341 +01:00 [DBG] OUT :: -1835228890 4352 1 1 0 test NULL Darkraptor 1 1 0 1 1,11025 0 -1 -1 -1 -1 0 0 
-2018-11-21 01:32:45.442 +01:00 [DBG] OUT :: -1835224796 4608 712962049 77 
-2018-11-21 01:32:45.443 +01:00 [DBG]  IN :: 2459742505 4352 1606034108 0 test test Darkraptor 1 1
-2018-11-21 01:32:45.524 +01:00 [ERR] System.NullReferenceException: Object reference not set to an instance of an object.
-   at Authentication.Networking.Handlers.PlayerLogin.Process(User user) in C:\Users\Santiago\source\repos\WCPStandard2\Authentication\Networking\Handlers\PlayerLogin.cs:line 34
-   at Authentication.Networking.PacketHandler.Handle(InPacket inPacket) in C:\Users\Santiago\source\repos\WCPStandard2\Authentication\Networking\PacketHandler.cs:line 20
-   at Authentication.Entities.User.OnDataReceived(IAsyncResult iAr) in C:\Users\Santiago\source\repos\WCPStandard2\Authentication\Entities\User.cs:line 111
-2018-11-21 01:33:35.899 +01:00 [INF] Binding a socket listener to port: 5012.
-2018-11-21 01:33:36.038 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
-2018-11-21 01:33:36.040 +01:00 [INF] Binding a socket listener to port: 5330.
-2018-11-21 01:33:36.041 +01:00 [INF] The socket is successfully binded to the port!
-2018-11-21 01:33:36.043 +01:00 [DBG] Server started
-2018-11-21 01:33:36.045 +01:00 [INF] Emulator loaded in 742,1872 milliseconds!
-2018-11-21 01:33:47.534 +01:00 [DBG] OUT :: -1835162703 4608 723385370 77 
-2018-11-21 01:33:47.536 +01:00 [DBG]  IN :: 2459804597 4352 4287544511 0 test test 0 0
-2018-11-21 01:33:47.653 +01:00 [DBG] OUT :: -1835162578 4352 72000 
-2018-11-21 01:33:50.165 +01:00 [DBG]  IN :: 2459807227 4353 asddasdad
-2018-11-21 01:33:50.190 +01:00 [DBG] OUT :: -1835160046 4352 1 1 0 test NULL asddasdad 1 1 0 1 1,11025 0 -1 -1 -1 -1 0 0 
-2018-11-21 01:33:53.963 +01:00 [DBG] OUT :: -1835156265 4608 953640914 77 
-2018-11-21 01:33:53.965 +01:00 [DBG]  IN :: 2459811029 4352 1416170134 0 test test asddasdad 1 1
-2018-11-21 01:33:53.966 +01:00 [DBG] OUT :: -1835156265 4352 1 1 0 test NULL asddasdad 2 1 0 1 1,11025 0 -1 -1 -1 -1 0 0 
+2018-11-21 04:01:04.683 +01:00 [INF] Database connection test... successfull
+2018-11-21 04:01:04.751 +01:00 [INF] Binding a socket listener to port: 5012.
+2018-11-21 04:01:04.770 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
+2018-11-21 04:01:04.773 +01:00 [INF] Binding a socket listener to port: 5330.
+2018-11-21 04:01:04.774 +01:00 [INF] The socket is successfully binded to the port!
+2018-11-21 04:01:04.776 +01:00 [DBG] Server started
+2018-11-21 04:01:04.783 +01:00 [INF] Emulator loaded in 517,3809 milliseconds!
+2018-11-21 04:01:18.506 +01:00 [DBG] OUT :: -1826311734 4608 981145286 77 
+2018-11-21 04:01:18.515 +01:00 [DBG]  IN :: 2468655575 4352 682164049 0 test tsto 0 0
+2018-11-21 04:01:18.525 +01:00 [DBG] OUT :: -1826311703 4352 72000 
+2018-11-21 04:01:20.986 +01:00 [DBG]  IN :: 2468658054 4353 asdadadsada
+2018-11-21 04:01:21.173 +01:00 [ERR] MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'asdadadsada' in 'where clause' ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'asdadadsada' in 'where clause'
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\Core\ResultSet.cs:line 42
+   at MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet(ResultSet resultSet) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 80
+   at MySql.Data.MySqlClient.MySqlDataReader.ReadFirstResultSetAsync(IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 302
+   at MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(MySqlCommand command, CommandBehavior behavior, ResultSetProtocol resultSetProtocol, IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 287
+   at MySqlConnector.Core.TextCommandExecutor.ExecuteReaderAsync(String commandText, MySqlParameterCollection parameterCollection, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:\projects\mysqlconnector\src\MySqlConnector\Core\TextCommandExecutor.cs:line 37
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlCommand.cs:line 252
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader() in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlCommand.cs:line 66
+   at Authentication.Networking.Handlers.NewNickName.DBIsNameTaken(String newName) in C:\Users\Santiago\source\repos\WCPStandard2\Authentication\Networking\Handlers\NewNickName.cs:line 76
+2018-11-21 04:01:21.177 +01:00 [DBG] OUT :: -1826309062 4352 74070 
+2018-11-21 04:04:33.140 +01:00 [INF] Database connection test... successfull
+2018-11-21 04:04:33.210 +01:00 [INF] Binding a socket listener to port: 5012.
+2018-11-21 04:04:33.217 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
+2018-11-21 04:04:33.218 +01:00 [INF] Binding a socket listener to port: 5330.
+2018-11-21 04:04:33.219 +01:00 [INF] The socket is successfully binded to the port!
+2018-11-21 04:04:33.220 +01:00 [DBG] Server started
+2018-11-21 04:04:33.221 +01:00 [INF] Emulator loaded in 514,1092 milliseconds!
+2018-11-21 04:04:45.220 +01:00 [DBG] OUT :: -1826105015 4608 257250706 77 
+2018-11-21 04:04:45.227 +01:00 [DBG]  IN :: 2468862288 4352 3648247812 0 test test 0 0
+2018-11-21 04:04:45.241 +01:00 [DBG] OUT :: -1826105000 4352 72000 
+2018-11-21 04:04:47.519 +01:00 [DBG]  IN :: 2468864582 4353 asdasdada
+2018-11-21 04:04:47.693 +01:00 [ERR] MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'asdasdada' in 'where clause' ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'asdasdada' in 'where clause'
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\Core\ResultSet.cs:line 42
+   at MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet(ResultSet resultSet) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 80
+   at MySql.Data.MySqlClient.MySqlDataReader.ReadFirstResultSetAsync(IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 302
+   at MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(MySqlCommand command, CommandBehavior behavior, ResultSetProtocol resultSetProtocol, IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 287
+   at MySqlConnector.Core.TextCommandExecutor.ExecuteReaderAsync(String commandText, MySqlParameterCollection parameterCollection, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:\projects\mysqlconnector\src\MySqlConnector\Core\TextCommandExecutor.cs:line 37
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlCommand.cs:line 252
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader() in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlCommand.cs:line 66
+   at Authentication.Networking.Handlers.NewNickName.DBIsNameTaken(String newName) in C:\Users\Santiago\source\repos\WCPStandard2\Authentication\Networking\Handlers\NewNickName.cs:line 76
+2018-11-21 04:04:47.697 +01:00 [DBG] OUT :: -1826102531 4352 74070 
+2018-11-21 04:06:28.407 +01:00 [DBG] OUT :: -1826001828 4608 371200140 77 
+2018-11-21 04:06:28.408 +01:00 [DBG]  IN :: 2468965473 4352 3567260861 0 test test 0 0
+2018-11-21 04:06:28.409 +01:00 [DBG] OUT :: -1826001828 4352 72000 
+2018-11-21 04:06:30.919 +01:00 [DBG]  IN :: 2468967980 4353 Darkraptor
+2018-11-21 04:06:30.997 +01:00 [ERR] System.NullReferenceException: Object reference not set to an instance of an object.
+   at MySql.Data.MySqlClient.MySqlCommand.TryGetPreparedStatement() in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlCommand.cs:line 428
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlCommand.cs:line 316
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlCommand.cs:line 251
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader() in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlCommand.cs:line 66
+   at Authentication.Networking.Handlers.NewNickName.DBIsNameTaken(String newName) in C:\Users\Santiago\source\repos\WCPStandard2\Authentication\Networking\Handlers\NewNickName.cs:line 76
+2018-11-21 04:06:31.013 +01:00 [DBG] OUT :: -1825999218 4352 74070 
+2018-11-21 04:06:32.429 +01:00 [DBG]  IN :: 2468969496 4353 Darkraptor
+2018-11-21 04:06:32.476 +01:00 [ERR] System.NullReferenceException: Object reference not set to an instance of an object.
+   at MySql.Data.MySqlClient.MySqlCommand.TryGetPreparedStatement() in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlCommand.cs:line 428
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlCommand.cs:line 316
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlCommand.cs:line 251
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader() in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlCommand.cs:line 66
+   at Authentication.Networking.Handlers.NewNickName.DBIsNameTaken(String newName) in C:\Users\Santiago\source\repos\WCPStandard2\Authentication\Networking\Handlers\NewNickName.cs:line 76
+2018-11-21 04:06:32.483 +01:00 [DBG] OUT :: -1825997750 4352 74070 
+2018-11-21 04:11:25.031 +01:00 [INF] Database connection test... successfull
+2018-11-21 04:11:25.096 +01:00 [INF] Binding a socket listener to port: 5012.
+2018-11-21 04:11:25.101 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
+2018-11-21 04:11:25.103 +01:00 [INF] Binding a socket listener to port: 5330.
+2018-11-21 04:11:25.104 +01:00 [INF] The socket is successfully binded to the port!
+2018-11-21 04:11:25.105 +01:00 [DBG] Server started
+2018-11-21 04:11:25.108 +01:00 [INF] Emulator loaded in 499,593 milliseconds!
+2018-11-21 04:11:35.177 +01:00 [DBG] OUT :: -1825695062 4608 247918989 77 
+2018-11-21 04:11:35.184 +01:00 [DBG]  IN :: 2469272234 4352 3134042245 0 test test 0 0
+2018-11-21 04:11:35.197 +01:00 [DBG] OUT :: -1825695031 4352 72000 
+2018-11-21 04:11:36.899 +01:00 [DBG]  IN :: 2469273951 4353 asdasdsada
+2018-11-21 04:11:37.027 +01:00 [DBG] OUT :: -1825693203 4352 1 1 0 test NULL asdasdsada 1 1 0 1 1,11025 0 -1 -1 -1 -1 0 0 
+2018-11-21 04:11:48.742 +01:00 [DBG] OUT :: -1825681500 4608 943040241 77 
+2018-11-21 04:11:48.743 +01:00 [DBG]  IN :: 2469285800 4352 3868701026 0 test test asdasdsada 1 1
+2018-11-21 04:11:48.744 +01:00 [DBG] OUT :: -1825681484 4352 72000 
+2018-11-21 04:11:49.975 +01:00 [DBG]  IN :: 2469287032 4353 asdasdsada
+2018-11-21 04:11:49.979 +01:00 [DBG] OUT :: -1825680250 4352 74070 
+2018-11-21 04:11:53.570 +01:00 [DBG]  IN :: 2469290629 4353 asdasdsada1
+2018-11-21 04:11:53.584 +01:00 [DBG] OUT :: -1825676656 4352 1 1 0 test NULL asdasdsada1 2 1 0 1 1,11025 0 -1 -1 -1 -1 0 0 
+2018-11-21 04:12:06.514 +01:00 [DBG] OUT :: -1825663718 4608 800145434 77 
+2018-11-21 04:12:06.515 +01:00 [DBG]  IN :: 2469303576 4352 3869694036 0 test test asdasdsada1 2 1
+2018-11-21 04:12:06.516 +01:00 [DBG] OUT :: -1825663718 4352 72000 
+2018-11-21 04:12:08.652 +01:00 [DBG]  IN :: 2469305712 4353 asdasdsada123
+2018-11-21 04:12:08.756 +01:00 [ERR] System.NullReferenceException: Object reference not set to an instance of an object.
+   at MySql.Data.MySqlClient.MySqlCommand.TryGetPreparedStatement() in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlCommand.cs:line 428
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlCommand.cs:line 316
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlCommand.cs:line 251
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader() in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlCommand.cs:line 66
+   at Authentication.Networking.Handlers.NewNickName.DBIsNameTaken(String newName) in C:\Users\Santiago\source\repos\WCPStandard2\Authentication\Networking\Handlers\NewNickName.cs:line 76
+2018-11-21 04:12:08.760 +01:00 [DBG] OUT :: -1825661468 4352 74070 
+2018-11-21 04:12:10.224 +01:00 [DBG]  IN :: 2469307286 4353 asdasdsada123
+2018-11-21 04:12:10.227 +01:00 [DBG] OUT :: -1825660015 4352 1 1 0 test NULL asdasdsada123 3 1 0 1 1,11025 0 -1 -1 -1 -1 0 0 
+2018-11-21 04:12:22.773 +01:00 [DBG] OUT :: -1825647468 4608 660122852 77 
+2018-11-21 04:12:22.774 +01:00 [DBG]  IN :: 2469319837 4352 2795690541 0 test test asdasdsada123 3 1
+2018-11-21 04:12:22.775 +01:00 [DBG] OUT :: -1825647453 4352 72000 
+2018-11-21 04:12:23.841 +01:00 [DBG]  IN :: 2469320905 4353 asdasdsada123
+2018-11-21 04:12:23.865 +01:00 [ERR] System.NullReferenceException: Object reference not set to an instance of an object.
+   at MySql.Data.MySqlClient.MySqlCommand.TryGetPreparedStatement() in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlCommand.cs:line 428
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlCommand.cs:line 316
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlCommand.cs:line 251
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader() in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlCommand.cs:line 66
+   at Authentication.Networking.Handlers.NewNickName.DBIsNameTaken(String newName) in C:\Users\Santiago\source\repos\WCPStandard2\Authentication\Networking\Handlers\NewNickName.cs:line 76
+2018-11-21 04:12:23.870 +01:00 [DBG] OUT :: -1825646359 4352 74070 
+2018-11-21 04:12:25.934 +01:00 [DBG]  IN :: 2469322999 4353 asdasdsada123
+2018-11-21 04:12:25.955 +01:00 [ERR] System.NullReferenceException: Object reference not set to an instance of an object.
+   at MySql.Data.MySqlClient.MySqlCommand.TryGetPreparedStatement() in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlCommand.cs:line 428
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlCommand.cs:line 316
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlCommand.cs:line 251
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader() in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlCommand.cs:line 66
+   at Authentication.Networking.Handlers.NewNickName.DBIsNameTaken(String newName) in C:\Users\Santiago\source\repos\WCPStandard2\Authentication\Networking\Handlers\NewNickName.cs:line 76
+2018-11-21 04:12:25.959 +01:00 [DBG] OUT :: -1825644281 4352 74070 
+2018-11-21 04:12:29.457 +01:00 [DBG]  IN :: 2469326522 4353 asdas
+2018-11-21 04:12:29.477 +01:00 [ERR] System.NullReferenceException: Object reference not set to an instance of an object.
+   at MySql.Data.MySqlClient.MySqlCommand.TryGetPreparedStatement() in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlCommand.cs:line 428
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlCommand.cs:line 316
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlCommand.cs:line 251
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader() in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlCommand.cs:line 66
+   at Authentication.Networking.Handlers.NewNickName.DBIsNameTaken(String newName) in C:\Users\Santiago\source\repos\WCPStandard2\Authentication\Networking\Handlers\NewNickName.cs:line 76
+2018-11-21 04:12:29.479 +01:00 [DBG] OUT :: -1825640750 4352 74070 
+2018-11-21 04:12:30.926 +01:00 [DBG]  IN :: 2469327994 4353 asdas
+2018-11-21 04:12:30.933 +01:00 [DBG] OUT :: -1825639296 4352 1 1 0 test NULL asdas 4 1 0 1 1,11025 0 -1 -1 -1 -1 0 0 
+2018-11-21 04:14:15.577 +01:00 [INF] Database connection test... successfull
+2018-11-21 04:14:15.644 +01:00 [INF] Binding a socket listener to port: 5012.
+2018-11-21 04:14:15.648 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
+2018-11-21 04:14:15.649 +01:00 [INF] Binding a socket listener to port: 5330.
+2018-11-21 04:14:15.650 +01:00 [INF] The socket is successfully binded to the port!
+2018-11-21 04:14:15.651 +01:00 [DBG] Server started
+2018-11-21 04:14:15.652 +01:00 [INF] Emulator loaded in 510,7075 milliseconds!
+2018-11-21 04:14:31.286 +01:00 [DBG] OUT :: -1825518953 4608 409553259 77 
+2018-11-21 04:14:31.290 +01:00 [DBG]  IN :: 2469448356 4352 1990043405 0 test test 0 0
+2018-11-21 04:14:31.298 +01:00 [DBG] OUT :: -1825518937 4352 72000 
+2018-11-21 04:14:34.596 +01:00 [DBG]  IN :: 2469451659 4353 darkito
+2018-11-21 04:14:34.689 +01:00 [DBG] OUT :: -1825515546 4352 74070 
+2018-11-21 04:14:44.780 +01:00 [DBG]  IN :: 2469461850 4353 darkito123
+2018-11-21 04:14:44.826 +01:00 [DBG] OUT :: -1825505406 4352 1 1 0 test NULL darkito123 1 1 0 1 1,11025 0 -1 -1 -1 -1 0 0 
+2018-11-21 04:15:08.170 +01:00 [DBG] OUT :: -1825482062 4608 470795680 77 
+2018-11-21 04:15:08.175 +01:00 [DBG]  IN :: 2469485242 4352 3922312056 0 test test darkito123 1 1
+2018-11-21 04:15:08.176 +01:00 [DBG] OUT :: -1825482062 4352 72000 
+2018-11-21 04:15:15.188 +01:00 [DBG]  IN :: 2469492260 4353 darkito123
+2018-11-21 04:15:15.318 +01:00 [ERR] System.NullReferenceException: Object reference not set to an instance of an object.
+   at MySql.Data.MySqlClient.MySqlCommand.TryGetPreparedStatement() in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlCommand.cs:line 428
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlCommand.cs:line 316
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlCommand.cs:line 251
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader() in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlCommand.cs:line 66
+   at Authentication.Networking.Handlers.NewNickName.DBIsNameTaken(String newName) in C:\Users\Santiago\source\repos\WCPStandard2\Authentication\Networking\Handlers\NewNickName.cs:line 76
+2018-11-21 04:15:15.320 +01:00 [DBG] OUT :: -1825474921 4352 74070 
+2018-11-21 11:37:39.463 +01:00 [INF] Database connection test... successfull
+2018-11-21 11:37:39.524 +01:00 [INF] Binding a socket listener to port: 5012.
+2018-11-21 11:37:39.528 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
+2018-11-21 11:37:39.529 +01:00 [INF] Binding a socket listener to port: 5330.
+2018-11-21 11:37:39.530 +01:00 [INF] The socket is successfully binded to the port!
+2018-11-21 11:37:39.530 +01:00 [DBG] Server started
+2018-11-21 11:37:39.531 +01:00 [INF] Emulator loaded in 619,3836 milliseconds!
+2018-11-21 11:37:54.135 +01:00 [DBG] OUT :: -1798916093 4608 787151414 77 
+2018-11-21 11:37:54.143 +01:00 [DBG]  IN :: 2496051204 4352 3734394545 0 test test 0 0
+2018-11-21 11:39:00.720 +01:00 [INF] Database connection test... successfull
+2018-11-21 11:39:00.804 +01:00 [INF] Binding a socket listener to port: 5012.
+2018-11-21 11:39:00.811 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
+2018-11-21 11:39:00.812 +01:00 [INF] Binding a socket listener to port: 5330.
+2018-11-21 11:39:00.819 +01:00 [INF] The socket is successfully binded to the port!
+2018-11-21 11:39:00.821 +01:00 [DBG] Server started
+2018-11-21 11:39:00.825 +01:00 [INF] Emulator loaded in 710,2372 milliseconds!
+2018-11-21 11:39:03.351 +01:00 [DBG] OUT :: -1798846890 4608 853831551 77 
+2018-11-21 11:39:03.359 +01:00 [DBG]  IN :: 2496120421 4352 1307360463 0 test test 0 0
+2018-11-21 11:39:03.535 +01:00 [ERR] MySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''users' WHERE 'username'='test'' at line 1 ---> MySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''users' WHERE 'username'='test'' at line 1
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\Core\ResultSet.cs:line 42
+   at MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet(ResultSet resultSet) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 80
+   at MySql.Data.MySqlClient.MySqlDataReader.ReadFirstResultSetAsync(IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 302
+   at MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(MySqlCommand command, CommandBehavior behavior, ResultSetProtocol resultSetProtocol, IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 287
+   at MySqlConnector.Core.TextCommandExecutor.ExecuteReaderAsync(String commandText, MySqlParameterCollection parameterCollection, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:\projects\mysqlconnector\src\MySqlConnector\Core\TextCommandExecutor.cs:line 37
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlCommand.cs:line 252
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader() in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlCommand.cs:line 66
+   at Authentication.Networking.Handlers.PlayerLogin.DBQueryForUser(String inputUserName) in C:\Users\Santiago\source\repos\WCPStandard2\Authentication\Networking\Handlers\PlayerLogin.cs:line 135
+2018-11-21 11:39:31.805 +01:00 [INF] Database connection test... successfull
+2018-11-21 11:39:31.865 +01:00 [INF] Binding a socket listener to port: 5012.
+2018-11-21 11:39:31.869 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
+2018-11-21 11:39:31.870 +01:00 [INF] Binding a socket listener to port: 5330.
+2018-11-21 11:39:31.871 +01:00 [INF] The socket is successfully binded to the port!
+2018-11-21 11:39:31.872 +01:00 [DBG] Server started
+2018-11-21 11:39:31.872 +01:00 [INF] Emulator loaded in 444,0232 milliseconds!
+2018-11-21 11:39:34.850 +01:00 [DBG] OUT :: -1798815390 4608 216430430 77 
+2018-11-21 11:39:34.857 +01:00 [DBG]  IN :: 2496151921 4352 116854058 0 test test 0 0
+2018-11-21 11:39:52.850 +01:00 [INF] Database connection test... successfull
+2018-11-21 11:39:52.919 +01:00 [INF] Binding a socket listener to port: 5012.
+2018-11-21 11:39:52.924 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
+2018-11-21 11:39:52.925 +01:00 [INF] Binding a socket listener to port: 5330.
+2018-11-21 11:39:52.926 +01:00 [INF] The socket is successfully binded to the port!
+2018-11-21 11:39:52.927 +01:00 [DBG] Server started
+2018-11-21 11:39:52.928 +01:00 [INF] Emulator loaded in 506,9624 milliseconds!
+2018-11-21 11:39:55.149 +01:00 [DBG] OUT :: -1798795093 4608 362605994 77 
+2018-11-21 11:39:55.157 +01:00 [DBG]  IN :: 2496172221 4352 1284471347 0 test test 0 0
+2018-11-21 11:41:06.489 +01:00 [INF] Database connection test... successfull
+2018-11-21 11:41:06.583 +01:00 [INF] Binding a socket listener to port: 5012.
+2018-11-21 11:41:06.617 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
+2018-11-21 11:41:06.621 +01:00 [INF] Binding a socket listener to port: 5330.
+2018-11-21 11:41:06.622 +01:00 [INF] The socket is successfully binded to the port!
+2018-11-21 11:41:06.623 +01:00 [DBG] Server started
+2018-11-21 11:41:06.624 +01:00 [INF] Emulator loaded in 619,4299 milliseconds!
+2018-11-21 11:41:11.233 +01:00 [DBG] OUT :: -1798719000 4608 375659035 77 
+2018-11-21 11:41:11.240 +01:00 [DBG]  IN :: 2496248306 4352 907125366 0 test test 0 0
+2018-11-21 11:42:48.348 +01:00 [INF] Database connection test... successfull
+2018-11-21 11:42:48.436 +01:00 [INF] Binding a socket listener to port: 5012.
+2018-11-21 11:42:48.449 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
+2018-11-21 11:42:48.455 +01:00 [INF] Binding a socket listener to port: 5330.
+2018-11-21 11:42:48.456 +01:00 [INF] The socket is successfully binded to the port!
+2018-11-21 11:42:48.457 +01:00 [DBG] Server started
+2018-11-21 11:42:48.459 +01:00 [INF] Emulator loaded in 512,3745 milliseconds!
+2018-11-21 11:42:52.316 +01:00 [DBG] OUT :: -1798617921 4608 304821221 77 
+2018-11-21 11:42:52.323 +01:00 [DBG]  IN :: 2496349390 4352 2472742512 0 test test 0 0
+2018-11-21 11:43:04.021 +01:00 [ERR] System.InvalidCastException: Unable to cast object of type 'System.UInt64' to type 'System.String'.
+   at MySql.Data.MySqlClient.MySqlDataReader.GetString(Int32 ordinal) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 210
+   at Authentication.Networking.Handlers.PlayerLogin.DBQueryForUser(String inputUserName) in C:\Users\Santiago\source\repos\WCPStandard2\Authentication\Networking\Handlers\PlayerLogin.cs:line 139
+2018-11-21 11:54:22.134 +01:00 [INF] Database connection test... successfull
+2018-11-21 11:54:22.205 +01:00 [INF] Binding a socket listener to port: 5012.
+2018-11-21 11:54:22.210 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
+2018-11-21 11:54:22.211 +01:00 [INF] Binding a socket listener to port: 5330.
+2018-11-21 11:54:22.211 +01:00 [INF] The socket is successfully binded to the port!
+2018-11-21 11:54:22.212 +01:00 [DBG] Server started
+2018-11-21 11:54:22.213 +01:00 [INF] Emulator loaded in 576,4219 milliseconds!
+2018-11-21 11:54:37.251 +01:00 [DBG] OUT :: -1797912984 4608 205120139 77 
+2018-11-21 11:54:37.255 +01:00 [DBG]  IN :: 2497054309 4352 536832807 0 test test 0 0
+2018-11-21 11:54:37.408 +01:00 [ERR] System.InvalidCastException: Unable to cast object of type 'System.UInt64' to type 'System.String'.
+   at MySql.Data.MySqlClient.MySqlDataReader.GetString(Int32 ordinal) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 210
+   at Authentication.Networking.Handlers.PlayerLogin.DBQueryForUser(String inputUserName) in C:\Users\Santiago\source\repos\WCPStandard2\Authentication\Networking\Handlers\PlayerLogin.cs:line 128
+2018-11-21 11:54:37.440 +01:00 [DBG] OUT :: -1797912796 4352 72010 
+2018-11-21 11:55:22.457 +01:00 [INF] Database connection test... successfull
+2018-11-21 11:55:22.569 +01:00 [INF] Binding a socket listener to port: 5012.
+2018-11-21 11:55:22.577 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
+2018-11-21 11:55:22.579 +01:00 [INF] Binding a socket listener to port: 5330.
+2018-11-21 11:55:22.580 +01:00 [INF] The socket is successfully binded to the port!
+2018-11-21 11:55:22.581 +01:00 [DBG] Server started
+2018-11-21 11:55:22.582 +01:00 [INF] Emulator loaded in 662,5607 milliseconds!
+2018-11-21 11:55:27.905 +01:00 [DBG] OUT :: -1797862328 4608 753259488 77 
+2018-11-21 11:55:27.913 +01:00 [DBG]  IN :: 2497104963 4352 3541548039 0 test test 0 0
+2018-11-21 11:55:36.104 +01:00 [ERR] System.InvalidCastException: Unable to cast object of type 'System.UInt64' to type 'System.String'.
+   at MySql.Data.MySqlClient.MySqlDataReader.GetString(Int32 ordinal) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 210
+   at Authentication.Networking.Handlers.PlayerLogin.DBQueryForUser(String inputUserName) in C:\Users\Santiago\source\repos\WCPStandard2\Authentication\Networking\Handlers\PlayerLogin.cs:line 128
+2018-11-21 11:55:53.068 +01:00 [INF] Database connection test... successfull
+2018-11-21 11:55:53.136 +01:00 [INF] Binding a socket listener to port: 5012.
+2018-11-21 11:55:53.141 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
+2018-11-21 11:55:53.141 +01:00 [INF] Binding a socket listener to port: 5330.
+2018-11-21 11:55:53.142 +01:00 [INF] The socket is successfully binded to the port!
+2018-11-21 11:55:53.143 +01:00 [DBG] Server started
+2018-11-21 11:55:53.143 +01:00 [INF] Emulator loaded in 457,5846 milliseconds!
+2018-11-21 11:55:55.590 +01:00 [DBG] OUT :: -1797834640 4608 765009132 77 
+2018-11-21 11:55:55.597 +01:00 [DBG]  IN :: 2497132649 4352 2760901148 0 test test 0 0
+2018-11-21 11:57:26.913 +01:00 [INF] Database connection test... successfull
+2018-11-21 11:57:26.972 +01:00 [INF] Binding a socket listener to port: 5012.
+2018-11-21 11:57:26.977 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
+2018-11-21 11:57:26.978 +01:00 [INF] Binding a socket listener to port: 5330.
+2018-11-21 11:57:26.979 +01:00 [INF] The socket is successfully binded to the port!
+2018-11-21 11:57:26.979 +01:00 [DBG] Server started
+2018-11-21 11:57:26.980 +01:00 [INF] Emulator loaded in 425,9426 milliseconds!
+2018-11-21 11:57:40.510 +01:00 [DBG] OUT :: -1797729718 4608 162349865 77 
+2018-11-21 11:57:40.516 +01:00 [DBG]  IN :: 2497237568 4352 2355612846 0 test test 0 0
+2018-11-21 11:57:40.644 +01:00 [DBG] OUT :: -1797729593 4352 72000 
+2018-11-21 11:57:43.784 +01:00 [DBG]  IN :: 2497240843 4353 DarkRaptor
+2018-11-21 11:57:43.826 +01:00 [DBG] OUT :: -1797726406 4352 1 1 0 test NULL DarkRaptor 1 1 0 1 1,11025 0 -1 -1 -1 -1 0 0 
+2018-11-21 11:57:57.621 +01:00 [DBG] OUT :: -1797712609 4608 755088062 77 
+2018-11-21 11:57:57.623 +01:00 [DBG]  IN :: 2497254682 4352 1504009242 0 test test DarkRaptor 1 1
+2018-11-21 11:57:57.715 +01:00 [ERR] System.NullReferenceException: Object reference not set to an instance of an object.
+   at MySql.Data.MySqlClient.MySqlCommand.TryGetPreparedStatement() in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlCommand.cs:line 428
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlCommand.cs:line 316
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlCommand.cs:line 251
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader() in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlCommand.cs:line 66
+   at Authentication.Networking.Handlers.PlayerLogin.DBQueryForUser(String inputUserName) in C:\Users\Santiago\source\repos\WCPStandard2\Authentication\Networking\Handlers\PlayerLogin.cs:line 122
+2018-11-21 11:57:57.717 +01:00 [DBG] OUT :: -1797712515 4352 72010 
+2018-11-21 11:58:33.229 +01:00 [DBG] OUT :: -1797677000 4608 535224533 77 
+2018-11-21 11:58:33.234 +01:00 [DBG]  IN :: 2497290290 4352 2905945333 0 test test DarkRaptor 1 1
+2018-11-21 11:58:33.289 +01:00 [ERR] System.NullReferenceException: Object reference not set to an instance of an object.
+   at MySql.Data.MySqlClient.MySqlCommand.TryGetPreparedStatement() in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlCommand.cs:line 428
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlCommand.cs:line 316
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlCommand.cs:line 251
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader() in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlCommand.cs:line 66
+   at Authentication.Networking.Handlers.PlayerLogin.DBQueryForUser(String inputUserName) in C:\Users\Santiago\source\repos\WCPStandard2\Authentication\Networking\Handlers\PlayerLogin.cs:line 122
+2018-11-21 11:58:33.290 +01:00 [DBG] OUT :: -1797676937 4352 72010 
+2018-11-21 11:59:20.695 +01:00 [INF] Database connection test... successfull
+2018-11-21 11:59:20.766 +01:00 [INF] Binding a socket listener to port: 5012.
+2018-11-21 11:59:20.772 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
+2018-11-21 11:59:20.773 +01:00 [INF] Binding a socket listener to port: 5330.
+2018-11-21 11:59:20.774 +01:00 [INF] The socket is successfully binded to the port!
+2018-11-21 11:59:20.776 +01:00 [DBG] Server started
+2018-11-21 11:59:20.779 +01:00 [INF] Emulator loaded in 627,4192 milliseconds!
+2018-11-21 11:59:23.723 +01:00 [DBG] OUT :: -1797626515 4608 762437427 77 
+2018-11-21 11:59:23.729 +01:00 [DBG]  IN :: 2497340785 4352 2097700375 0 test test DarkRaptor 1 1
+2018-11-21 11:59:39.743 +01:00 [DBG] OUT :: -1797610500 4352 1 1 0 test NULL DarkRaptor 1 1 0 1 1,11025 0 -1 -1 -1 -1 0 0 
+2018-11-21 12:01:31.361 +01:00 [INF] Database connection test... successfull
+2018-11-21 12:01:31.435 +01:00 [INF] Binding a socket listener to port: 5012.
+2018-11-21 12:01:31.440 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
+2018-11-21 12:01:31.441 +01:00 [INF] Binding a socket listener to port: 5330.
+2018-11-21 12:01:31.442 +01:00 [INF] The socket is successfully binded to the port!
+2018-11-21 12:01:31.442 +01:00 [DBG] Server started
+2018-11-21 12:01:31.443 +01:00 [INF] Emulator loaded in 529,6845 milliseconds!
+2018-11-21 12:01:42.610 +01:00 [DBG] OUT :: -1797487625 4608 918501771 77 
+2018-11-21 12:01:42.614 +01:00 [DBG]  IN :: 2497479681 4352 2960981119 0 test test 0 0
+2018-11-21 12:01:42.741 +01:00 [DBG] OUT :: -1797487500 4352 1 1 0 test NULL DarkRaptor 1 1 0 1 1,11025 0 -1 -1 -1 -1 0 0 
+2018-11-21 12:01:48.484 +01:00 [DBG] OUT :: -1797481750 4608 792175117 77 
+2018-11-21 12:01:48.490 +01:00 [DBG]  IN :: 2497485555 4352 4035831620 0 test test DarkRaptor 1 1
+2018-11-21 12:01:48.492 +01:00 [DBG] OUT :: -1797481750 4352 1 1 0 test NULL DarkRaptor 2 1 0 1 1,11025 0 -1 -1 -1 -1 0 0 
+2018-11-21 12:01:54.509 +01:00 [DBG] OUT :: -1797475718 4608 640023382 77 
+2018-11-21 12:01:54.510 +01:00 [DBG]  IN :: 2497491581 4352 3916922628 0 test test DarkRaptor 2 1
+2018-11-21 12:01:54.512 +01:00 [DBG] OUT :: -1797475718 4352 1 1 0 test NULL DarkRaptor 3 1 0 1 1,11025 0 -1 -1 -1 -1 0 0 
+2018-11-21 12:06:40.214 +01:00 [INF] Database connection test... successfull
+2018-11-21 12:06:40.277 +01:00 [INF] Binding a socket listener to port: 5012.
+2018-11-21 12:06:40.282 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
+2018-11-21 12:06:40.283 +01:00 [INF] Binding a socket listener to port: 5330.
+2018-11-21 12:06:40.283 +01:00 [INF] The socket is successfully binded to the port!
+2018-11-21 12:06:40.285 +01:00 [DBG] Server started
+2018-11-21 12:06:40.285 +01:00 [INF] Emulator loaded in 466,7578 milliseconds!
+2018-11-21 12:06:51.706 +01:00 [DBG] OUT :: -1797178531 4608 987526815 77 
+2018-11-21 12:06:51.709 +01:00 [DBG]  IN :: 2497788770 4352 992137025 0 test test 0 0
+2018-11-21 12:06:51.832 +01:00 [DBG] OUT :: -1797178406 4352 72000 
+2018-11-21 12:06:55.066 +01:00 [DBG]  IN :: 2497792130 4353 DarkRaptor
+2018-11-21 12:06:55.116 +01:00 [DBG] OUT :: -1797175125 4352 1 1 0 test NULL DarkRaptor 1 1 0 1 1,11025 0 -1 -1 -1 -1 0 0 
+2018-11-21 12:10:01.187 +01:00 [DBG] OUT :: -1796989046 4608 889010288 77 
+2018-11-21 12:10:01.188 +01:00 [DBG]  IN :: 2497978252 4352 1382046438 0 test test 0 0
+2018-11-21 12:10:01.230 +01:00 [DBG] OUT :: -1796989000 4352 1 1 0 test NULL DarkRaptor 2 1 0 1 1,11025 0 -1 -1 -1 -1 0 0 

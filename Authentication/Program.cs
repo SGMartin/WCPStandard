@@ -57,14 +57,8 @@ namespace Authentication
 
             //Path.Combine is platform friendly :) Windows uses \ whereas Linux uses /
             //TODO: be able to add cfg file using command line
-            if (!Config.Read(Path.Combine(
-                String.Concat(
-                    Environment.CurrentDirectory, Path.DirectorySeparatorChar, "CFG", Path.DirectorySeparatorChar, "Authentication.cfg"))))
-            {
-                Log.Fatal("Failed to load the configuration file.");
-                Console.ReadKey();
-                return;
-            }
+              Config.Read(Path.Combine(String.Concat(Environment.CurrentDirectory, 
+                  Path.DirectorySeparatorChar, "CFG", Path.DirectorySeparatorChar, "Authentication.ini")));
 
             // test database connection
             using (MySqlConnection TestConnection = new MySqlConnection(Config.AUTH_CONNECTION))

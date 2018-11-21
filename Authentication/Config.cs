@@ -1,16 +1,21 @@
 /*
  * 
- *                                 
- *                                
+ *                                   Using ini-parser 2.5.2 by rickyah    
+ *                                    MITT license -see license file.
+ *                                    https://www.nuget.org/packages/ini-parser/
  */
 
 using System;
+using IniParser;
+using IniParser.Model;
+using Serilog;
 
 namespace Authentication
 {
     public class Config
     {
-        //public static string[] AUTH_DATABASE = new string[] { "localhost", "3306", "root", "", "wcps-authentication"};
+   
+        //default CFG
 
         public static string AUTH_CONNECTION = string.Concat("Server=",
                "localhost",
@@ -22,31 +27,16 @@ namespace Authentication
                "",
                ";Database=",
                "wcps-authentication",
-               ";");
+               ";");  
 
-        /*
-         
-         string connectionData = string.Concat(
-              "Server=",
-               host,
-               ";Port=",
-               port,
-               ";Uid=",
-               user,
-               ";Pwd=",
-               password,
-               ";Database=",
-               database,
-               ";"); 
-         */
-
-        public static int SERILOGLEVEL = 1; 
+        public static int    SERILOGLEVEL = 1; 
         public static string GAMESERVERKEY = "wcps-auth";
 
         public static int  MAXIMUM_SERVER_COUNT = 10;
         public static bool ENABLEOLDLAUNCHER = true;
         public static bool ENABLENICKCHANGE = true;
 
+        //TODO: Add this to CFG
         public static int FORMAT = 0;
         public static int LAUNCHER = 0;
         public static int CLIENT = 0;
@@ -56,12 +46,41 @@ namespace Authentication
         public static string URL = "http://www.google.es";
 
 
-        public static bool Read(string fileToRead)
+        public static bool Read(string iniFile)
         {
-           
+            try
+            {
+                var parser = new FileIniDataParser();
+                IniData AuthData = parser.ReadFile(iniFile);
+
+                AUTH_CONNECTION = string.Concat("Server=",
+                    AuthData["Database"]["Host"],
+                   ";Port=",
+                   AuthData["Database"]["Port"],
+                   ";Uid=",
+                   AuthData["Database"]["User"],
+                   ";Pwd=",
+                   AuthData["Database"]["Password"],
+                   ";Database=",
+                   AuthData["Database"]["DbName"],
+                   ";");
+
+                SERILOGLEVEL             = Convert.ToInt16(AuthData["Logging"]["SetLoggingLevel"]);
+                GAMESERVERKEY            = AuthData["Authentication"]["SetServerKey"];
+                MAXIMUM_SERVER_COUNT     = Convert.ToInt16(AuthData["Authentication"]["SetMaximumGameServers"]);
+                ENABLEOLDLAUNCHER        = Convert.ToBoolean(AuthData["Authentication"]["EnableOldLauncherPacker"]);
+                ENABLENICKCHANGE         = Convert.ToBoolean(AuthData["Authentication"]["EnableNickNamePacket"]);
 
                 return true;
-       
+            }
+            catch(Exception e)
+            {
+                Log.Error(String.Concat("Could not load ", iniFile, ":"));
+                Log.Error(e.ToString());
+                Log.Error("Reverting to default...");
+
+                return false;
+            }      
         }
     }
 }

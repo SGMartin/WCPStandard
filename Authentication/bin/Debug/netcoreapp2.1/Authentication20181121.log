@@ -42,3 +42,97 @@
 2018-11-21 00:38:28.002 +01:00 [DBG] OUT :: -1838482234 4608 567038802 77 
 2018-11-21 00:38:28.003 +01:00 [DBG]  IN :: 2456485059 4352 2019673917 0 test test 0 0
 2018-11-21 00:38:28.010 +01:00 [DBG] OUT :: -1838482218 4352 1 1 0 test NULL DarkRaptor 1 1 0 1 1,11025 0 -1 -1 -1 -1 0 0 
+2018-11-21 00:52:59.964 +01:00 [FTL] Failed to connect to the database
+2018-11-21 00:53:21.647 +01:00 [FTL] Failed to connect to the database
+2018-11-21 00:55:22.034 +01:00 [FTL] Failed to connect to the database
+2018-11-21 00:55:40.327 +01:00 [FTL] Failed to connect to the database
+2018-11-21 00:56:25.342 +01:00 [INF] Binding a socket listener to port: 5012.
+2018-11-21 00:56:25.405 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
+2018-11-21 00:56:25.406 +01:00 [INF] Binding a socket listener to port: 5330.
+2018-11-21 00:56:25.407 +01:00 [INF] The socket is successfully binded to the port!
+2018-11-21 00:56:25.407 +01:00 [DBG] Server started
+2018-11-21 00:56:25.408 +01:00 [INF] Emulator loaded in 525,7246 milliseconds!
+2018-11-21 00:59:04.559 +01:00 [INF] Binding a socket listener to port: 5012.
+2018-11-21 00:59:04.629 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
+2018-11-21 00:59:04.630 +01:00 [INF] Binding a socket listener to port: 5330.
+2018-11-21 00:59:04.631 +01:00 [INF] The socket is successfully binded to the port!
+2018-11-21 00:59:04.632 +01:00 [DBG] Server started
+2018-11-21 00:59:04.632 +01:00 [INF] Emulator loaded in 668,0301 milliseconds!
+2018-11-21 00:59:31.577 +01:00 [FTL] Failed to connect to the database
+2018-11-21 00:59:38.388 +01:00 [FTL] Failed to connect to the database
+2018-11-21 00:59:43.115 +01:00 [INF] Binding a socket listener to port: 5012.
+2018-11-21 00:59:43.182 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
+2018-11-21 00:59:43.183 +01:00 [INF] Binding a socket listener to port: 5330.
+2018-11-21 00:59:43.184 +01:00 [INF] The socket is successfully binded to the port!
+2018-11-21 00:59:43.185 +01:00 [DBG] Server started
+2018-11-21 00:59:43.186 +01:00 [INF] Emulator loaded in 657,6483 milliseconds!
+2018-11-21 01:00:00.534 +01:00 [DBG] OUT :: -1837189703 4608 363321439 77 
+2018-11-21 01:00:00.542 +01:00 [DBG]  IN :: 2457777593 4352 1725274100 0 test test 0 0
+2018-11-21 01:00:00.736 +01:00 [DBG] OUT :: -1837189500 4352 1 1 0 test NULL WCPS 1 1 0 1 1,11025 0 -1 -1 -1 -1 0 0 
+2018-11-21 01:01:42.610 +01:00 [DBG] OUT :: -1837087625 4608 736784604 77 
+2018-11-21 01:01:42.611 +01:00 [DBG]  IN :: 2457879668 4352 1948410429 0 test test 0 0
+2018-11-21 01:01:42.612 +01:00 [DBG] OUT :: -1837087625 4352 1 1 0 test NULL WCPS 2 1 0 1 1,11025 0 -1 -1 -1 -1 0 0 
+2018-11-21 01:04:11.274 +01:00 [DBG] OUT :: -1836938968 4608 703470098 77 
+2018-11-21 01:04:11.275 +01:00 [DBG]  IN :: 2458028343 4352 967892012 0 test test 0 0
+2018-11-21 01:04:11.276 +01:00 [DBG] OUT :: -1836938953 4352 1 1 0 test NULL WCPS 3 1 0 1 1,11025 0 -1 -1 -1 -1 0 0 
+2018-11-21 01:10:20.997 +01:00 [INF] Binding a socket listener to port: 5012.
+2018-11-21 01:10:21.062 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
+2018-11-21 01:10:21.066 +01:00 [INF] Binding a socket listener to port: 5330.
+2018-11-21 01:10:21.068 +01:00 [INF] The socket is successfully binded to the port!
+2018-11-21 01:10:21.072 +01:00 [DBG] Server started
+2018-11-21 01:10:21.073 +01:00 [INF] Emulator loaded in 648,9699 milliseconds!
+2018-11-21 01:10:35.013 +01:00 [DBG] OUT :: -1836555218 4608 660926541 77 
+2018-11-21 01:10:35.026 +01:00 [DBG]  IN :: 2458412077 4352 2306244713 0 test test 0 0
+2018-11-21 01:10:35.202 +01:00 [DBG] OUT :: -1836555031 4352 1 1 0 test NULL WCPS 1 1 0 1 1,11025 0 -1 -1 -1 -1 0 0 
+2018-11-21 01:13:03.147 +01:00 [DBG] OUT :: -1836407093 4608 689792986 77 
+2018-11-21 01:13:03.148 +01:00 [DBG]  IN :: 2458560209 4352 2696685706 0 test test 0 0
+2018-11-21 01:13:05.287 +01:00 [ERR] System.NullReferenceException: Object reference not set to an instance of an object.
+   at Authentication.Networking.Handlers.PlayerLogin.Process(User user) in C:\Users\Santiago\source\repos\WCPStandard2\Authentication\Networking\Handlers\PlayerLogin.cs:line 34
+   at Authentication.Networking.PacketHandler.Handle(InPacket inPacket) in C:\Users\Santiago\source\repos\WCPStandard2\Authentication\Networking\PacketHandler.cs:line 20
+   at Authentication.Entities.User.OnDataReceived(IAsyncResult iAr) in C:\Users\Santiago\source\repos\WCPStandard2\Authentication\Entities\User.cs:line 111
+2018-11-21 01:21:07.944 +01:00 [INF] Binding a socket listener to port: 5012.
+2018-11-21 01:21:08.025 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
+2018-11-21 01:21:08.038 +01:00 [INF] Binding a socket listener to port: 5330.
+2018-11-21 01:21:08.039 +01:00 [INF] The socket is successfully binded to the port!
+2018-11-21 01:21:08.041 +01:00 [DBG] Server started
+2018-11-21 01:21:08.041 +01:00 [INF] Emulator loaded in 774,1115 milliseconds!
+2018-11-21 01:21:20.429 +01:00 [DBG] OUT :: -1835909812 4608 114049925 77 
+2018-11-21 01:21:20.436 +01:00 [DBG]  IN :: 2459057487 4352 1025845194 0 test test 0 0
+2018-11-21 01:21:20.559 +01:00 [DBG] OUT :: -1835909671 4352 1 1 0 test NULL WCPS 1 1 0 1 1,11025 0 -1 -1 -1 -1 0 0 
+2018-11-21 01:23:45.530 +01:00 [DBG] OUT :: -1835764703 4608 424104419 77 
+2018-11-21 01:23:45.531 +01:00 [DBG]  IN :: 2459202599 4352 1081070578 0 test test 0 0
+2018-11-21 01:23:45.618 +01:00 [ERR] System.NullReferenceException: Object reference not set to an instance of an object.
+   at Authentication.Networking.Handlers.PlayerLogin.Process(User user) in C:\Users\Santiago\source\repos\WCPStandard2\Authentication\Networking\Handlers\PlayerLogin.cs:line 34
+   at Authentication.Networking.PacketHandler.Handle(InPacket inPacket) in C:\Users\Santiago\source\repos\WCPStandard2\Authentication\Networking\PacketHandler.cs:line 20
+   at Authentication.Entities.User.OnDataReceived(IAsyncResult iAr) in C:\Users\Santiago\source\repos\WCPStandard2\Authentication\Entities\User.cs:line 111
+2018-11-21 01:32:20.373 +01:00 [INF] Binding a socket listener to port: 5012.
+2018-11-21 01:32:20.493 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
+2018-11-21 01:32:20.495 +01:00 [INF] Binding a socket listener to port: 5330.
+2018-11-21 01:32:20.495 +01:00 [INF] The socket is successfully binded to the port!
+2018-11-21 01:32:20.496 +01:00 [DBG] Server started
+2018-11-21 01:32:20.496 +01:00 [INF] Emulator loaded in 1307,1218 milliseconds!
+2018-11-21 01:32:37.544 +01:00 [DBG] OUT :: -1835232687 4608 755601618 77 
+2018-11-21 01:32:37.550 +01:00 [DBG]  IN :: 2459734605 4352 1564043503 0 test test 0 0
+2018-11-21 01:32:37.680 +01:00 [DBG] OUT :: -1835232562 4352 72000 
+2018-11-21 01:32:41.067 +01:00 [DBG]  IN :: 2459738124 4353 Darkraptor
+2018-11-21 01:32:41.341 +01:00 [DBG] OUT :: -1835228890 4352 1 1 0 test NULL Darkraptor 1 1 0 1 1,11025 0 -1 -1 -1 -1 0 0 
+2018-11-21 01:32:45.442 +01:00 [DBG] OUT :: -1835224796 4608 712962049 77 
+2018-11-21 01:32:45.443 +01:00 [DBG]  IN :: 2459742505 4352 1606034108 0 test test Darkraptor 1 1
+2018-11-21 01:32:45.524 +01:00 [ERR] System.NullReferenceException: Object reference not set to an instance of an object.
+   at Authentication.Networking.Handlers.PlayerLogin.Process(User user) in C:\Users\Santiago\source\repos\WCPStandard2\Authentication\Networking\Handlers\PlayerLogin.cs:line 34
+   at Authentication.Networking.PacketHandler.Handle(InPacket inPacket) in C:\Users\Santiago\source\repos\WCPStandard2\Authentication\Networking\PacketHandler.cs:line 20
+   at Authentication.Entities.User.OnDataReceived(IAsyncResult iAr) in C:\Users\Santiago\source\repos\WCPStandard2\Authentication\Entities\User.cs:line 111
+2018-11-21 01:33:35.899 +01:00 [INF] Binding a socket listener to port: 5012.
+2018-11-21 01:33:36.038 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
+2018-11-21 01:33:36.040 +01:00 [INF] Binding a socket listener to port: 5330.
+2018-11-21 01:33:36.041 +01:00 [INF] The socket is successfully binded to the port!
+2018-11-21 01:33:36.043 +01:00 [DBG] Server started
+2018-11-21 01:33:36.045 +01:00 [INF] Emulator loaded in 742,1872 milliseconds!
+2018-11-21 01:33:47.534 +01:00 [DBG] OUT :: -1835162703 4608 723385370 77 
+2018-11-21 01:33:47.536 +01:00 [DBG]  IN :: 2459804597 4352 4287544511 0 test test 0 0
+2018-11-21 01:33:47.653 +01:00 [DBG] OUT :: -1835162578 4352 72000 
+2018-11-21 01:33:50.165 +01:00 [DBG]  IN :: 2459807227 4353 asddasdad
+2018-11-21 01:33:50.190 +01:00 [DBG] OUT :: -1835160046 4352 1 1 0 test NULL asddasdad 1 1 0 1 1,11025 0 -1 -1 -1 -1 0 0 
+2018-11-21 01:33:53.963 +01:00 [DBG] OUT :: -1835156265 4608 953640914 77 
+2018-11-21 01:33:53.965 +01:00 [DBG]  IN :: 2459811029 4352 1416170134 0 test test asddasdad 1 1
+2018-11-21 01:33:53.966 +01:00 [DBG] OUT :: -1835156265 4352 1 1 0 test NULL asddasdad 2 1 0 1 1,11025 0 -1 -1 -1 -1 0 0 

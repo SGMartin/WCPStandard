@@ -17,7 +17,7 @@ namespace Authentication
 
         public static int  MAXIMUM_SERVER_COUNT = 10;
         public static bool ENABLEOLDLAUNCHER = true;
-        public static bool ENABLENICKCHANGE = false;
+        public static bool ENABLENICKCHANGE = true;
 
         public static int FORMAT = 0;
         public static int LAUNCHER = 0;

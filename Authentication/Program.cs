@@ -13,6 +13,7 @@ using System.Threading;
 using Serilog;
 using Serilog.Core;
 
+using MySql.Data.MySqlClient;
 
 namespace Authentication 
 {
@@ -65,21 +66,28 @@ namespace Authentication
                 return;
             }
 
-
-            if (!Databases.Init())
+            // test database connection
+            using (MySqlConnection TestConnection = new MySqlConnection(Config.AUTH_CONNECTION))
             {
-                Log.Fatal("Failed to connect to the database");
-                Console.ReadKey();
-                return;
+                try
+                {
+                    TestConnection.Open();
+                    Log.Information("Database connection test... successfull");
+                }
+                catch
+                {
+                    Log.Fatal("Database connection test failed!!");
+                    Console.ReadKey();
+                    return;
+                    
+                }
             }
-
-
-            if (!new Networking.GameServerListener((int)Core.Networking.Constants.Ports.Internal).Start())
-            {
-                Log.Fatal("Could not start GameServer listener. Is the port already in use?");
-                isRunning = false;
-                return;
-            }
+                if (!new Networking.GameServerListener((int)Core.Networking.Constants.Ports.Internal).Start())
+                {
+                    Log.Fatal("Could not start GameServer listener. Is the port already in use?");
+                    isRunning = false;
+                    return;
+                }
 
             if(!new Networking.ServerListener((int)Core.Networking.Constants.Ports.Login).Start())
             {

@@ -556,7 +556,9 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "MySqlConnector": "0.47.1",
-          "Serilog": "2.7.1"
+          "Serilog": "2.7.1",
+          "Serilog.Sinks.Console": "3.1.1",
+          "Serilog.Sinks.File": "4.0.0"
         },
         "compile": {
           "bin/placeholder/Core.dll": {}

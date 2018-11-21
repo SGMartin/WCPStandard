@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Threading.Tasks;
+
 using System.Linq;
-using System.Collections.Generic;
+using System.Collections;
 using MySql.Data.MySqlClient;
 
 using Core;
@@ -12,6 +14,8 @@ namespace Authentication.Networking.Handlers
     {
         protected override void Process(Entities.User user)
         {
+            ArrayList userData = new ArrayList();
+
             string inputUserName = GetString(2);
             string inputPassword = GetString(3);
 
@@ -23,32 +27,26 @@ namespace Authentication.Networking.Handlers
                 //is password long enough?
                 if (inputPassword.Length >= 3)
                 {
-                    MySqlDataReader reader = Databases.Auth.Select(
-                      new string[] { "ID", "username", "displayname", "password", "salt", "rights"},
-                       "users",
-                      new Dictionary<string, object>() {
-                        { "username", inputUserName }
-                   });
-
+                    userData = DBQueryForUser(inputUserName);   
+                    
                     //Does the username exists?
-                    if (reader.HasRows && reader.Read())
+                    if (userData.Count > 0)
                     {
                         //The  user does exist:  retrieve data
-                        uint id = reader.GetUInt32(0);
-                        string dbUserName = inputUserName;
-                        string displayname = reader.GetString(2);
-                        string dbPassword = reader.GetString(3);
-                        string dbPasswordSalt = reader.GetString(4);
+                        uint id                  = Convert.ToUInt32(userData[0]);
+                        string dbUserName        = inputUserName;
+                        string displayname       = userData[2].ToString();
+                        string dbPassword        = userData[3].ToString();
+                        string dbPasswordSalt    = userData[4].ToString();
+
                         GameConstants.Rights dbRights;
 
-                        try { dbRights = (GameConstants.Rights)reader.GetByte(5); }
+                        try { dbRights = (GameConstants.Rights)Convert.ToByte(userData[5]); }
                         catch
                         { Log.Error("User " + dbUserName + " rights could not be parsed. Blocking user.");
                             dbRights = GameConstants.Rights.Blocked;
                         }
                        
-
-
                         //We hash password typed  by the player and check it against  the one stored in the DB
                         string hashedPassword = Core.Utils.CreateSHAHash(String.Concat(inputPassword, dbPasswordSalt));
 
@@ -95,8 +93,6 @@ namespace Authentication.Networking.Handlers
                     }
                     else { user.Send(new Packets.ServerList(Packets.ServerList.ErrorCodes.WrongUser)); }
 
-
-                    if (!reader.IsClosed) { reader.Close(); }
                 }
                 else { user.Send(new Packets.ServerList(Packets.ServerList.ErrorCodes.EnterPasswordError)); }
 
@@ -110,5 +106,43 @@ namespace Authentication.Networking.Handlers
             if (!isSettingNewNickName)
                 user.Disconnect();
         }
+
+        //TODO: update with await and async methods
+        private ArrayList DBQueryForUser(string inputUserName)
+        {
+            ArrayList dbData = new ArrayList();
+
+            using (MySqlConnection connection = new MySqlConnection(Config.AUTH_CONNECTION))
+            {
+                try
+                {
+                    var commandQuery = connection.CreateCommand() as MySqlCommand;
+
+                    commandQuery.CommandText = string.Concat("SELECT * FROM users WHERE username=", "'", inputUserName, "'", ";");
+                    connection.Open();
+
+                    MySqlDataReader Reader = commandQuery.ExecuteReader();  //asynch this?
+
+                    if (Reader.HasRows && Reader.Read())
+                    {
+                        for(int i = 0; i < Reader.FieldCount; i++)
+                        {
+                            dbData.Add(Reader.GetValue(i));
+                        }
+
+                    }
+
+                    Reader.Close();
+                }
+                catch (Exception e)
+                {
+                    Log.Error(e.ToString());
+                }
+
+            }
+
+            return dbData;
+        }
+
     }
 }

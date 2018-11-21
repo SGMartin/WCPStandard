@@ -1,7 +1,7 @@
 /*
 
         This class is instanced whenever an user attempts to connect to the Authentication server. 
-        It manages session, basic user data andthe socket to communicate with the client.
+        It manages session, basic user data and the socket to communicate with the client.
 
  */
 

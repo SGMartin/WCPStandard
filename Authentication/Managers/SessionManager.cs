@@ -1,7 +1,7 @@
 /*
         This manager keeps tracks of all active player sessions. A player session is created whenever an user makes a successful login.
         Sessions are removed on player logout or GameServer crash.
-
+        
  */
 
 using System;

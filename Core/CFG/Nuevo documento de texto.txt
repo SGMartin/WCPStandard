@@ -1,0 +1,51 @@
+# __          _______ _____   _____ _                  _               _ 
+# \ \        / / ____|  __ \ / ____| |                | |             | |
+#  \ \  /\  / / |    | |__) | (___ | |_ __ _ _ __   __| | __ _ _ __ __| |
+#   \ \/  \/ /| |    |  ___/ \___ \| __/ _` | '_ \ / _` |/ _` | '__/ _` |
+#    \  /\  / | |____| |     ____) | || (_| | | | | (_| | (_| | | | (_| |
+#     \/  \/   \_____|_|    |_____/ \__\__,_|_| |_|\__,_|\__,_|_|  \__,_|
+#							Configuration file
+
+# -------- GLOBAL AUTHENTICATION SETTINGS -------------- #
+
+
+# ------- Database settings --------- #
+
+[Database]
+Host     =	localhost
+Port 	 =	3306
+User	 =	root	  
+Password =	
+DbName   =  wcps-authentication
+
+# ------- Logging level --------- #
+
+[Logging]
+
+# Sets Serilog global logging level. Default is 1.
+# 0 = verbose, 1 = debug, 2 = information, 3 = warning, 4 = error, 5 = fatal error
+
+SetLoggingLevel = 5
+
+
+[Authentication]
+
+# Maximum available game servers. Values: 1-10. Default is 10.
+
+SetMaximumGameServers = 10
+
+# Only  game servers matching this key will be accepted. Key characters: 1-10. Default is "WCPS-Standard"
+
+SetServerKey = "WCPS-Standard2"
+
+# ------- Deprecated packets --------- #
+
+#Enables default WR-CP1 launcher and updater by responding to the incoming packet. 
+#This is disabled by default because both of them are old and pretty useless.
+
+EnableOldLauncherPacket = 0
+
+#Enable the server to send a "new nickname" packet if database field is empty. 
+#This packet is disabled by default because nicknames are usually set via website.
+
+EnableNickNamePacket  = 0

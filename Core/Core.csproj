@@ -2,19 +2,32 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <ApplicationIcon />
+    <OutputType>Library</OutputType>
+    <StartupObject />
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="CFG\Authentication.ini" />
+    <None Remove="CFG\Game.ini" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="CFG\Authentication.ini">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CFG\Game.ini">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommandLineParser" Version="2.3.0" />
+    <PackageReference Include="ini-parser" Version="2.5.2" />
     <PackageReference Include="MySqlConnector" Version="0.47.1" />
     <PackageReference Include="Serilog" Version="2.7.1" />
     <PackageReference Include="Serilog.Sinks.Console" Version="3.1.1" />
     <PackageReference Include="Serilog.Sinks.File" Version="4.0.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="CFG\Authentication.cfg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
 
 </Project>

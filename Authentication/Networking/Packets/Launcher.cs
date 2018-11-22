@@ -1,6 +1,6 @@
 /*
 
-                This packer is disabled by default, but it can be enabled in server config. It will make default client launchers work.
+                This packet is disabled by default, but it can be enabled in server config. It will make legacy client launchers work.
                 Check the wiki for more info.
 
  */

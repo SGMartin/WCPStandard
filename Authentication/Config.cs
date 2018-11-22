@@ -68,8 +68,16 @@ namespace Authentication
                 SERILOGLEVEL             = Convert.ToInt16(AuthData["Logging"]["SetLoggingLevel"]);
                 GAMESERVERKEY            = AuthData["Authentication"]["SetServerKey"];
                 MAXIMUM_SERVER_COUNT     = Convert.ToInt16(AuthData["Authentication"]["SetMaximumGameServers"]);
-                ENABLEOLDLAUNCHER        = Convert.ToBoolean(AuthData["Authentication"]["EnableOldLauncherPacker"]);
+                ENABLEOLDLAUNCHER        = Convert.ToBoolean(AuthData["Authentication"]["EnableOldLauncherPacket"]);
                 ENABLENICKCHANGE         = Convert.ToBoolean(AuthData["Authentication"]["EnableNickNamePacket"]);
+
+                FORMAT                  = Convert.ToInt16(AuthData["Authentication"]["Format"]);
+                LAUNCHER                = Convert.ToInt16(AuthData["Authentication"]["Launcher"]);
+                CLIENT                  = Convert.ToInt16(AuthData["Authentication"]["Client"]);
+                UPDATER                 = Convert.ToInt16(AuthData["Authentication"]["Updater"]);
+                SUB                     = Convert.ToInt16(AuthData["Authentication"]["Sub"]);
+                OPTION                  = Convert.ToInt16(AuthData["Authentication"]["Option"]);
+                URL                     = AuthData["Authentication"]["Url"];
 
                 return true;
             }

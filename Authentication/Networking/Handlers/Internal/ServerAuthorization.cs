@@ -46,7 +46,7 @@ namespace Authentication.Networking.Handlers.Internal
                         if(serverId > 0)
                         {
                             s.Send(new Packets.Internal.Authorize(serverId));
-                            Log.Information("New server registered as :" + serverName);
+                            Log.Information("New server registered as: " + serverName);
                         }    
                         else
                         {

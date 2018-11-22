@@ -26,3 +26,4 @@ C:\Users\Santiago\source\repos\WCPStandard\Core\obj\Debug\netstandard2.0\Core.As
 C:\Users\Santiago\source\repos\WCPStandard\Core\obj\Debug\netstandard2.0\Core.dll
 C:\Users\Santiago\source\repos\WCPStandard\Core\obj\Debug\netstandard2.0\Core.pdb
 C:\Users\Santiago\source\repos\WCPStandard\Core\bin\Debug\netstandard2.0\CFG\Authentication.INI
+C:\Users\Santiago\source\repos\WCPStandard\Core\obj\Debug\netstandard2.0\Core.csprojAssemblyReference.cache

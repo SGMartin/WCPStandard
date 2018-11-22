@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "f517b4cd3df3370d27c3987002ac0b9b48406355"
+    "signature": "001bb58ff8e8c7813259ea7ece2a25032b5ab5a7"
   },
   "compilationOptions": {},
   "targets": {
@@ -13,10 +13,19 @@
           "NETStandard.Library": "2.0.3",
           "Serilog": "2.7.1",
           "Serilog.Sinks.Console": "3.1.1",
-          "Serilog.Sinks.File": "4.0.0"
+          "Serilog.Sinks.File": "4.0.0",
+          "ini-parser": "2.5.2"
         },
         "runtime": {
           "Core.dll": {}
+        }
+      },
+      "ini-parser/2.5.2": {
+        "runtime": {
+          "lib/net20/INIFileParser.dll": {
+            "assemblyVersion": "2.5.2.0",
+            "fileVersion": "2.5.2.0"
+          }
         }
       },
       "Microsoft.NETCore.Platforms/1.1.0": {},
@@ -312,6 +321,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "ini-parser/2.5.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4tTkVV6xAPuit4vwHeLdcwmLO2kRtWRE7TXKga5QQOdt2DPdtq00ADeXHOzO7hkNtcZpT7GbsvBd6jOiwGz0JQ==",
+      "path": "ini-parser/2.5.2",
+      "hashPath": "ini-parser.2.5.2.nupkg.sha512"
     },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",

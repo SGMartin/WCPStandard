@@ -316,3 +316,408 @@
 2018-11-21 12:10:01.187 +01:00 [DBG] OUT :: -1796989046 4608 889010288 77 
 2018-11-21 12:10:01.188 +01:00 [DBG]  IN :: 2497978252 4352 1382046438 0 test test 0 0
 2018-11-21 12:10:01.230 +01:00 [DBG] OUT :: -1796989000 4352 1 1 0 test NULL DarkRaptor 2 1 0 1 1,11025 0 -1 -1 -1 -1 0 0 
+2018-11-21 22:15:18.519 +01:00 [ERR] Could not load CFG file:
+2018-11-21 22:15:18.720 +01:00 [ERR] IniParser.Exceptions.ParsingException: Unknown file format. Couldn't parse the line: '# __          _______ _____   _____ _                  _               _'. while parsing line number 0 with value '' - IniParser version: 2.5.2.0 while parsing line number 1 with value '# __          _______ _____   _____ _                  _               _ ' - IniParser version: 2.5.2.0 ---> IniParser.Exceptions.ParsingException: Unknown file format. Couldn't parse the line: '# __          _______ _____   _____ _                  _               _'. while parsing line number 0 with value '' - IniParser version: 2.5.2.0
+   at IniParser.Parser.IniDataParser.ProcessLine(String currentLine, IniData currentIniData)
+   at IniParser.Parser.IniDataParser.Parse(String iniDataString)
+   --- End of inner exception stack trace ---
+   at IniParser.Parser.IniDataParser.Parse(String iniDataString)
+   at IniParser.FileIniDataParser.ReadFile(String filePath, Encoding fileEncoding)
+   at Authentication.Config.Read(String iniFile) in C:\Users\Santiago\source\repos\WCPStandard\Authentication\Config.cs:line 54
+2018-11-21 22:15:18.721 +01:00 [ERR] Reverting to default...
+2018-11-21 22:15:18.722 +01:00 [FTL] Failed to load the configuration file.
+2018-11-21 22:15:42.142 +01:00 [ERR] Could not load CFG file:
+2018-11-21 22:15:42.302 +01:00 [ERR] IniParser.Exceptions.ParsingException: Could not parse file C:\Users\Santiago\source\repos\WCPStandard\Authentication\bin\Debug\netcoreapp2.1\CFG\Authentication.cfg while parsing line number 0 with value '' - IniParser version: 2.5.2.0 ---> System.IO.FileNotFoundException: Could not find file 'C:\Users\Santiago\source\repos\WCPStandard\Authentication\bin\Debug\netcoreapp2.1\CFG\Authentication.cfg'.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at IniParser.FileIniDataParser.ReadFile(String filePath, Encoding fileEncoding)
+   --- End of inner exception stack trace ---
+   at IniParser.FileIniDataParser.ReadFile(String filePath, Encoding fileEncoding)
+   at Authentication.Config.Read(String iniFile) in C:\Users\Santiago\source\repos\WCPStandard\Authentication\Config.cs:line 54
+2018-11-21 22:15:42.303 +01:00 [ERR] Reverting to default...
+2018-11-21 22:15:42.303 +01:00 [FTL] Failed to load the configuration file.
+2018-11-21 22:16:43.319 +01:00 [ERR] Could not load CFG file:
+2018-11-21 22:16:43.456 +01:00 [ERR] IniParser.Exceptions.ParsingException: Could not parse file C:\Users\Santiago\source\repos\WCPStandard\Authentication\bin\Debug\netcoreapp2.1\CFG\Authentication.cfg while parsing line number 0 with value '' - IniParser version: 2.5.2.0 ---> System.IO.FileNotFoundException: Could not find file 'C:\Users\Santiago\source\repos\WCPStandard\Authentication\bin\Debug\netcoreapp2.1\CFG\Authentication.cfg'.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at IniParser.FileIniDataParser.ReadFile(String filePath, Encoding fileEncoding)
+   --- End of inner exception stack trace ---
+   at IniParser.FileIniDataParser.ReadFile(String filePath, Encoding fileEncoding)
+   at Authentication.Config.Read(String iniFile) in C:\Users\Santiago\source\repos\WCPStandard\Authentication\Config.cs:line 54
+2018-11-21 22:16:43.458 +01:00 [ERR] Reverting to default...
+2018-11-21 22:16:43.458 +01:00 [FTL] Failed to load the configuration file.
+2018-11-21 22:17:22.065 +01:00 [ERR] Could not load CFG file:
+2018-11-21 22:17:22.187 +01:00 [ERR] IniParser.Exceptions.ParsingException: Could not parse file C:\Users\Santiago\source\repos\WCPStandard\Authentication\bin\Debug\netcoreapp2.1\CFG\Authentication.cfg while parsing line number 0 with value '' - IniParser version: 2.5.2.0 ---> System.IO.FileNotFoundException: Could not find file 'C:\Users\Santiago\source\repos\WCPStandard\Authentication\bin\Debug\netcoreapp2.1\CFG\Authentication.cfg'.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at IniParser.FileIniDataParser.ReadFile(String filePath, Encoding fileEncoding)
+   --- End of inner exception stack trace ---
+   at IniParser.FileIniDataParser.ReadFile(String filePath, Encoding fileEncoding)
+   at Authentication.Config.Read(String iniFile) in C:\Users\Santiago\source\repos\WCPStandard\Authentication\Config.cs:line 54
+2018-11-21 22:17:22.188 +01:00 [ERR] Reverting to default...
+2018-11-21 22:17:22.188 +01:00 [FTL] Failed to load the configuration file.
+2018-11-21 22:17:45.364 +01:00 [ERR] Could not load CFG file:
+2018-11-21 22:17:45.486 +01:00 [ERR] IniParser.Exceptions.ParsingException: Could not parse file C:\Users\Santiago\source\repos\WCPStandard\Authentication\bin\Debug\netcoreapp2.1\CFG\Authentication.cfg while parsing line number 0 with value '' - IniParser version: 2.5.2.0 ---> System.IO.FileNotFoundException: Could not find file 'C:\Users\Santiago\source\repos\WCPStandard\Authentication\bin\Debug\netcoreapp2.1\CFG\Authentication.cfg'.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at IniParser.FileIniDataParser.ReadFile(String filePath, Encoding fileEncoding)
+   --- End of inner exception stack trace ---
+   at IniParser.FileIniDataParser.ReadFile(String filePath, Encoding fileEncoding)
+   at Authentication.Config.Read(String iniFile) in C:\Users\Santiago\source\repos\WCPStandard\Authentication\Config.cs:line 54
+2018-11-21 22:17:45.487 +01:00 [ERR] Reverting to default...
+2018-11-21 22:17:45.488 +01:00 [FTL] Failed to load the configuration file.
+2018-11-21 22:26:32.502 +01:00 [ERR] Could not load C:\Users\Santiago\source\repos\WCPStandard\Authentication\bin\Debug\netcoreapp2.1\CFG\Authentication.ini:
+2018-11-21 22:26:32.653 +01:00 [ERR] IniParser.Exceptions.ParsingException: Unknown file format. Couldn't parse the line: '# __          _______ _____   _____ _                  _               _'. while parsing line number 0 with value '' - IniParser version: 2.5.2.0 while parsing line number 1 with value '# __          _______ _____   _____ _                  _               _ ' - IniParser version: 2.5.2.0 ---> IniParser.Exceptions.ParsingException: Unknown file format. Couldn't parse the line: '# __          _______ _____   _____ _                  _               _'. while parsing line number 0 with value '' - IniParser version: 2.5.2.0
+   at IniParser.Parser.IniDataParser.ProcessLine(String currentLine, IniData currentIniData)
+   at IniParser.Parser.IniDataParser.Parse(String iniDataString)
+   --- End of inner exception stack trace ---
+   at IniParser.Parser.IniDataParser.Parse(String iniDataString)
+   at IniParser.FileIniDataParser.ReadFile(String filePath, Encoding fileEncoding)
+   at Authentication.Config.Read(String iniFile) in C:\Users\Santiago\source\repos\WCPStandard\Authentication\Config.cs:line 54
+2018-11-21 22:26:32.655 +01:00 [ERR] Reverting to default...
+2018-11-21 22:26:32.898 +01:00 [INF] Database connection test... successfull
+2018-11-21 22:26:32.903 +01:00 [INF] Binding a socket listener to port: 5012.
+2018-11-21 22:26:32.910 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
+2018-11-21 22:26:32.910 +01:00 [INF] Binding a socket listener to port: 5330.
+2018-11-21 22:26:32.911 +01:00 [INF] The socket is successfully binded to the port!
+2018-11-21 22:26:32.912 +01:00 [DBG] Server started
+2018-11-21 22:26:32.913 +01:00 [INF] Emulator loaded in 738,677 milliseconds!
+2018-11-21 22:29:23.092 +01:00 [ERR] Could not load C:\Users\Santiago\source\repos\WCPStandard\Authentication\bin\Debug\netcoreapp2.1\CFG\Authentication.ini:
+2018-11-21 22:29:23.221 +01:00 [ERR] IniParser.Exceptions.ParsingException: Unknown file format. Couldn't parse the line: '# __          _______ _____   _____ _                  _               _'. while parsing line number 0 with value '' - IniParser version: 2.5.2.0 while parsing line number 1 with value '# __          _______ _____   _____ _                  _               _ ' - IniParser version: 2.5.2.0 ---> IniParser.Exceptions.ParsingException: Unknown file format. Couldn't parse the line: '# __          _______ _____   _____ _                  _               _'. while parsing line number 0 with value '' - IniParser version: 2.5.2.0
+   at IniParser.Parser.IniDataParser.ProcessLine(String currentLine, IniData currentIniData)
+   at IniParser.Parser.IniDataParser.Parse(String iniDataString)
+   --- End of inner exception stack trace ---
+   at IniParser.Parser.IniDataParser.Parse(String iniDataString)
+   at IniParser.FileIniDataParser.ReadFile(String filePath, Encoding fileEncoding)
+   at Authentication.Config.Read(String iniFile) in C:\Users\Santiago\source\repos\WCPStandard\Authentication\Config.cs:line 54
+2018-11-21 22:29:23.222 +01:00 [ERR] Reverting to default...
+2018-11-21 22:29:23.456 +01:00 [INF] Database connection test... successfull
+2018-11-21 22:29:23.461 +01:00 [INF] Binding a socket listener to port: 5012.
+2018-11-21 22:29:23.473 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
+2018-11-21 22:29:23.474 +01:00 [INF] Binding a socket listener to port: 5330.
+2018-11-21 22:29:23.475 +01:00 [INF] The socket is successfully binded to the port!
+2018-11-21 22:29:23.476 +01:00 [DBG] Server started
+2018-11-21 22:29:23.477 +01:00 [INF] Emulator loaded in 23050,4978 milliseconds!
+2018-11-21 22:30:59.570 +01:00 [ERR] Could not load C:\Users\Santiago\source\repos\WCPStandard\Authentication\bin\Debug\netcoreapp2.1\CFG\Authentication.ini:
+2018-11-21 22:30:59.708 +01:00 [ERR] IniParser.Exceptions.ParsingException: Unknown file format. Couldn't parse the line: '# __          _______ _____   _____ _                  _               _'. while parsing line number 0 with value '' - IniParser version: 2.5.2.0 while parsing line number 1 with value '# __          _______ _____   _____ _                  _               _ ' - IniParser version: 2.5.2.0 ---> IniParser.Exceptions.ParsingException: Unknown file format. Couldn't parse the line: '# __          _______ _____   _____ _                  _               _'. while parsing line number 0 with value '' - IniParser version: 2.5.2.0
+   at IniParser.Parser.IniDataParser.ProcessLine(String currentLine, IniData currentIniData)
+   at IniParser.Parser.IniDataParser.Parse(String iniDataString)
+   --- End of inner exception stack trace ---
+   at IniParser.Parser.IniDataParser.Parse(String iniDataString)
+   at IniParser.FileIniDataParser.ReadFile(String filePath, Encoding fileEncoding)
+   at Authentication.Config.Read(String iniFile) in C:\Users\Santiago\source\repos\WCPStandard\Authentication\Config.cs:line 54
+2018-11-21 22:30:59.709 +01:00 [ERR] Reverting to default...
+2018-11-21 22:30:59.962 +01:00 [INF] Database connection test... successfull
+2018-11-21 22:30:59.966 +01:00 [INF] Binding a socket listener to port: 5012.
+2018-11-21 22:30:59.971 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
+2018-11-21 22:30:59.972 +01:00 [INF] Binding a socket listener to port: 5330.
+2018-11-21 22:30:59.973 +01:00 [INF] The socket is successfully binded to the port!
+2018-11-21 22:30:59.974 +01:00 [DBG] Server started
+2018-11-21 22:30:59.975 +01:00 [INF] Emulator loaded in 691,2615 milliseconds!
+2018-11-21 22:31:25.752 +01:00 [ERR] Could not load C:\Users\Santiago\source\repos\WCPStandard\Authentication\bin\Debug\netcoreapp2.1\CFG\Authentication.ini:
+2018-11-21 22:31:25.872 +01:00 [ERR] IniParser.Exceptions.ParsingException: Unknown file format. Couldn't parse the line: '# __          _______ _____   _____ _                  _               _'. while parsing line number 0 with value '' - IniParser version: 2.5.2.0 while parsing line number 1 with value '# __          _______ _____   _____ _                  _               _ ' - IniParser version: 2.5.2.0 ---> IniParser.Exceptions.ParsingException: Unknown file format. Couldn't parse the line: '# __          _______ _____   _____ _                  _               _'. while parsing line number 0 with value '' - IniParser version: 2.5.2.0
+   at IniParser.Parser.IniDataParser.ProcessLine(String currentLine, IniData currentIniData)
+   at IniParser.Parser.IniDataParser.Parse(String iniDataString)
+   --- End of inner exception stack trace ---
+   at IniParser.Parser.IniDataParser.Parse(String iniDataString)
+   at IniParser.FileIniDataParser.ReadFile(String filePath, Encoding fileEncoding)
+   at Authentication.Config.Read(String iniFile) in C:\Users\Santiago\source\repos\WCPStandard\Authentication\Config.cs:line 54
+2018-11-21 22:31:25.873 +01:00 [ERR] Reverting to default...
+2018-11-21 22:31:26.088 +01:00 [INF] Database connection test... successfull
+2018-11-21 22:31:26.093 +01:00 [INF] Binding a socket listener to port: 5012.
+2018-11-21 22:31:26.097 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
+2018-11-21 22:31:26.098 +01:00 [INF] Binding a socket listener to port: 5330.
+2018-11-21 22:31:26.099 +01:00 [INF] The socket is successfully binded to the port!
+2018-11-21 22:31:26.099 +01:00 [DBG] Server started
+2018-11-21 22:31:26.100 +01:00 [INF] Emulator loaded in 570,7197 milliseconds!
+2018-11-21 22:32:23.885 +01:00 [ERR] Could not load C:\Users\Santiago\source\repos\WCPStandard\Authentication\bin\Debug\netcoreapp2.1\CFG\Authentication.ini:
+2018-11-21 22:32:24.043 +01:00 [ERR] IniParser.Exceptions.ParsingException: Unknown file format. Couldn't parse the line: '# __          _______ _____   _____ _                  _               _'. while parsing line number 0 with value '' - IniParser version: 2.5.2.0 while parsing line number 1 with value '# __          _______ _____   _____ _                  _               _ ' - IniParser version: 2.5.2.0 ---> IniParser.Exceptions.ParsingException: Unknown file format. Couldn't parse the line: '# __          _______ _____   _____ _                  _               _'. while parsing line number 0 with value '' - IniParser version: 2.5.2.0
+   at IniParser.Parser.IniDataParser.ProcessLine(String currentLine, IniData currentIniData)
+   at IniParser.Parser.IniDataParser.Parse(String iniDataString)
+   --- End of inner exception stack trace ---
+   at IniParser.Parser.IniDataParser.Parse(String iniDataString)
+   at IniParser.FileIniDataParser.ReadFile(String filePath, Encoding fileEncoding)
+   at Authentication.Config.Read(String iniFile) in C:\Users\Santiago\source\repos\WCPStandard\Authentication\Config.cs:line 54
+2018-11-21 22:32:24.047 +01:00 [ERR] Reverting to default...
+2018-11-21 22:32:24.385 +01:00 [INF] Database connection test... successfull
+2018-11-21 22:32:24.390 +01:00 [INF] Binding a socket listener to port: 5012.
+2018-11-21 22:32:24.394 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
+2018-11-21 22:32:24.395 +01:00 [INF] Binding a socket listener to port: 5330.
+2018-11-21 22:32:24.396 +01:00 [INF] The socket is successfully binded to the port!
+2018-11-21 22:32:24.396 +01:00 [DBG] Server started
+2018-11-21 22:32:24.397 +01:00 [INF] Emulator loaded in 711,1724 milliseconds!
+2018-11-21 22:33:00.449 +01:00 [ERR] Could not load C:\Users\Santiago\source\repos\WCPStandard\Authentication\bin\Debug\netcoreapp2.1\CFG\Authentication.ini:
+2018-11-21 22:33:00.620 +01:00 [ERR] System.FormatException: String was not recognized as a valid Boolean.
+   at System.Boolean.Parse(ReadOnlySpan`1 value)
+   at System.Boolean.Parse(String value)
+   at Authentication.Config.Read(String iniFile) in C:\Users\Santiago\source\repos\WCPStandard\Authentication\Config.cs:line 72
+2018-11-21 22:33:00.625 +01:00 [ERR] Reverting to default...
+2018-11-21 22:33:00.915 +01:00 [INF] Database connection test... successfull
+2018-11-21 22:33:00.919 +01:00 [INF] Binding a socket listener to port: 5012.
+2018-11-21 22:33:00.924 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
+2018-11-21 22:33:00.925 +01:00 [INF] Binding a socket listener to port: 5330.
+2018-11-21 22:33:00.925 +01:00 [INF] The socket is successfully binded to the port!
+2018-11-21 22:33:00.926 +01:00 [DBG] Server started
+2018-11-21 22:33:00.926 +01:00 [INF] Emulator loaded in 696,8004 milliseconds!
+2018-11-21 22:36:00.178 +01:00 [ERR] Could not load C:\Users\Santiago\source\repos\WCPStandard\Authentication\bin\Debug\netcoreapp2.1\CFG\Authentication.ini:
+2018-11-21 22:38:21.907 +01:00 [ERR] Could not load C:\Users\Santiago\source\repos\WCPStandard\Authentication\bin\Debug\netcoreapp2.1\CFG\Authentication.ini:
+2018-11-21 22:38:22.039 +01:00 [ERR] IniParser.Exceptions.ParsingException: Unknown file format. Couldn't parse the line: '# __          _______ _____   _____ _                  _               _'. while parsing line number 0 with value '' - IniParser version: 2.5.2.0 while parsing line number 1 with value '# __          _______ _____   _____ _                  _               _ ' - IniParser version: 2.5.2.0 ---> IniParser.Exceptions.ParsingException: Unknown file format. Couldn't parse the line: '# __          _______ _____   _____ _                  _               _'. while parsing line number 0 with value '' - IniParser version: 2.5.2.0
+   at IniParser.Parser.IniDataParser.ProcessLine(String currentLine, IniData currentIniData)
+   at IniParser.Parser.IniDataParser.Parse(String iniDataString)
+   --- End of inner exception stack trace ---
+   at IniParser.Parser.IniDataParser.Parse(String iniDataString)
+   at IniParser.FileIniDataParser.ReadFile(String filePath, Encoding fileEncoding)
+   at Authentication.Config.Read(String iniFile) in C:\Users\Santiago\source\repos\WCPStandard\Authentication\Config.cs:line 54
+2018-11-21 22:38:22.040 +01:00 [ERR] Reverting to default...
+2018-11-21 22:38:22.281 +01:00 [INF] Database connection test... successfull
+2018-11-21 22:38:22.286 +01:00 [INF] Binding a socket listener to port: 5012.
+2018-11-21 22:38:22.292 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
+2018-11-21 22:38:22.293 +01:00 [INF] Binding a socket listener to port: 5330.
+2018-11-21 22:38:22.294 +01:00 [INF] The socket is successfully binded to the port!
+2018-11-21 22:38:22.294 +01:00 [DBG] Server started
+2018-11-21 22:38:22.295 +01:00 [INF] Emulator loaded in 643,3312 milliseconds!
+2018-11-21 22:38:51.575 +01:00 [ERR] Could not load C:\Users\Santiago\source\repos\WCPStandard\Authentication\bin\Debug\netcoreapp2.1\CFG\Authentication.ini:
+2018-11-21 22:38:51.723 +01:00 [ERR] IniParser.Exceptions.ParsingException: Unknown file format. Couldn't parse the line: '# __          _______ _____   _____ _                  _               _'. while parsing line number 0 with value '' - IniParser version: 2.5.2.0 while parsing line number 1 with value '# __          _______ _____   _____ _                  _               _ ' - IniParser version: 2.5.2.0 ---> IniParser.Exceptions.ParsingException: Unknown file format. Couldn't parse the line: '# __          _______ _____   _____ _                  _               _'. while parsing line number 0 with value '' - IniParser version: 2.5.2.0
+   at IniParser.Parser.IniDataParser.ProcessLine(String currentLine, IniData currentIniData)
+   at IniParser.Parser.IniDataParser.Parse(String iniDataString)
+   --- End of inner exception stack trace ---
+   at IniParser.Parser.IniDataParser.Parse(String iniDataString)
+   at IniParser.FileIniDataParser.ReadFile(String filePath, Encoding fileEncoding)
+   at Authentication.Config.Read(String iniFile) in C:\Users\Santiago\source\repos\WCPStandard\Authentication\Config.cs:line 54
+2018-11-21 22:38:51.724 +01:00 [ERR] Reverting to default...
+2018-11-21 22:38:51.966 +01:00 [INF] Database connection test... successfull
+2018-11-21 22:38:51.970 +01:00 [INF] Binding a socket listener to port: 5012.
+2018-11-21 22:38:51.974 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
+2018-11-21 22:38:51.977 +01:00 [INF] Binding a socket listener to port: 5330.
+2018-11-21 22:38:51.978 +01:00 [INF] The socket is successfully binded to the port!
+2018-11-21 22:38:51.978 +01:00 [DBG] Server started
+2018-11-21 22:38:51.979 +01:00 [INF] Emulator loaded in 583,266 milliseconds!
+2018-11-21 22:39:05.856 +01:00 [ERR] Could not load C:\Users\Santiago\source\repos\WCPStandard\Authentication\bin\Debug\netcoreapp2.1\CFG\Authentication.ini:
+2018-11-21 22:39:06.065 +01:00 [ERR] IniParser.Exceptions.ParsingException: Unknown file format. Couldn't parse the line: '# __          _______ _____   _____ _                  _               _'. while parsing line number 0 with value '' - IniParser version: 2.5.2.0 while parsing line number 1 with value '# __          _______ _____   _____ _                  _               _ ' - IniParser version: 2.5.2.0 ---> IniParser.Exceptions.ParsingException: Unknown file format. Couldn't parse the line: '# __          _______ _____   _____ _                  _               _'. while parsing line number 0 with value '' - IniParser version: 2.5.2.0
+   at IniParser.Parser.IniDataParser.ProcessLine(String currentLine, IniData currentIniData)
+   at IniParser.Parser.IniDataParser.Parse(String iniDataString)
+   --- End of inner exception stack trace ---
+   at IniParser.Parser.IniDataParser.Parse(String iniDataString)
+   at IniParser.FileIniDataParser.ReadFile(String filePath, Encoding fileEncoding)
+   at Authentication.Config.Read(String iniFile) in C:\Users\Santiago\source\repos\WCPStandard\Authentication\Config.cs:line 54
+2018-11-21 22:39:06.066 +01:00 [ERR] Reverting to default...
+2018-11-21 22:39:06.292 +01:00 [INF] Database connection test... successfull
+2018-11-21 22:39:06.297 +01:00 [INF] Binding a socket listener to port: 5012.
+2018-11-21 22:39:06.301 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
+2018-11-21 22:39:06.302 +01:00 [INF] Binding a socket listener to port: 5330.
+2018-11-21 22:39:06.303 +01:00 [INF] The socket is successfully binded to the port!
+2018-11-21 22:39:06.303 +01:00 [DBG] Server started
+2018-11-21 22:39:06.304 +01:00 [INF] Emulator loaded in 637,4572 milliseconds!
+2018-11-21 22:40:19.473 +01:00 [ERR] Could not load C:\Users\Santiago\source\repos\WCPStandard\Authentication\bin\Debug\netcoreapp2.1\CFG\Authentication.ini:
+2018-11-21 22:40:19.615 +01:00 [ERR] IniParser.Exceptions.ParsingException: Could not parse file C:\Users\Santiago\source\repos\WCPStandard\Authentication\bin\Debug\netcoreapp2.1\CFG\Authentication.ini while parsing line number 0 with value '' - IniParser version: 2.5.2.0 ---> System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\Users\Santiago\source\repos\WCPStandard\Authentication\bin\Debug\netcoreapp2.1\CFG\Authentication.ini'.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at IniParser.FileIniDataParser.ReadFile(String filePath, Encoding fileEncoding)
+   --- End of inner exception stack trace ---
+   at IniParser.FileIniDataParser.ReadFile(String filePath, Encoding fileEncoding)
+   at Authentication.Config.Read(String iniFile) in C:\Users\Santiago\source\repos\WCPStandard\Authentication\Config.cs:line 54
+2018-11-21 22:40:19.618 +01:00 [ERR] Reverting to default...
+2018-11-21 22:40:19.908 +01:00 [INF] Database connection test... successfull
+2018-11-21 22:40:19.913 +01:00 [INF] Binding a socket listener to port: 5012.
+2018-11-21 22:40:19.918 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
+2018-11-21 22:40:19.919 +01:00 [INF] Binding a socket listener to port: 5330.
+2018-11-21 22:40:19.922 +01:00 [INF] The socket is successfully binded to the port!
+2018-11-21 22:40:19.925 +01:00 [DBG] Server started
+2018-11-21 22:40:19.928 +01:00 [INF] Emulator loaded in 643,2581 milliseconds!
+2018-11-21 22:41:25.635 +01:00 [INF] Database connection test... successfull
+2018-11-21 22:41:25.699 +01:00 [INF] Binding a socket listener to port: 5012.
+2018-11-21 22:41:25.703 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
+2018-11-21 22:41:25.704 +01:00 [INF] Binding a socket listener to port: 5330.
+2018-11-21 22:41:25.705 +01:00 [INF] The socket is successfully binded to the port!
+2018-11-21 22:41:25.705 +01:00 [DBG] Server started
+2018-11-21 22:41:25.706 +01:00 [INF] Emulator loaded in 623,8197 milliseconds!
+2018-11-21 22:41:37.807 +01:00 [INF] Database connection test... successfull
+2018-11-21 22:41:37.877 +01:00 [INF] Binding a socket listener to port: 5012.
+2018-11-21 22:41:37.882 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
+2018-11-21 22:41:37.883 +01:00 [INF] Binding a socket listener to port: 5330.
+2018-11-21 22:41:37.883 +01:00 [INF] The socket is successfully binded to the port!
+2018-11-21 22:41:37.884 +01:00 [DBG] Server started
+2018-11-21 22:41:37.885 +01:00 [INF] Emulator loaded in 680,8837 milliseconds!
+2018-11-21 22:41:44.064 +01:00 [INF] Database connection test... successfull
+2018-11-21 22:41:44.126 +01:00 [INF] Binding a socket listener to port: 5012.
+2018-11-21 22:41:44.130 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
+2018-11-21 22:41:44.131 +01:00 [INF] Binding a socket listener to port: 5330.
+2018-11-21 22:41:44.131 +01:00 [INF] The socket is successfully binded to the port!
+2018-11-21 22:41:44.132 +01:00 [DBG] Server started
+2018-11-21 22:41:44.132 +01:00 [INF] Emulator loaded in 595,606 milliseconds!
+2018-11-21 22:41:54.276 +01:00 [INF] Database connection test... successfull
+2018-11-21 22:41:54.341 +01:00 [INF] Binding a socket listener to port: 5012.
+2018-11-21 22:41:54.345 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
+2018-11-21 22:41:54.346 +01:00 [INF] Binding a socket listener to port: 5330.
+2018-11-21 22:41:54.347 +01:00 [INF] The socket is successfully binded to the port!
+2018-11-21 22:41:54.347 +01:00 [DBG] Server started
+2018-11-21 22:41:54.348 +01:00 [INF] Emulator loaded in 596,6372 milliseconds!
+2018-11-21 22:42:04.777 +01:00 [INF] Database connection test... successfull
+2018-11-21 22:42:04.842 +01:00 [INF] Binding a socket listener to port: 5012.
+2018-11-21 22:42:04.846 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
+2018-11-21 22:42:04.847 +01:00 [INF] Binding a socket listener to port: 5330.
+2018-11-21 22:42:04.848 +01:00 [INF] The socket is successfully binded to the port!
+2018-11-21 22:42:04.850 +01:00 [DBG] Server started
+2018-11-21 22:42:04.851 +01:00 [INF] Emulator loaded in 563,2506 milliseconds!
+2018-11-21 22:42:34.273 +01:00 [ERR] Could not load C:\Users\Santiago\source\repos\WCPStandard\Authentication\bin\Debug\netcoreapp2.1\CFG\Authentication.ini:
+2018-11-21 22:42:34.418 +01:00 [ERR] IniParser.Exceptions.ParsingException: Could not parse file C:\Users\Santiago\source\repos\WCPStandard\Authentication\bin\Debug\netcoreapp2.1\CFG\Authentication.ini while parsing line number 0 with value '' - IniParser version: 2.5.2.0 ---> System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\Users\Santiago\source\repos\WCPStandard\Authentication\bin\Debug\netcoreapp2.1\CFG\Authentication.ini'.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at IniParser.FileIniDataParser.ReadFile(String filePath, Encoding fileEncoding)
+   --- End of inner exception stack trace ---
+   at IniParser.FileIniDataParser.ReadFile(String filePath, Encoding fileEncoding)
+   at Authentication.Config.Read(String iniFile) in C:\Users\Santiago\source\repos\WCPStandard\Authentication\Config.cs:line 54
+2018-11-21 22:42:34.421 +01:00 [ERR] Reverting to default...
+2018-11-21 22:42:34.771 +01:00 [INF] Database connection test... successfull
+2018-11-21 22:42:34.776 +01:00 [INF] Binding a socket listener to port: 5012.
+2018-11-21 22:42:34.783 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
+2018-11-21 22:42:34.785 +01:00 [INF] Binding a socket listener to port: 5330.
+2018-11-21 22:42:34.786 +01:00 [INF] The socket is successfully binded to the port!
+2018-11-21 22:42:34.788 +01:00 [DBG] Server started
+2018-11-21 22:42:34.791 +01:00 [INF] Emulator loaded in 742,059 milliseconds!
+2018-11-21 22:42:43.172 +01:00 [ERR] Could not load C:\Users\Santiago\source\repos\WCPStandard\Authentication\bin\Debug\netcoreapp2.1\CFG\Authentication.ini:
+2018-11-21 22:42:43.323 +01:00 [ERR] IniParser.Exceptions.ParsingException: Could not parse file C:\Users\Santiago\source\repos\WCPStandard\Authentication\bin\Debug\netcoreapp2.1\CFG\Authentication.ini while parsing line number 0 with value '' - IniParser version: 2.5.2.0 ---> System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\Users\Santiago\source\repos\WCPStandard\Authentication\bin\Debug\netcoreapp2.1\CFG\Authentication.ini'.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at IniParser.FileIniDataParser.ReadFile(String filePath, Encoding fileEncoding)
+   --- End of inner exception stack trace ---
+   at IniParser.FileIniDataParser.ReadFile(String filePath, Encoding fileEncoding)
+   at Authentication.Config.Read(String iniFile) in C:\Users\Santiago\source\repos\WCPStandard\Authentication\Config.cs:line 54
+2018-11-21 22:42:43.325 +01:00 [ERR] Reverting to default...
+2018-11-21 22:42:43.606 +01:00 [INF] Database connection test... successfull
+2018-11-21 22:42:43.610 +01:00 [INF] Binding a socket listener to port: 5012.
+2018-11-21 22:42:43.614 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
+2018-11-21 22:42:43.616 +01:00 [INF] Binding a socket listener to port: 5330.
+2018-11-21 22:42:43.616 +01:00 [INF] The socket is successfully binded to the port!
+2018-11-21 22:42:43.617 +01:00 [DBG] Server started
+2018-11-21 22:42:43.618 +01:00 [INF] Emulator loaded in 637,9106 milliseconds!
+2018-11-21 22:44:31.246 +01:00 [INF] Database connection test... successfull
+2018-11-21 22:44:31.311 +01:00 [INF] Binding a socket listener to port: 5012.
+2018-11-21 22:44:31.316 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
+2018-11-21 22:44:31.317 +01:00 [INF] Binding a socket listener to port: 5330.
+2018-11-21 22:44:31.318 +01:00 [INF] The socket is successfully binded to the port!
+2018-11-21 22:44:31.319 +01:00 [DBG] Server started
+2018-11-21 22:44:31.319 +01:00 [INF] Emulator loaded in 568,4811 milliseconds!
+2018-11-21 22:44:38.070 +01:00 [INF] Database connection test... successfull
+2018-11-21 22:44:38.131 +01:00 [INF] Binding a socket listener to port: 5012.
+2018-11-21 22:44:38.136 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
+2018-11-21 22:44:38.137 +01:00 [INF] Binding a socket listener to port: 5330.
+2018-11-21 22:44:38.137 +01:00 [INF] The socket is successfully binded to the port!
+2018-11-21 22:44:38.138 +01:00 [DBG] Server started
+2018-11-21 22:44:38.139 +01:00 [INF] Emulator loaded in 496,6963 milliseconds!
+2018-11-21 22:44:46.328 +01:00 [INF] Database connection test... successfull
+2018-11-21 22:44:46.392 +01:00 [INF] Binding a socket listener to port: 5012.
+2018-11-21 22:44:46.397 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
+2018-11-21 22:44:46.398 +01:00 [INF] Binding a socket listener to port: 5330.
+2018-11-21 22:44:46.398 +01:00 [INF] The socket is successfully binded to the port!
+2018-11-21 22:44:46.399 +01:00 [DBG] Server started
+2018-11-21 22:44:46.399 +01:00 [INF] Emulator loaded in 513,1485 milliseconds!
+2018-11-21 22:45:04.901 +01:00 [FTL] Database connection test failed!!
+2018-11-21 22:45:19.975 +01:00 [FTL] Database connection test failed!!
+2018-11-21 22:45:34.137 +01:00 [FTL] Database connection test failed!!
+2018-11-21 22:46:55.662 +01:00 [INF] Database connection test... successfull
+2018-11-21 22:46:55.727 +01:00 [INF] Binding a socket listener to port: 5012.
+2018-11-21 22:46:55.732 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
+2018-11-21 22:46:55.734 +01:00 [INF] Binding a socket listener to port: 5330.
+2018-11-21 22:46:55.734 +01:00 [INF] The socket is successfully binded to the port!
+2018-11-21 22:46:55.735 +01:00 [DBG] Server started
+2018-11-21 22:46:55.736 +01:00 [INF] Emulator loaded in 654,5156 milliseconds!
+2018-11-21 22:47:38.067 +01:00 [ERR] Could not load C:\Users\Santiago\source\repos\WCPStandard\Authentication\bin\Debug\netcoreapp2.1\CFG\Authentication.ini:
+2018-11-21 22:47:38.269 +01:00 [ERR] IniParser.Exceptions.ParsingException: Unknown file format. Couldn't parse the line: '# __          _______ _____   _____ _                  _               _'. while parsing line number 0 with value '' - IniParser version: 2.5.2.0 while parsing line number 7 with value '# __          _______ _____   _____ _                  _               _ ' - IniParser version: 2.5.2.0 ---> IniParser.Exceptions.ParsingException: Unknown file format. Couldn't parse the line: '# __          _______ _____   _____ _                  _               _'. while parsing line number 0 with value '' - IniParser version: 2.5.2.0
+   at IniParser.Parser.IniDataParser.ProcessLine(String currentLine, IniData currentIniData)
+   at IniParser.Parser.IniDataParser.Parse(String iniDataString)
+   --- End of inner exception stack trace ---
+   at IniParser.Parser.IniDataParser.Parse(String iniDataString)
+   at IniParser.FileIniDataParser.ReadFile(String filePath, Encoding fileEncoding)
+   at Authentication.Config.Read(String iniFile) in C:\Users\Santiago\source\repos\WCPStandard\Authentication\Config.cs:line 54
+2018-11-21 22:47:38.270 +01:00 [ERR] Reverting to default...
+2018-11-21 22:47:38.523 +01:00 [INF] Database connection test... successfull
+2018-11-21 22:47:38.530 +01:00 [INF] Binding a socket listener to port: 5012.
+2018-11-21 22:47:38.535 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
+2018-11-21 22:47:38.536 +01:00 [INF] Binding a socket listener to port: 5330.
+2018-11-21 22:47:38.537 +01:00 [INF] The socket is successfully binded to the port!
+2018-11-21 22:47:38.537 +01:00 [DBG] Server started
+2018-11-21 22:47:38.538 +01:00 [INF] Emulator loaded in 661,8712 milliseconds!
+2018-11-21 22:48:05.457 +01:00 [ERR] Could not load C:\Users\Santiago\source\repos\WCPStandard\Authentication\bin\Debug\netcoreapp2.1\CFG\Authentication.ini:
+2018-11-21 22:48:05.667 +01:00 [ERR] IniParser.Exceptions.ParsingException: Unknown file format. Couldn't parse the line: '# __          _______ _____   _____ _                  _               _'. while parsing line number 0 with value '' - IniParser version: 2.5.2.0 while parsing line number 7 with value '# __          _______ _____   _____ _                  _               _ ' - IniParser version: 2.5.2.0 ---> IniParser.Exceptions.ParsingException: Unknown file format. Couldn't parse the line: '# __          _______ _____   _____ _                  _               _'. while parsing line number 0 with value '' - IniParser version: 2.5.2.0
+   at IniParser.Parser.IniDataParser.ProcessLine(String currentLine, IniData currentIniData)
+   at IniParser.Parser.IniDataParser.Parse(String iniDataString)
+   --- End of inner exception stack trace ---
+   at IniParser.Parser.IniDataParser.Parse(String iniDataString)
+   at IniParser.FileIniDataParser.ReadFile(String filePath, Encoding fileEncoding)
+   at Authentication.Config.Read(String iniFile) in C:\Users\Santiago\source\repos\WCPStandard\Authentication\Config.cs:line 54
+2018-11-21 22:48:05.690 +01:00 [ERR] Reverting to default...
+2018-11-21 22:48:05.966 +01:00 [INF] Database connection test... successfull
+2018-11-21 22:48:05.970 +01:00 [INF] Binding a socket listener to port: 5012.
+2018-11-21 22:48:05.975 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
+2018-11-21 22:48:05.976 +01:00 [INF] Binding a socket listener to port: 5330.
+2018-11-21 22:48:05.977 +01:00 [INF] The socket is successfully binded to the port!
+2018-11-21 22:48:05.978 +01:00 [DBG] Server started
+2018-11-21 22:48:05.979 +01:00 [INF] Emulator loaded in 739,7879 milliseconds!
+2018-11-21 22:48:15.879 +01:00 [ERR] Could not load C:\Users\Santiago\source\repos\WCPStandard\Authentication\bin\Debug\netcoreapp2.1\CFG\Authentication.ini:
+2018-11-21 22:48:16.002 +01:00 [ERR] IniParser.Exceptions.ParsingException: Unknown file format. Couldn't parse the line: '#This is a single line commentary'. while parsing line number 0 with value '' - IniParser version: 2.5.2.0 while parsing line number 7 with value '#This is a single line commentary' - IniParser version: 2.5.2.0 ---> IniParser.Exceptions.ParsingException: Unknown file format. Couldn't parse the line: '#This is a single line commentary'. while parsing line number 0 with value '' - IniParser version: 2.5.2.0
+   at IniParser.Parser.IniDataParser.ProcessLine(String currentLine, IniData currentIniData)
+   at IniParser.Parser.IniDataParser.Parse(String iniDataString)
+   --- End of inner exception stack trace ---
+   at IniParser.Parser.IniDataParser.Parse(String iniDataString)
+   at IniParser.FileIniDataParser.ReadFile(String filePath, Encoding fileEncoding)
+   at Authentication.Config.Read(String iniFile) in C:\Users\Santiago\source\repos\WCPStandard\Authentication\Config.cs:line 54
+2018-11-21 22:48:16.003 +01:00 [ERR] Reverting to default...
+2018-11-21 22:48:16.246 +01:00 [INF] Database connection test... successfull
+2018-11-21 22:48:16.250 +01:00 [INF] Binding a socket listener to port: 5012.
+2018-11-21 22:48:16.257 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
+2018-11-21 22:48:16.258 +01:00 [INF] Binding a socket listener to port: 5330.
+2018-11-21 22:48:16.259 +01:00 [INF] The socket is successfully binded to the port!
+2018-11-21 22:48:16.260 +01:00 [DBG] Server started
+2018-11-21 22:48:16.261 +01:00 [INF] Emulator loaded in 598,4482 milliseconds!
+2018-11-21 22:48:34.320 +01:00 [ERR] Could not load C:\Users\Santiago\source\repos\WCPStandard\Authentication\bin\Debug\netcoreapp2.1\CFG\Authentication.ini:
+2018-11-21 22:48:34.450 +01:00 [ERR] IniParser.Exceptions.ParsingException: Unknown file format. Couldn't parse the line: '# This is a single line commentary'. while parsing line number 0 with value '' - IniParser version: 2.5.2.0 while parsing line number 7 with value '# This is a single line commentary' - IniParser version: 2.5.2.0 ---> IniParser.Exceptions.ParsingException: Unknown file format. Couldn't parse the line: '# This is a single line commentary'. while parsing line number 0 with value '' - IniParser version: 2.5.2.0
+   at IniParser.Parser.IniDataParser.ProcessLine(String currentLine, IniData currentIniData)
+   at IniParser.Parser.IniDataParser.Parse(String iniDataString)
+   --- End of inner exception stack trace ---
+   at IniParser.Parser.IniDataParser.Parse(String iniDataString)
+   at IniParser.FileIniDataParser.ReadFile(String filePath, Encoding fileEncoding)
+   at Authentication.Config.Read(String iniFile) in C:\Users\Santiago\source\repos\WCPStandard\Authentication\Config.cs:line 54
+2018-11-21 22:48:34.451 +01:00 [ERR] Reverting to default...
+2018-11-21 22:48:34.690 +01:00 [INF] Database connection test... successfull
+2018-11-21 22:48:34.695 +01:00 [INF] Binding a socket listener to port: 5012.
+2018-11-21 22:48:34.703 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
+2018-11-21 22:48:34.704 +01:00 [INF] Binding a socket listener to port: 5330.
+2018-11-21 22:48:34.705 +01:00 [INF] The socket is successfully binded to the port!
+2018-11-21 22:48:34.707 +01:00 [DBG] Server started
+2018-11-21 22:48:34.708 +01:00 [INF] Emulator loaded in 558,6745 milliseconds!
+2018-11-21 22:48:54.696 +01:00 [INF] Database connection test... successfull
+2018-11-21 22:48:54.767 +01:00 [INF] Binding a socket listener to port: 5012.
+2018-11-21 22:48:54.772 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
+2018-11-21 22:48:54.772 +01:00 [INF] Binding a socket listener to port: 5330.
+2018-11-21 22:48:54.773 +01:00 [INF] The socket is successfully binded to the port!
+2018-11-21 22:48:54.773 +01:00 [DBG] Server started
+2018-11-21 22:48:54.774 +01:00 [INF] Emulator loaded in 508,3156 milliseconds!
+2018-11-21 22:49:32.113 +01:00 [INF] Database connection test... successfull
+2018-11-21 22:49:32.180 +01:00 [INF] Binding a socket listener to port: 5012.
+2018-11-21 22:49:32.184 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
+2018-11-21 22:49:32.185 +01:00 [INF] Binding a socket listener to port: 5330.
+2018-11-21 22:49:32.186 +01:00 [INF] The socket is successfully binded to the port!
+2018-11-21 22:49:32.187 +01:00 [DBG] Server started
+2018-11-21 22:49:32.188 +01:00 [INF] Emulator loaded in 661,2936 milliseconds!
+2018-11-21 22:49:38.415 +01:00 [INF] Database connection test... successfull
+2018-11-21 22:49:38.480 +01:00 [INF] Binding a socket listener to port: 5012.
+2018-11-21 22:49:38.484 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
+2018-11-21 22:49:38.485 +01:00 [INF] Binding a socket listener to port: 5330.
+2018-11-21 22:49:38.486 +01:00 [INF] The socket is successfully binded to the port!
+2018-11-21 22:49:38.486 +01:00 [DBG] Server started
+2018-11-21 22:49:38.487 +01:00 [INF] Emulator loaded in 559,1495 milliseconds!
+2018-11-21 22:54:40.274 +01:00 [INF] Database connection test... successfull
+2018-11-21 22:54:40.337 +01:00 [INF] Binding a socket listener to port: 5012.
+2018-11-21 22:54:40.342 +01:00 [INF] The Game Listener Socket is successfully binded to the port!
+2018-11-21 22:54:40.343 +01:00 [INF] Binding a socket listener to port: 5330.
+2018-11-21 22:54:40.343 +01:00 [INF] The socket is successfully binded to the port!
+2018-11-21 22:54:40.344 +01:00 [DBG] Server started
+2018-11-21 22:54:40.344 +01:00 [INF] Emulator loaded in 591,045 milliseconds!

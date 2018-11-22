@@ -1,17 +1,20 @@
 ﻿/*
  * 
  * 
- *           This is the actual server application. The core of it is just a loop and two listener sockets.
- *                                                                                                                                          
+ *                               This is the actual server application. The core of it is just a loop and two listener sockets.
+ *                                                        The command line is parsed using Eric Newton´s CLR parser
+ *                                                        https://github.com/commandlineparser/commandline                                                                                  
  * 
- */ 
+ */
 
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Threading;
 
 using Serilog;
 using Serilog.Core;
+using CommandLine;
 
 using MySql.Data.MySqlClient;
 
@@ -20,12 +23,14 @@ namespace Authentication
     class Program
     {
 
-        public static object sessionLock = new Object();
-
         //Defines the global logging level for the server
         public static LoggingLevelSwitch levelSwitch = new LoggingLevelSwitch();
 
-        private static bool isRunning = true;
+        //CMD related var.
+        private static bool useDifferentFileLocation = false;
+        private static string iniFileLocation        = string.Empty;
+
+        private static bool isRunning                = true;
         private static DateTime startTime;
 
 
@@ -33,13 +38,9 @@ namespace Authentication
         {
             startTime = DateTime.Now;
 
-            //setting up the logger. Defaulting to debug unless overwritten by a config file.
+
+            //setting up the logger config. Defaulting to debug unless overwritten by a config file.
             levelSwitch.MinimumLevel = (Serilog.Events.LogEventLevel)Config.SERILOGLEVEL;
-
-            Log.Logger = new LoggerConfiguration().MinimumLevel.ControlledBy(levelSwitch).WriteTo.Console().
-                WriteTo.File("Authentication.log", rollingInterval: RollingInterval.Day).CreateLogger();
-
-           
 
             Console.Title = "Authentication server";
 
@@ -55,16 +56,24 @@ namespace Authentication
             Console.WriteLine();
 
 
+            //initialize logger
+            Log.Logger = new LoggerConfiguration().MinimumLevel.ControlledBy(levelSwitch).WriteTo.Console().
+                WriteTo.File("Authentication.log", rollingInterval: RollingInterval.Day).CreateLogger();
+
+
+            //setting up CMD reader
+            var CMD = Parser.Default.ParseArguments<Options>(args)
+                .WithParsed<Options>(opts => RunOptionsAndReturnExitCode(opts))
+                .WithNotParsed<Options>((errs) => HandleParseError(errs));
+
+
             //Path.Combine is platform friendly :) Windows uses \ whereas Linux uses /
-            //TODO: be able to add cfg file using command line
-            if (!Config.Read(Path.Combine(
-                String.Concat(
-                    Environment.CurrentDirectory, Path.DirectorySeparatorChar, "CFG", Path.DirectorySeparatorChar, "Authentication.cfg"))))
-            {
-                Log.Fatal("Failed to load the configuration file.");
-                Console.ReadKey();
-                return;
-            }
+            //iniFileLocation can be redefined by CMD... see RunOptionsAndReturnExitCode
+            if (!useDifferentFileLocation)
+                iniFileLocation = Path.Combine(String.Concat(Environment.CurrentDirectory, Path.DirectorySeparatorChar, "CFG", Path.DirectorySeparatorChar, "Authentication.ini"));
+            
+
+            Config.Read(iniFileLocation);
 
             // test database connection
             using (MySqlConnection TestConnection = new MySqlConnection(Config.AUTH_CONNECTION))
@@ -106,9 +115,25 @@ namespace Authentication
            
             while (isRunning)
             {
-               
                 Thread.Sleep(1000);
             }
+        }
+
+        //Console methods
+        static int RunOptionsAndReturnExitCode(Options options)
+        {
+            if(options.InputCFG != string.Empty) //the program won´t crash even if something wrong is written here.
+            {
+                useDifferentFileLocation = true;
+                         iniFileLocation = options.InputCFG;
+            }
+           
+            return 0;
+        }
+
+        static void HandleParseError(IEnumerable<Error> errs)
+        {
+            Log.Error("NOT WORKING");
         }
     }
 }

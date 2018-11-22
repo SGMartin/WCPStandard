@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.0": {
+      "ini-parser/2.5.2": {
+        "type": "package",
+        "compile": {
+          "lib/net20/INIFileParser.dll": {}
+        },
+        "runtime": {
+          "lib/net20/INIFileParser.dll": {}
+        }
+      },
       "Microsoft.NETCore.Platforms/1.1.0": {
         "type": "package",
         "compile": {
@@ -401,7 +410,8 @@
           "MySqlConnector": "0.47.1",
           "Serilog": "2.7.1",
           "Serilog.Sinks.Console": "3.1.1",
-          "Serilog.Sinks.File": "4.0.0"
+          "Serilog.Sinks.File": "4.0.0",
+          "ini-parser": "2.5.2"
         },
         "compile": {
           "bin/placeholder/Core.dll": {}
@@ -413,6 +423,20 @@
     }
   },
   "libraries": {
+    "ini-parser/2.5.2": {
+      "sha512": "4tTkVV6xAPuit4vwHeLdcwmLO2kRtWRE7TXKga5QQOdt2DPdtq00ADeXHOzO7hkNtcZpT7GbsvBd6jOiwGz0JQ==",
+      "type": "package",
+      "path": "ini-parser/2.5.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ini-parser.2.5.2.nupkg.sha512",
+        "ini-parser.nuspec",
+        "lib/net20/INIFileParser.dll",
+        "lib/net20/INIFileParser.dll.mdb",
+        "lib/net20/INIFileParser.xml"
+      ]
+    },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "sha512": "bLpT1f/SFlO1CzqXG12KnJzpZs6lv24uX2Rzi4Fmm0noJpNlnWRVryuO3yK18Ca04t/YHcO1e1Z0WDfjseqNzw==",
       "type": "package",
@@ -2048,7 +2072,8 @@
       "NETStandard.Library >= 2.0.3",
       "Serilog >= 2.7.1",
       "Serilog.Sinks.Console >= 3.1.1",
-      "Serilog.Sinks.File >= 4.0.0"
+      "Serilog.Sinks.File >= 4.0.0",
+      "ini-parser >= 2.5.2"
     ]
   },
   "packageFolders": {
@@ -2058,11 +2083,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Santiago\\source\\repos\\WCPStandard2\\Game\\Game.csproj",
+      "projectUniqueName": "C:\\Users\\Santiago\\source\\repos\\WCPStandard\\Game\\Game.csproj",
       "projectName": "Game",
-      "projectPath": "C:\\Users\\Santiago\\source\\repos\\WCPStandard2\\Game\\Game.csproj",
+      "projectPath": "C:\\Users\\Santiago\\source\\repos\\WCPStandard\\Game\\Game.csproj",
       "packagesPath": "C:\\Users\\Santiago\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Santiago\\source\\repos\\WCPStandard2\\Game\\obj\\",
+      "outputPath": "C:\\Users\\Santiago\\source\\repos\\WCPStandard\\Game\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -2081,8 +2106,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "C:\\Users\\Santiago\\source\\repos\\WCPStandard2\\Core\\Core.csproj": {
-              "projectPath": "C:\\Users\\Santiago\\source\\repos\\WCPStandard2\\Core\\Core.csproj"
+            "C:\\Users\\Santiago\\source\\repos\\WCPStandard\\Core\\Core.csproj": {
+              "projectPath": "C:\\Users\\Santiago\\source\\repos\\WCPStandard\\Core\\Core.csproj"
             }
           }
         }
@@ -2113,6 +2138,10 @@
           "Serilog.Sinks.File": {
             "target": "Package",
             "version": "[4.0.0, )"
+          },
+          "ini-parser": {
+            "target": "Package",
+            "version": "[2.5.2, )"
           }
         },
         "imports": [
@@ -2122,5 +2151,17 @@
         "warn": true
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"ini-parser 2.5.2\" se restauró con \".NETFramework,Version=v4.6.1\" en lugar de la plataforma de destino del proyecto \".NETStandard,Version=v2.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
+      "libraryId": "ini-parser",
+      "targetGraphs": [
+        ".NETStandard,Version=v2.0"
+      ]
+    }
+  ]
 }

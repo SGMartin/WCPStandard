@@ -14,7 +14,7 @@ namespace Authentication
 {
     class Options
     {
-        [Option('c', "config", Required = false, HelpText = "Specify custom config file.")]
+        [Option('c', "config", Default = "", Required = false, HelpText = "Specify custom config file.")]
         public string InputCFG { get; set; }
 
     }

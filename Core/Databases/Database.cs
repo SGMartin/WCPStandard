@@ -9,7 +9,9 @@
                            https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql-server-connection-pooling
  */
 
+using System.Data.Common;
 using System;
+using System.Collections.Generic;
 using Serilog;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
@@ -51,6 +53,65 @@ namespace Core.Databases
             }
 
         }
-      
+
+
+        public async Task<List<object>> AsyncGetRowFromTable(string[] keys, string table, Dictionary<string,object> values)
+        {
+            List<object> dataRow = new List<object>();
+
+            string query     = string.Concat("SELECT ", string.Join(",", keys), " FROM ", table);
+            string allValues = string.Empty;
+
+            if (values.Count > 0)
+            {
+                byte index = 0;
+                foreach (KeyValuePair<string, object> entry in values)
+                {
+                    if (index == 0)
+                    {
+                        allValues = string.Concat(allValues, entry.Key, "=@", entry.Key);
+                        index++;
+                    }
+                    else
+                    {
+                        allValues = string.Concat(allValues, " AND ", entry.Key, "=@", entry.Key);
+                    }
+                }
+                query = string.Concat(query, " WHERE ", allValues);
+            }
+
+            try
+            {
+                await Connection.OpenAsync();
+
+                using (var commandQuery = Connection.CreateCommand() as MySqlCommand)
+                {
+                    commandQuery.CommandText = query;
+
+                    foreach(KeyValuePair<string, object> entry in values)
+                    {
+                        commandQuery.Parameters.AddWithValue("@" + entry.Key, entry.Value);
+                    }
+
+                    using (DbDataReader Reader = await commandQuery.ExecuteReaderAsync())
+                    {
+                        if (await Reader.ReadAsync())
+                        {
+                            if (Reader.HasRows)
+                            {
+                                for (int i = 0; i < Reader.FieldCount; i++)
+                                    dataRow.Add(Reader.GetValue(i));
+                            }
+                        }
+                    }
+                }
+                return dataRow;
+            }
+            catch(Exception e)
+            {
+                Log.Error(e.ToString());
+                return null;
+            }
+        }
     }
 }

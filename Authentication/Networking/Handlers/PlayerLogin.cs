@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 
+using System.Data.Common;
 using System.Linq;
 using System.Collections;
 using MySql.Data.MySqlClient;
@@ -12,7 +13,7 @@ namespace Authentication.Networking.Handlers
 {
     class PlayerLogin : Networking.PacketHandler
     {
-        protected override void Process(Entities.User user)
+        protected async override void Process(Entities.User user)
         {
             ArrayList userData = new ArrayList();
 
@@ -27,7 +28,7 @@ namespace Authentication.Networking.Handlers
                 //is password long enough?
                 if (inputPassword.Length >= 3)
                 {
-                    userData = DBQueryForUser(inputUserName);   
+                    userData = await DBQueryForUser(inputUserName);   
                     
                     //Does the username exists?
                     if (userData.Count > 0)
@@ -108,39 +109,32 @@ namespace Authentication.Networking.Handlers
         }
 
         //TODO: update with await and async methods
-        private ArrayList DBQueryForUser(string inputUserName)
+        private async Task<ArrayList> DBQueryForUser(string inputUserName)
         {
             ArrayList dbData = new ArrayList();
 
             using (MySqlConnection connection = new MySqlConnection(Config.AUTH_CONNECTION))
             {
-                try
+
+                await connection.OpenAsync();
+                using (var commandQuery = connection.CreateCommand() as MySqlCommand)
                 {
-                    var commandQuery = connection.CreateCommand() as MySqlCommand;
-
                     commandQuery.CommandText = string.Concat("SELECT * FROM users WHERE username=", "'", inputUserName, "'", ";");
-                    connection.Open();
 
-                    MySqlDataReader Reader = commandQuery.ExecuteReader();  //asynch this?
-
-                    if (Reader.HasRows && Reader.Read())
+                    using (DbDataReader Reader = await commandQuery.ExecuteReaderAsync())
                     {
-                        for(int i = 0; i < Reader.FieldCount; i++)
+                        if (await Reader.ReadAsync())
                         {
-                            dbData.Add(Reader.GetValue(i));
+                            if (Reader.HasRows)
+                            {
+                                for (int i = 0; i < Reader.FieldCount; i++)
+                                    dbData.Add(Reader.GetValue(i));
+                            }
                         }
-
                     }
 
-                    Reader.Close();
                 }
-                catch (Exception e)
-                {
-                    Log.Error(e.ToString());
-                }
-
             }
-
             return dbData;
         }
 

@@ -56,7 +56,7 @@ namespace Game.Networking.Handlers.Internal
                             break;
                         }
 
-                    case ErrorCodes.InvalidSessionMatch: //TODO: Authentication server custom errorcode for this
+                    case ErrorCodes.ServerNameInUse:
                         {
                             Log.Error("Error while authorizing: the server name is already in use.");
                             s.Disconnect(true);

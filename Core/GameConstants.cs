@@ -14,7 +14,7 @@ namespace Core
     public class GameConstants
     {
 
-        //TODO: Check whose of these actually work.
+        //Only normal and adult are visible by regular users. Ids 21-29 are labeled "trainee"
         public enum ServerTypes : byte 
         {
         Normal = 0,

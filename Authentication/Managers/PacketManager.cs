@@ -29,7 +29,7 @@ namespace Authentication.Managers {
             // Game Packets //
            AddExternal(PacketList.Launcher,   new Networking.Handlers.OldLauncher());
            AddExternal(PacketList.ServerList, new Networking.Handlers.PlayerLogin());
-           AddExternal(PacketList.Nickname,   new Networking.Handlers.NewNickName());
+           AddExternal(PacketList.Nickname,   new Networking.Handlers.NewNickname());
         }
 
         private void AddInternal(Core.Networking.PacketList packetType, PacketHandler handler) {
@@ -40,14 +40,14 @@ namespace Authentication.Managers {
 
         public PacketHandler FindInternal(Core.Networking.InPacket inPacket) {
             if (_internalPacketList.ContainsKey(inPacket.Id)) {
-                return (Authentication.Networking.PacketHandler)_internalPacketList[inPacket.Id];
+                return (PacketHandler)_internalPacketList[inPacket.Id];
             } else {
                 Console.WriteLine("UNKNOWN PACKET :: " + inPacket.fullPacket.Remove(inPacket.fullPacket.Length-1));
             }
             return null;
         }
 
-        private void AddExternal(Authentication.Networking.PacketList packetType, PacketHandler handler) {
+        private void AddExternal(PacketList packetType, PacketHandler handler) {
             if (!_externalPacketList.ContainsKey(packetType)) {
                 _externalPacketList.Add((ushort)packetType, handler);
             }
@@ -55,7 +55,7 @@ namespace Authentication.Managers {
 
         public PacketHandler FindExternal(Core.Networking.InPacket inPacket) {
             if (_externalPacketList.ContainsKey(inPacket.Id)) {
-                return (Authentication.Networking.PacketHandler)_externalPacketList[inPacket.Id];
+                return (PacketHandler)_externalPacketList[inPacket.Id];
             } else {
                 Console.WriteLine("UNKNOWN PACKET :: " + inPacket.fullPacket.Remove(inPacket.fullPacket.Length - 1));
             }

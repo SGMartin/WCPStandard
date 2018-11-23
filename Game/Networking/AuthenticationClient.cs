@@ -44,7 +44,7 @@ namespace Game.Networking
                 socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
                 socket.Connect(ip, port);
                 socket.BeginReceive(buffer, 0, buffer.Length, SocketFlags.None, new AsyncCallback(OnDataReceived), null);
-                Log.Information("Successfully connected to the auth server.");
+                Log.Information("Connection established with authentication server.");
                 return true;
             }
             catch { Log.Fatal("failed to connect to the auth server."); Disconnect(IsFirstConnect); } //TODO: really fatal...? implement reconnection routine?

@@ -132,11 +132,15 @@ namespace Game
             }
             */
             // CONNECT TO THE AUTHORIZATION SERVER //
-            AuthServer = new AuthenticationClient(Config.AUTH_SERVER_IP, (int)Core.Networking.Constants.Ports.Internal);
-            if (!AuthServer.Connect())
-            {
-                return;
-            }
+
+                AuthServer = new AuthenticationClient(Config.AUTH_SERVER_IP, (int)Core.Networking.Constants.Ports.Internal);
+                if (!AuthServer.Connect())
+                {
+                Console.ReadKey();
+                    return;
+                }
+            
+            
             /*
             if (!new UDPListener((int)Ports.UDP1).Start())
             {

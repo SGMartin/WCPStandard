@@ -24,7 +24,7 @@ namespace Authentication.Networking.Handlers.Internal
                 {
                     Core.GameConstants.ServerTypes serverType;
 
-                    //check for an existing server type. TODO: research the list for usable stuff and update wiki
+                    //check for an existing server type.
                     if (System.Enum.IsDefined(typeof(Core.GameConstants.ServerTypes), type))
                     {
                         serverType = (Core.GameConstants.ServerTypes)type;
@@ -32,9 +32,19 @@ namespace Authentication.Networking.Handlers.Internal
                         //check if name is already in use, reject server if affirmative
                            foreach(Entities.Server authorizedServer in Managers.ServerManager.Instance.GetAllAuthorized())
                             {
-                                if(authorizedServer.ServerName == serverName)
+
+                           //Already authorized?
+                            if (authorizedServer.IP == ipAddress)
+                            {
+                                s.Send(new Packets.Internal.Authorize(Core.Networking.ErrorCodes.EntityAlreadyAuthorized));
+                                Log.Information("Rejected server " + serverName + " . Server already authorized");
+                                s.Disconnect();
+                                return;
+                            }
+                               
+                            if(authorizedServer.ServerName == serverName)
                                 {
-                                    s.Send(new Packets.Internal.Authorize(Core.Networking.ErrorCodes.EntityAlreadyAuthorized));
+                                    s.Send(new Packets.Internal.Authorize(Core.Networking.ErrorCodes.ServerNameInUse));
                                     Log.Information("Rejected server " + serverName + " . Name already in use");
                                     s.Disconnect();
                                     return;

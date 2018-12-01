@@ -4,25 +4,23 @@
  * 
  */
 
-using Core.Networking;
-
 namespace Game.Networking.Packets.Internal
 {
-    /*
+    
    class PlayerAuthorization : Core.Networking.OutPacket
     {
         public PlayerAuthorization(uint sessionId, uint id, string name)
-            : base((ushort)PacketList.PlayerAuthentication, Constants.xOrKeyServerRecieve) //TODO: check these keys
+            : base((ushort)Core.Networking.PacketList.PlayerAuthentication, Core.Networking.Constants.xOrKeyInternalRecieve)
         {
-            Append((ushort)PlayerAuthorizationErrorCodes.Login);
+            Append((ushort)Core.Networking.ErrorCodes.Success);
             Append(sessionId);
             Append(id);
             Append(name);
         }
         public PlayerAuthorization(uint sessionId, uint id, string name, byte _accessLevel)
-            : base((ushort)PacketList.PlayerAuthentication, Constants.xOrKeyServerRecieve)
+            : base((ushort)Core.Networking.PacketList.PlayerAuthentication, Core.Networking.Constants.xOrKeyInternalRecieve)
         {
-            Append((ushort)PlayerAuthorizationErrorCodes.Login);
+            Append((ushort)Core.Networking.ErrorCodes.Success);
             Append(sessionId);
             Append(id);
             Append(name);
@@ -30,19 +28,19 @@ namespace Game.Networking.Packets.Internal
         }
 
         public PlayerAuthorization(uint id)
-            : base((ushort)PacketList.PlayerAuthentication, Constants.xOrKeyServerRecieve)
+            : base((ushort)Core.Networking.PacketList.PlayerAuthentication, Core.Networking.Constants.xOrKeyInternalRecieve)
         {
-            Append((ushort)PlayerAuthorizationErrorCodes.Logout);
+            Append((ushort)Core.Networking.ErrorCodes.EndConnection);
             Append(id);
         }
 
         public PlayerAuthorization(Entities.User u)
-            : base((ushort)PacketList.PlayerAuthentication, Constants.xOrKeyServerRecieve)
+            : base((ushort)Core.Networking.PacketList.PlayerAuthentication, Core.Networking.Constants.xOrKeyInternalRecieve)
         {
-            Append((ushort)PlayerAuthorizationErrorCodes.Update);
+            Append((ushort)Core.Networking.ErrorCodes.Update);
             Append(u.ID);
 
 
         }
-    }*/
+    }
 }

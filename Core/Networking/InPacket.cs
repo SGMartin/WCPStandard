@@ -10,7 +10,6 @@
 using System;
 using Serilog;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Core.Networking {
     public class InPacket {

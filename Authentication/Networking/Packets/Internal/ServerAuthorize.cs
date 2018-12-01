@@ -10,12 +10,12 @@ namespace Authentication.Networking.Packets.Internal
 {
     class Authorize : Core.Networking.OutPacket {
         public Authorize(Core.Networking.ErrorCodes ErrorCode)
-            : base((ushort)Core.Networking.PacketList.ServerAuthentication, Core.Networking.Constants.xOrKeyServerSend) {
+            : base((ushort)Core.Networking.PacketList.ServerAuthentication, Core.Networking.Constants.xOrKeyInternalSend) {
             Append((ushort)ErrorCode);
         }
 
         public Authorize(byte serverId)
-            : base((ushort)Core.Networking.PacketList.ServerAuthentication, Core.Networking.Constants.xOrKeyServerSend) {
+            : base((ushort)Core.Networking.PacketList.ServerAuthentication, Core.Networking.Constants.xOrKeyInternalSend) {
                 Append(Core.Networking.Constants.ERROR_OK);
                 Append(serverId);
         }

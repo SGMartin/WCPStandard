@@ -96,11 +96,11 @@ namespace Authentication
                     _isRunning = false;
                 }
 
-            if(!new Networking.ServerListener(false, (int)Core.Networking.Constants.Ports.Login).IsListening)
-            {
+              if(!new Networking.ServerListener(false, (int)Core.Networking.Constants.Ports.Login).IsListening)
+                {
                 Log.Fatal("Could not start Server Listener. Is the login port already in use?");
                 _isRunning = false;
-            }
+                 }
 
                 Log.Information("Server started");
 

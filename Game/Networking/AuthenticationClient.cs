@@ -5,14 +5,15 @@
 using System;
 using System.Linq;
 using System.Net.Sockets;
-
-using Core.Networking;
+using Game.Networking.Packets.Internal;
 using Serilog;
 
 namespace Game.Networking
 {
+    
     public class AuthenticationClient
     {
+        public bool Authorized { get { return this._isAuthorized; } set { } }
 
         private Socket socket;
         private byte[] buffer = new byte[1024];
@@ -20,7 +21,7 @@ namespace Game.Networking
         private uint packetCount = 0;
         private bool isDisconnect = false;
         public bool IsFirstConnect { get; private set; }
-        private bool isAuthorized = false;
+        private bool _isAuthorized = false;
 
         private byte serverId;
 
@@ -39,7 +40,7 @@ namespace Game.Networking
             {
                 IsFirstConnect = true;
                 isDisconnect = false;
-                Log.Information("Fetching the local ip address to: " + Config.SERVER_IP + ".");
+                Log.Information("Fetching the local ip address to: " + Config.SERVER_IP + "." + " Using port: " + port.ToString());
                 Log.Information("Attempting to connect to the auth server.");
                 socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
                 socket.Connect(ip, port);
@@ -55,6 +56,7 @@ namespace Game.Networking
         {
             this.serverId = serverId;
             Config.SERVER_ID = serverId;
+            _isAuthorized = true;
             Log.Information(string.Concat("Authorized as server: ", serverId, "."));
         }
 
@@ -71,7 +73,7 @@ namespace Game.Networking
                     // Decrypt the bytes with the xOrKey.
                     for (int i = 0; i < bytesReceived; i++)
                     {
-                        packetBuffer[i] = (byte)(this.buffer[i] ^ Constants.xOrKeyServerSend);
+                        packetBuffer[i] = (byte)(this.buffer[i] ^ Core.Networking.Constants.xOrKeyInternalSend);
                     }
 
                     int oldLength = cacheBuffer.Length;
@@ -91,8 +93,7 @@ namespace Game.Networking
                             packetCount++;
 
                             // Handle the packet instantly.
-                            InPacket inPacket = new Core.Networking.InPacket(newPacket, this);
-                        //    ServerLogger.Instance.AppendPacket(newPacket);
+                            Core.Networking.InPacket inPacket = new Core.Networking.InPacket(newPacket, this);
                             if (inPacket.Id > 0)
                             {
                                 Networking.PacketHandler pHandler = Managers.PacketManager.Instance.FindInternal(inPacket);
@@ -100,17 +101,13 @@ namespace Game.Networking
                                 {
                                     //try {
                                     pHandler.Handle(inPacket);
-                                    //} catch { /*Disconnect();*/ }
+                                    //} catch { /*Disconnect(); }
                                 }
                             }
 
                             startIndex = i + 1;
                         }
                     }
-
-
-
-
 
                     if (startIndex > 0)
                     {
@@ -136,7 +133,7 @@ namespace Game.Networking
             }
         }
 
-        public void Send(OutPacket outPacket)
+        public void Send(Core.Networking.OutPacket outPacket)
         {
             try
             {
@@ -179,7 +176,6 @@ namespace Game.Networking
             if (!force)
                 Connect();
         }
-
-        public bool Authorized { get { return this.isAuthorized; } set { } }
     }
+
 }

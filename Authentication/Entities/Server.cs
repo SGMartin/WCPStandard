@@ -45,11 +45,11 @@ namespace Authentication.Entities {
         private bool isAuthorized = false;
 
         public Server(Socket socket)
-            : base(0, "Unknown", Core.GameConstants.Rights.Regular) {
+           : base(0, "Unknown", Core.GameConstants.Rights.Regular) {
             this.socket = socket;
             isDisconnect = false;
             this.socket.BeginReceive(buffer, 0, buffer.Length, SocketFlags.None, new AsyncCallback(OnDataReceived), null);
-            Send(new Core.Networking.Packets.Connection(Core.Networking.Constants.xOrKeyServerSend));
+            Send(new Core.Networking.Packets.Connection(Core.Networking.Constants.xOrKeyInternalSend));
         }
 
         public void OnAuthorize(byte id, string name, string ip, int port, Core.GameConstants.ServerTypes type) {
@@ -71,7 +71,7 @@ namespace Authentication.Entities {
 
                     // Decrypt the bytes with the xOrKey.
                     for (int i = 0; i < bytesReceived; i++) {
-                        packetBuffer[i] = (byte)(this.buffer[i] ^ Core.Networking.Constants.xOrKeyServerRecieve);
+                        packetBuffer[i] = (byte)(this.buffer[i] ^ Core.Networking.Constants.xOrKeyInternalRecieve);
                     }
 
                     int oldLength = cacheBuffer.Length;
@@ -96,7 +96,9 @@ namespace Authentication.Entities {
                                     {
                                         pHandler.Handle(inPacket);
                                     }
-                                    catch (Exception e) { Log.Error(e.ToString()); }
+                                    catch (Exception e) { Log.Error(e.ToString()); 
+                                     
+                                    }
                                 }
                             }
 

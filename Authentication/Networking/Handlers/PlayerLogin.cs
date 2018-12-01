@@ -8,7 +8,7 @@ using Serilog;
 
 namespace Authentication.Networking.Handlers
 {
-    class PlayerLogin : Networking.PacketHandler
+    class PlayerLogin : PacketHandler
     {
         protected async override void Process(Entities.User user)
         {

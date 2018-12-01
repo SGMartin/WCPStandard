@@ -31,7 +31,6 @@ namespace Game.Networking
                 socket.Bind(new IPEndPoint(IPAddress.Any, this.bindPort));
                 socket.Listen(1);
                 socket.BeginAccept(new AsyncCallback(this.OnAcceptConnection), null);
-                Log.Information(string.Concat("Binding a socket listener to port: ", this.bindPort, "."));
                 return true;
             }
             catch
@@ -47,9 +46,15 @@ namespace Game.Networking
             try
             {
                 Socket s = socket.EndAccept(iAr);
-         //       Entities.User usr = new Entities.User(s);
+                Entities.User usr = new Entities.User(s);
             }
-            catch { }
+            //     catch { }
+            catch(Exception e)
+            {
+                throw new Exception(e.ToString());
+            }
+
+
 
             if (socket != null)
                 socket.BeginAccept(new AsyncCallback(this.OnAcceptConnection), null);

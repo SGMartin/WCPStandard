@@ -136,8 +136,8 @@ namespace Game
                 AuthServer = new AuthenticationClient(Config.AUTH_SERVER_IP, (int)Core.Networking.Constants.Ports.Internal);
                 if (!AuthServer.Connect())
                 {
-                Console.ReadKey();
-                    return;
+                      Console.ReadKey();
+                          return;
                 }
             
             
@@ -198,7 +198,7 @@ namespace Game
                 }
 
                 //ping to auth  server
-         //       AuthServer.Send(new Packets.Internal.Ping());
+            //    AuthServer.Send(new Networking.Packets.Internal.Ping());
 
                 serverLoops++;
 

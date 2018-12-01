@@ -51,11 +51,11 @@ namespace Authentication.Networking
         {
                 Socket s = socket.EndAccept(iAr);
 
-            if (!_isGameServerListener){
-                Entities.User usr = new Entities.User(s);
+            if (!_isGameServerListener) {
+                Entities.User User = new Entities.User(s);
             }
-            else {
-                Entities.Server server = new Entities.Server(s);
+            else{
+                Entities.Server GameServer = new Entities.Server(s);
             }     
             if (socket != null)
                 socket.BeginAccept(new AsyncCallback(this.OnAcceptConnection), null);

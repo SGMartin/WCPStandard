@@ -10,28 +10,29 @@
 
 
 
-using Core.Networking;
+//using Core.Networking;
 
 namespace Authentication.Networking.Packets.Internal {
     class PlayerAuthentication : Core.Networking.OutPacket {
 
         public PlayerAuthentication()
-            : base((ushort)Core.Networking.PacketList.PlayerAuthentication, Constants.xOrKeyServerSend) {
+            : base((ushort)Core.Networking.PacketList.PlayerAuthentication, Core.Networking.Constants.xOrKeyInternalSend) {
             
         }
 
         public PlayerAuthentication(Entities.Session session)
-            : base((ushort)Core.Networking.PacketList.PlayerAuthentication, Constants.xOrKeyServerSend) {
+            : base((ushort)Core.Networking.PacketList.PlayerAuthentication, Core.Networking.Constants.xOrKeyInternalSend) {
+            
                 Append((ushort)Core.Networking.ErrorCodes.Success);
                 Append(session.SessionID);
                 Append(session.ID);
                 Append(session.Name);
                 Append(session.UserDisplayName);
-                Append((byte)session.AccessLevel);
+                Append((byte)session.AccessLevel);       
         }
 
         public PlayerAuthentication(Core.Networking.ErrorCodes errorCode, uint targetId)
-            : base((ushort)Core.Networking.PacketList.PlayerAuthentication, Constants.xOrKeyServerSend) {
+            : base((ushort)Core.Networking.PacketList.PlayerAuthentication, Core.Networking.Constants.xOrKeyInternalSend) {
                 Append((ushort)errorCode);
                 Append(targetId);
         }

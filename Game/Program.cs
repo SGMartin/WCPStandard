@@ -18,7 +18,7 @@ namespace Game
 {
     class Program
     {
-     
+        
         private static DateTime startTime;
         
         //Defines the global logging level for the server
@@ -40,7 +40,6 @@ namespace Game
             //setting up the logger. Defaulting to debug unless overwritten by a config file.
             levelSwitch.MinimumLevel = (Serilog.Events.LogEventLevel)Config.SERILOGLEVEL;
 
-
             Console.Title = "WCPS Game server";
 
             Console.ForegroundColor = ConsoleColor.DarkGreen;
@@ -58,6 +57,9 @@ namespace Game
             Log.Logger = new LoggerConfiguration().MinimumLevel.ControlledBy(levelSwitch)
                         .WriteTo.Console()
                         .WriteTo.File("Game.log", rollingInterval: RollingInterval.Day).CreateLogger();
+
+            //UNIT TESTS
+            Unit_tests.WeaponTest WeaponTesting = new Unit_tests.WeaponTest();     
 
             //setting up CMD reader
             var CMD = Parser.Default.ParseArguments<Options>(args)

@@ -1,6 +1,6 @@
 ﻿namespace Game.Enums
 {
-    public enum Classes : byte
+    public enum Branches : byte
     {
         Engineer = 0,
         Medic,

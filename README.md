@@ -41,5 +41,13 @@ WCPS relies on the following external dependencies:
 
 The last three can be installed as NuGet Packages. Remember that, at least on for Linux, you need to **publish** your project so that it can be actually executed using **dotnet** command.
 
+## Collaborating
+
+Feel free to fork the project and make a Pull Request :)
+
+## Contact
+
+* E-mail: wrpro2@gmail.com
+
 *Last updated: 2-12-2018*
 

@@ -28,7 +28,7 @@ WCPS can be compiled and run either on Windows or on Linux.
 
 ### Running WCPS
 
-*Nightly builds* are planned and binaries will be added soon. Sadly, at the moment the only way to run WCPS is to compile it first. sorry for the inconvenience.
+*Nightly builds* are planned and binaries will be added soon. Sadly,the only way to run WCPS right now is to compile it first. Sorry for the inconvenience.
 
 ### Compiling WCPS
 

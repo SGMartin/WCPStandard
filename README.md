@@ -15,7 +15,7 @@ The first and foremost is to provide an open source, documented and complete ser
 
 * Databases: Authentication database is mostly finished. Game Server database is in active development.
 
-*Last updated: 2-12-2018*
+
 
 
 ## History
@@ -23,4 +23,6 @@ The first and foremost is to provide an open source, documented and complete ser
 The codebase is based on an older server which is itself based on CodeDragon's AlterEmu v5.01. Major improvements have been made already, such as implementing asynchronous database queries and refactoring old messy code. All classes are being documented and a wiki is planned.
 
 WarRock has seen a lot of private servers popping up between 2013-2016 but due to the scene's fragmentation and immaturity there isn't any open source decent server. The aim of this project is to fix that.
+
+*Last updated: 2-12-2018*
 

@@ -27,14 +27,17 @@ namespace Game.Managers
             AddInternal(Core.Networking.PacketList.Connection,           new Networking.Handlers.Internal.Connection());
             AddInternal(Core.Networking.PacketList.ServerAuthentication, new Networking.Handlers.Internal.Authorization());
             AddInternal(Core.Networking.PacketList.Ping                , new Networking.Handlers.Internal.Ping());
-           // AddInternal(Core.Networking.PacketList.PlayerAuthentication, new Networking.Handlers.Internal.PlayerAuthorization());
+            AddInternal(Core.Networking.PacketList.PlayerAuthentication, new Networking.Handlers.Internal.PlayerAuthorization());
 
-            /*
+
+            AddExternal(Networking.PacketList.ServerTime,    new Networking.Handlers.RequestServerTime());
+            AddExternal(Networking.PacketList.Authorization, new Networking.Handlers.Authorization());
             // External Packets //
+            /*
             AddExternal(Enums.Packets.LeaveServer, new Handlers.LeaveServer());
             AddExternal(Enums.Packets.ServerTime, new Handlers.RequestServerTime());
             AddExternal(Enums.Packets.CMDFindPlayer, new Handlers.CMDFindPlayer());
-            AddExternal(Enums.Packets.Authorization, new Handlers.Authorization());
+          
             AddExternal(Enums.Packets.ChannelSelection, new Handlers.ChangeChannel());
             AddExternal(Enums.Packets.RoomCreation, new Handlers.RoomCreation());
             AddExternal(Enums.Packets.RoomJoin, new Handlers.RoomJoin());
@@ -122,7 +125,7 @@ namespace Game.Managers
         {
             if (_internalPacketList.ContainsKey(inPacket.Id))
             {
-                return (Networking.PacketHandler)_internalPacketList[inPacket.Id];
+                return (PacketHandler)_internalPacketList[inPacket.Id];
             }
             else
             {
@@ -130,15 +133,15 @@ namespace Game.Managers
             }
             return null;
         }
-        /*
-        private void AddExternal(Enums.Packets packetType, PacketHandler handler)
+        
+        private void AddExternal(PacketList packetType, PacketHandler handler)
         {
             if (!_externalPacketList.ContainsKey(packetType))
             {
                 _externalPacketList.Add((ushort)packetType, handler);
             }
         }
-
+        /*
         public GameDataHandler GetHandler(ushort id)
         {
             GameDataHandler handler = null;
@@ -152,7 +155,7 @@ namespace Game.Managers
             }
             return handler;
         }
-
+        */
         public PacketHandler FindExternal(Core.Networking.InPacket inPacket)
         {
             if (_externalPacketList.ContainsKey(inPacket.Id))
@@ -161,11 +164,11 @@ namespace Game.Managers
             }
             else
             {
-                Log.Instance.WriteBoth("UNKNOWN PACKET :: " + inPacket.fullPacket.Remove(inPacket.fullPacket.Length - 1));
+                Log.Error("UNKNOWN PACKET :: " + inPacket.fullPacket.Remove(inPacket.fullPacket.Length - 1));
             }
             return null;
         }
-        */
+        
 
         private static PacketManager instance = null;
         public static PacketManager Instance { get { if (instance == null) instance = new PacketManager(); return instance; } set { } }

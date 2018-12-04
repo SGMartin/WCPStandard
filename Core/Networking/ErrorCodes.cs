@@ -18,7 +18,8 @@ namespace Core.Networking
         InvalidKeyOrSession = 0x100,
         InvalidSessionMatch = 0x110,     // <- Connection key or session is valid but some data does not match.
         EntityAlreadyAuthorized = 0x120, // <- Game server or user attempting to get Authentication is already authorized.
-        ServerLimitReached = 0x130
+        ServerLimitReached = 0x130,
+        ServerNameInUse = 0x140
 
         
     }

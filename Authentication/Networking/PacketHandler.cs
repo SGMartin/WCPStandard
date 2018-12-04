@@ -8,6 +8,8 @@
 
 
 using System;
+using Serilog;
+
 namespace Authentication.Networking {
     public abstract class PacketHandler {
         private Core.Networking.InPacket inPacket;
@@ -21,15 +23,15 @@ namespace Authentication.Networking {
             } else if (attachment is Entities.Server) {
                 this.Process((Entities.Server)inPacket.Attachment);
             } else {
-                Console.WriteLine("Unknown packet attachment!");
+                Log.Warning("Unknown packet attachment!");
             }
         }
 
         protected virtual void Process(Entities.User u) {
-            Console.WriteLine(string.Concat("No user handler for PacketID: ", this.inPacket.Id));
+            Log.Error(string.Concat("No user handler for PacketID: ", this.inPacket.Id));
         }
         protected virtual void Process(Entities.Server s) {
-            Console.WriteLine(string.Concat("No server handler for PacketID: ", this.inPacket.Id));
+            Log.Error(string.Concat("No server handler for PacketID: ", this.inPacket.Id));
         }
 
         protected string GetString(byte index) {

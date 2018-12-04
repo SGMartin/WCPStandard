@@ -1,14 +1,16 @@
 ﻿using System;
+using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 
 using Core;
 using Serilog;
+using System.Data.Common;
 
 namespace Authentication.Networking.Handlers
 {
-    class NewNickName : PacketHandler
+    class NewNickname : PacketHandler
     {
-        protected override void Process(Entities.User u)
+        protected override async void Process(Entities.User u)
         {
             if (u.Authorized)
             {
@@ -16,15 +18,17 @@ namespace Authentication.Networking.Handlers
 
                 if (newName.Length > 3 && Utils.isAlphaNumeric(newName)) //legal nickname. TODO: add reserved/allowed shit
                 {
-                    if (!DBIsNameTaken(newName))
-                    {
+                    bool dbNameIsTaken = await DBIsNameTaken(newName);
+                  
+                    if(!dbNameIsTaken)
+                    {                    
+                        u.UpdateDisplayname(newName);
+                        u.Send(new Packets.ServerList(u));
+                        u.Disconnect();
 
-                        if (DBUpdateDisplayName(u.ID, newName))
-                        {
-                            u.UpdateDisplayname(newName);
-                            u.Send(new Packets.ServerList(u));
-                            u.Disconnect();
-                        }
+                        // Update the DB
+                        DBUpdateDisplayName(u.ID, newName);
+
                     }
                     else
                         u.Send(new Packets.ServerList(Packets.ServerList.ErrorCodes.NicknameTaken));
@@ -36,56 +40,43 @@ namespace Authentication.Networking.Handlers
                 u.Disconnect();
         }
 
-        #region MySQL methods
-        // TODO: update with await and async methods
-        private bool DBUpdateDisplayName(uint userId, string newName)
+        #region MySQL methods 
+
+        private async Task<bool> DBUpdateDisplayName(uint userId, string newName)
         {
-            using (MySqlConnection connection = new MySqlConnection(Config.AUTH_CONNECTION))
+            using (Core.Databases.Database Database = new Core.Databases.Database(Config.AUTH_CONNECTION))
             {
-                try
-                {
-                    var commandQuery = connection.CreateCommand() as MySqlCommand;
-                    commandQuery.CommandText = string.Concat("UPDATE users SET `displayname` ='", newName, "' WHERE ID=", userId, ";");
-
-                    connection.OpenAsync();
-                    commandQuery.ExecuteNonQueryAsync();
-
-                    return true;
-                }
-                catch(Exception ex)
-                {
-                    Log.Error(ex.ToString());
-                    return false;
-                }
-               
+               await Database.AsyncQuery(string.Concat("UPDATE users SET `displayname` ='", newName, "' WHERE ID=", userId, ";"));
             }
+            return false;
         }
 
-        private bool DBIsNameTaken(string newName)
+        //TODO: refactor this and add to Database.cs
+        private async Task<bool>DBIsNameTaken(string newName)
         {
-            bool result = true;
+              bool result = true;
 
             using (MySqlConnection connection = new MySqlConnection(Config.AUTH_CONNECTION))
             {
                 try
                 {
-                    var commandQuery = connection.CreateCommand() as MySqlCommand;
+                    using (var commandQuery = connection.CreateCommand() as MySqlCommand)
+                    {
+                        commandQuery.CommandText = string.Concat("SELECT username FROM `users` WHERE BINARY displayname=", "'", newName, "'", ";");
 
-                    commandQuery.CommandText = string.Concat("SELECT username FROM `users` WHERE displayname=","'", newName,"'", ";");
-                    connection.Open();
+                        await connection.OpenAsync();
 
-                    MySqlDataReader Reader = commandQuery.ExecuteReader();
-
-                    if (Reader.HasRows && Reader.Read()){
-                      result = true; }
-
-                    else {
-                        result = false; }
-                        
-
-                    Reader.Close();
+                        using (DbDataReader Reader = await commandQuery.ExecuteReaderAsync())
+                        {
+                            if (await Reader.ReadAsync()) //rows found
+                                result = true;
+                            else
+                                result = false;
+                        }
+                    }
+                       
                 }
-                catch(Exception e)
+                catch (Exception e)
                 {
                     Log.Error(e.ToString());
                 }

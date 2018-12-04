@@ -27,10 +27,10 @@ namespace Authentication
         public static LoggingLevelSwitch levelSwitch = new LoggingLevelSwitch();
 
         //CMD related var.
-        private static bool useDifferentFileLocation = false;
-        private static string iniFileLocation        = string.Empty;
+        private static bool    _useDefaultConfigLocation = true;
+        private static string  _iniFileLocation          = string.Empty;
 
-        private static bool isRunning                = true;
+        private static bool _isRunning                   = true;
         private static DateTime startTime;
 
 
@@ -63,17 +63,16 @@ namespace Authentication
 
             //setting up CMD reader
             var CMD = Parser.Default.ParseArguments<Options>(args)
-                .WithParsed<Options>(opts => RunOptionsAndReturnExitCode(opts))
-                .WithNotParsed<Options>((errs) => HandleParseError(errs));
+                .WithParsed(opts => RunOptionsAndReturnExitCode(opts))
+                .WithNotParsed((errs) => HandleParseError(errs));
 
 
             //Path.Combine is platform friendly :) Windows uses \ whereas Linux uses /
             //iniFileLocation can be redefined by CMD... see RunOptionsAndReturnExitCode
-            if (!useDifferentFileLocation)
-                iniFileLocation = Path.Combine(String.Concat(Environment.CurrentDirectory, Path.DirectorySeparatorChar, "CFG", Path.DirectorySeparatorChar, "Authentication.ini"));
+            if (_useDefaultConfigLocation)
+                _iniFileLocation = Path.Combine(String.Concat(Environment.CurrentDirectory, Path.DirectorySeparatorChar, "CFG", Path.DirectorySeparatorChar, "Authentication.ini"));
             
-
-            Config.Read(iniFileLocation);
+            Config.Read(_iniFileLocation);
 
             // test database connection
             using (MySqlConnection TestConnection = new MySqlConnection(Config.AUTH_CONNECTION))
@@ -91,41 +90,40 @@ namespace Authentication
                     
                 }
             }
-                if (!new Networking.GameServerListener((int)Core.Networking.Constants.Ports.Internal).Start())
+                if (!new Networking.ServerListener(true, (int)Core.Networking.Constants.Ports.Internal).IsListening)
                 {
                     Log.Fatal("Could not start GameServer listener. Is the port already in use?");
-                    isRunning = false;
-                    return;
+                    _isRunning = false;
                 }
 
-            if(!new Networking.ServerListener((int)Core.Networking.Constants.Ports.Login).Start())
-            {
+              if(!new Networking.ServerListener(false, (int)Core.Networking.Constants.Ports.Login).IsListening)
+                {
                 Log.Fatal("Could not start Server Listener. Is the login port already in use?");
-                isRunning = false;
-            }
+                _isRunning = false;
+                 }
 
-            Log.Debug("Server started");
-            Console.ForegroundColor = ConsoleColor.Gray;
+                Log.Information("Server started");
 
-            if(isRunning)
+            if(_isRunning)
             {
                 TimeSpan loadTime = DateTime.Now - startTime;
                 Log.Information(string.Format("Emulator loaded in {0} milliseconds!", loadTime.TotalMilliseconds));
             }
            
-            while (isRunning)
+            //MAIN SERVER THREAD. TODO: BASIC QUERIES?
+            while (_isRunning)
             {
                 Thread.Sleep(1000);
             }
         }
 
         //Console methods
-        static int RunOptionsAndReturnExitCode(Options options)
+        private static int RunOptionsAndReturnExitCode(Options options)
         {
             if(options.InputCFG != string.Empty) //the program won´t crash even if something wrong is written here.
             {
-                useDifferentFileLocation = true;
-                         iniFileLocation = options.InputCFG;
+                _useDefaultConfigLocation   = false;
+                _iniFileLocation            = options.InputCFG;
             }
            
             return 0;

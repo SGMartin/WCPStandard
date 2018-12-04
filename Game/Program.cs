@@ -18,7 +18,7 @@ namespace Game
 {
     class Program
     {
-     
+        
         private static DateTime startTime;
         
         //Defines the global logging level for the server
@@ -40,7 +40,6 @@ namespace Game
             //setting up the logger. Defaulting to debug unless overwritten by a config file.
             levelSwitch.MinimumLevel = (Serilog.Events.LogEventLevel)Config.SERILOGLEVEL;
 
-
             Console.Title = "WCPS Game server";
 
             Console.ForegroundColor = ConsoleColor.DarkGreen;
@@ -58,6 +57,9 @@ namespace Game
             Log.Logger = new LoggerConfiguration().MinimumLevel.ControlledBy(levelSwitch)
                         .WriteTo.Console()
                         .WriteTo.File("Game.log", rollingInterval: RollingInterval.Day).CreateLogger();
+
+            //UNIT TESTS
+            Unit_tests.WeaponTest WeaponTesting = new Unit_tests.WeaponTest();     
 
             //setting up CMD reader
             var CMD = Parser.Default.ParseArguments<Options>(args)
@@ -132,22 +134,26 @@ namespace Game
             }
             */
             // CONNECT TO THE AUTHORIZATION SERVER //
-            AuthServer = new AuthenticationClient(Config.AUTH_SERVER_IP, (int)Core.Networking.Constants.Ports.Internal);
-            if (!AuthServer.Connect())
-            {
-                return;
-            }
-            /*
-            if (!new UDPListener((int)Ports.UDP1).Start())
+
+                AuthServer = new AuthenticationClient(Config.AUTH_SERVER_IP, (int)Core.Networking.Constants.Ports.Internal);
+                if (!AuthServer.Connect())
+                {
+                      Console.ReadKey();
+                          return;
+                }
+            
+            
+            
+            if (!new UDPListener((int)Core.Networking.Constants.Ports.UDP1).Start())
             {
                 return;
             }
 
-            if (!new UDPListener((int)Ports.UDP2).Start())
+            if (!new UDPListener((int)Core.Networking.Constants.Ports.UDP2).Start())
             {
                 return;
             }
-            */
+            
             //SHOW THE CONFIGURATION RATES
             /*
             if (Config.SERVER_DEBUG == 1)
@@ -172,8 +178,7 @@ namespace Game
             if (isRunning)
             {
                 TimeSpan loadTime = DateTime.Now - startTime;
-        //        Log.Instance.WriteLine(string.Format("Emulator loaded in {0} milliseconds!", loadTime.TotalMilliseconds));
-          //      ServerLogger.Instance.Append(ServerLogger.AlertLevel.Information, string.Format("Emulator loaded in {0} milliseconds!", loadTime.TotalMilliseconds));
+                Log.Information(string.Format("Emulator loaded in {0} milliseconds!", loadTime.TotalMilliseconds));
             }
 
             startTime = DateTime.Now;
@@ -186,15 +191,15 @@ namespace Game
 
                 if (serverLoops % 5 == 0)
                 {
-                 //   Parallel.ForEach(Managers.UserManager.Instance.Sessions.Values, user => {
-                   //     if (user.Authorized)
-                     //       user.SendPing();
-//                    });
+                    Parallel.ForEach(Managers.UserManager.Instance.Sessions.Values, user => {
+                        if (user.Authorized)
+                            user.SendPing();
+                    });
 
                 }
 
                 //ping to auth  server
-         //       AuthServer.Send(new Packets.Internal.Ping());
+            //    AuthServer.Send(new Networking.Packets.Internal.Ping());
 
                 serverLoops++;
 

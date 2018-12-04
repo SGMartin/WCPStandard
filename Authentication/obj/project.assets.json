@@ -3046,11 +3046,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Santiago\\source\\repos\\WCPStandard\\Authentication\\Authentication.csproj",
+      "projectUniqueName": "C:\\Users\\Santiago\\source\\repos\\WCPDevelopment\\Authentication\\Authentication.csproj",
       "projectName": "Authentication",
-      "projectPath": "C:\\Users\\Santiago\\source\\repos\\WCPStandard\\Authentication\\Authentication.csproj",
+      "projectPath": "C:\\Users\\Santiago\\source\\repos\\WCPDevelopment\\Authentication\\Authentication.csproj",
       "packagesPath": "C:\\Users\\Santiago\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Santiago\\source\\repos\\WCPStandard\\Authentication\\obj\\",
+      "outputPath": "C:\\Users\\Santiago\\source\\repos\\WCPDevelopment\\Authentication\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -3069,8 +3069,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\Santiago\\source\\repos\\WCPStandard\\Core\\Core.csproj": {
-              "projectPath": "C:\\Users\\Santiago\\source\\repos\\WCPStandard\\Core\\Core.csproj"
+            "C:\\Users\\Santiago\\source\\repos\\WCPDevelopment\\Core\\Core.csproj": {
+              "projectPath": "C:\\Users\\Santiago\\source\\repos\\WCPDevelopment\\Core\\Core.csproj"
             }
           }
         }

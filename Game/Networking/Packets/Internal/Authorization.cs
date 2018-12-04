@@ -8,7 +8,7 @@ namespace Game.Networking.Packets.Internal
     class Authorization : OutPacket
     {
         public Authorization()
-            : base((ushort)PacketList.ServerAuthentication, Constants.xOrKeyServerRecieve)
+            : base((ushort)Core.Networking.PacketList.ServerAuthentication, Constants.xOrKeyInternalRecieve)
         {
             Append(Constants.ERROR_OK);
             Append(Config.SERVER_KEY);

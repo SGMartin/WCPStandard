@@ -20,9 +20,9 @@ namespace Game.Networking
             this.InPacket = inPacket;
 
             object attachment = inPacket.Attachment;
-            if (attachment is Entities.User)
+            if (attachment is User)
             {
-              //  this.Process((Entities.User)inPacket.Attachment);
+                this.Process((User)inPacket.Attachment);
             }
             else if (attachment is AuthenticationClient)
             {
@@ -34,7 +34,7 @@ namespace Game.Networking
             }
         }
 
-       // protected virtual void Process(Entities.User u) { }
+        protected virtual void Process(User u) { }
         protected virtual void Process(AuthenticationClient s) { }
 
         protected string GetString(byte index)

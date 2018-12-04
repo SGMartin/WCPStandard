@@ -14,7 +14,7 @@ namespace Core
     public class GameConstants
     {
 
-        //TODO: Check whose of these actually work.
+        //Only normal and adult are visible by regular users. Ids 21-29 are labeled "trainee"
         public enum ServerTypes : byte 
         {
         Normal = 0,
@@ -61,5 +61,7 @@ namespace Core
         //102
         2147483647};
 
+        public static byte[] RoundLimits = new byte[] { 1, 3, 5, 7, 9 };
+        public static ushort[] TDMTickets = new ushort[] { 30, 50, 100, 150, 200, 300 };
     }
 }

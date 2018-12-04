@@ -35,7 +35,7 @@ namespace Game.Networking.Packets
                 Append(0); // Unknown
                 Append(16); // Unknown
                 Append(u.XP);
-                Append((byte)u.Premium);
+                Append((byte)u.PremiumState.Premium);
                 Append(0);
 
             }

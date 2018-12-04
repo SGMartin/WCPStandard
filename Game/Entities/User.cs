@@ -40,18 +40,17 @@ namespace Game.Entities
 
         //user related objects
         public string DisplayName { get; private set; }
-        public UserStats Stats           { get; private set; }
-        public UserLobbyState LobbyState { get; private set; }
         public ulong XP { get; private set; }
         public uint Money { get; private set; }
+
+        public UserStats Stats { get; private set; }
+        public UserLobbyState LobbyState { get; private set; }
+        public UserPremium PremiumState { get; private set; }
 
 
         //TODO: Inventory stuff here
 
-        //Premium related  
-        public Enums.Premium Premium { get; private set; }
-        public ulong PremiumExpireDate { get; private set; }
-        public long PremiumTimeInSeconds { get; private set; }
+
 
         private Socket _socket;
         private byte[] _buffer         = new byte[1024];
@@ -140,8 +139,7 @@ namespace Game.Entities
                     Log.Warning("Could not send ping to player: " + DisplayName);
                     return;
                 }
-
-               // UpdatePremiumState();
+                PremiumState.UpdatePremiumState(); //update premium state with each  server ping packet
 
                 pingOk = false;
                 Send(new Networking.Packets.Ping(this));
@@ -215,7 +213,18 @@ namespace Game.Entities
                         new Dictionary<string, object>() { { "ID", ID } });
 
                     if (BasicUserData.Count > 0)
-                        return true;
+                    {
+                        XP      = Convert.ToUInt64(BasicUserData[0]);
+                        Money   = Convert.ToUInt32(BasicUserData[1]);
+
+                        // Load premium data from database //
+                        byte premium             = Convert.ToByte(BasicUserData[2]);
+                        ulong premiumExpireDate  = Convert.ToUInt64(BasicUserData[3]);
+
+                        PremiumState = new UserPremium(this, (Enums.Premium)premium, premiumExpireDate);
+                       return true;
+                    }
+                       
                 }
             }
             catch (Exception e)

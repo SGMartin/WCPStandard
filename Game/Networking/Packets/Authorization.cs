@@ -63,17 +63,15 @@ namespace Game.Networking.Packets
             }
             */
             // CLAN BLOCKS
-            Append((byte)u.Premium);    // Premium Type.
+            Append((byte)u.PremiumState.Premium);    // Premium Type.
             Append(0);                  // Unknown.
             Append(0);                  // Unknown.
-                                        //   Append(Core.Utils.GetLevelforExp(u.XP)); // User Level (based on XP).
-            Append(Core.Utils.GetLevelforExp(0)); // User Level (based on XP).
-                                        //   Append(u.XP);               // User XP.
-            Append(0);
+            Append(Core.Utils.GetLevelforExp(u.XP)); // User Level (based on XP)
+            Append(u.XP);               // User XP.
+
             Append(0);                  // Unknown.
             Append(0);                  // Unknown.
-                                        // Append(u.Money);            // User Money
-            Append(30000);
+            Append(u.Money);            // User Money
             Append(u.Stats.Kills);            // User Kills
             Append(u.Stats.Deaths);           // User Deaths
             Fill(5, 0);                 // 5 Unknown blocks

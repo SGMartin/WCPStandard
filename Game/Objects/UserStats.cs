@@ -33,20 +33,20 @@ namespace Game.Objects
 
             Stats = await QueryUserStats(userID);
 
-            if(Stats.Count > 0 && Stats != null)
+            if(Stats != null && Stats.Count > 0)
             {
-                Kills       = Convert.ToUInt32(Stats[1]);
-                Deaths      = Convert.ToUInt32(Stats[2]);
-                Headshots   = Convert.ToUInt32(Stats[3]);
+                Kills       = Convert.ToUInt32(Stats[0]);
+                Deaths      = Convert.ToUInt32(Stats[1]);
+                Headshots   = Convert.ToUInt32(Stats[2]);
 
-                BombsPlanted = Convert.ToUInt32(Stats[4]);
-                BombsDefused = Convert.ToUInt32(Stats[5]);
-                RoundsPlayed = Convert.ToUInt32(Stats[6]);
+                BombsPlanted = Convert.ToUInt32(Stats[3]);
+                BombsDefused = Convert.ToUInt32(Stats[4]);
+                RoundsPlayed = Convert.ToUInt32(Stats[5]);
 
-                FlagsTaken           = Convert.ToUInt32(Stats[7]);
-                Victories            = Convert.ToUInt32(Stats[8]);
-                Defeats              = Convert.ToUInt32(Stats[9]);
-                VehiclesDestroyed    = Convert.ToUInt32(Stats[10]);
+                FlagsTaken           = Convert.ToUInt32(Stats[6]);
+                Victories            = Convert.ToUInt32(Stats[7]);
+                Defeats              = Convert.ToUInt32(Stats[8]);
+                VehiclesDestroyed    = Convert.ToUInt32(Stats[9]);
                 return true;
             }
             else //Use default instead and send an error
@@ -73,7 +73,7 @@ namespace Game.Objects
         }
 
         private async Task<List<object>> QueryUserStats(uint userID)
-        {
+         {
             //MySQL query to load the data
             List<object> UserStats = new List<object>();
 

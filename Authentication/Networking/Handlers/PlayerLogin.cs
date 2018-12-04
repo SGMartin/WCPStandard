@@ -111,36 +111,6 @@ namespace Authentication.Networking.Handlers
             if (!isSettingNewNickName)
                 user.Disconnect();
         }
-        /*
-        //TODO: update with await and async methods
-        private async Task<ArrayList> DBQueryForUser(string inputUserName)
-        {
-            ArrayList dbData = new ArrayList();
-
-            using (MySqlConnection connection = new MySqlConnection(Config.AUTH_CONNECTION))
-            {
-
-                await connection.OpenAsync();
-                using (var commandQuery = connection.CreateCommand() as MySqlCommand)
-                {
-                    commandQuery.CommandText = string.Concat("SELECT * FROM users WHERE username=", "'", inputUserName, "'", ";");
-
-                    using (DbDataReader Reader = await commandQuery.ExecuteReaderAsync())
-                    {
-                        if (await Reader.ReadAsync())
-                        {
-                            if (Reader.HasRows)
-                            {
-                                for (int i = 0; i < Reader.FieldCount; i++)
-                                    dbData.Add(Reader.GetValue(i));
-                            }
-                        }
-                    }
-
-                }
-            }
-            return dbData;
-        }
-        */
+       
     }
 }

@@ -113,5 +113,73 @@ namespace Core.Databases
                 return null;
             }
         }
+
+        public async Task<bool> AsyncUpdateData(string table, Dictionary<string, object>val, Dictionary<string, object> where)
+        {
+
+            string query = string.Concat("UPDATE ", table, " SET ");
+            string valuesString = string.Empty;
+
+            byte index = 0;
+            foreach (KeyValuePair<string, object> entry in val)
+            {
+                if (index == 0)
+                {
+                    valuesString = string.Concat(valuesString, entry.Key, "=@", entry.Key);
+                    index++;
+                }
+                else
+                {
+                    valuesString = string.Concat(valuesString, ", ", entry.Key, "=@", entry.Key);
+                }
+            }
+            query = string.Concat(query, valuesString);
+
+            if (where.Count > 0)
+            {
+                index = 0;
+                foreach (KeyValuePair<string, object> entry in where)
+                {
+                    if (index == 0)
+                    {
+                        valuesString = string.Concat(valuesString, entry.Key, "=@", entry.Key);
+                        index++;
+                    }
+                    else
+                    {
+                        valuesString = string.Concat(valuesString, " AND ", entry.Key, "=@", entry.Key);
+                    }
+                }
+                query = string.Concat(query, " WHERE ", valuesString);
+            }
+
+            try
+            {
+                await Connection.OpenAsync();
+
+                using (var commandQuery = Connection.CreateCommand() as MySqlCommand)
+                {
+                    commandQuery.CommandText = query;
+
+                    foreach (KeyValuePair<string, object> entry in where)
+                    {
+                        commandQuery.Parameters.AddWithValue("@" + entry.Key, entry.Value);
+                    }
+
+                    foreach (KeyValuePair<string, object> entry in val)
+                    {
+                        commandQuery.Parameters.AddWithValue("@" + entry.Key, entry.Value);
+                    }
+
+                    await commandQuery.ExecuteNonQueryAsync();
+                    return true;
+                }
+            }
+            catch(Exception e)
+            {
+                Log.Fatal(e.ToString());
+                return false;
+            }
+        }
     }
 }

@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ *                                          One of the earliest packets sent by the client when attempting to connect to the game server. It asks for the server time
+ *                                          and provides some useful information such as versionID and macAddress
+ */ 
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 

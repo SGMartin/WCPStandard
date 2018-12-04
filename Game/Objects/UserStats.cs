@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+ * 
+ *                  User statistics are stored here. Database operation pertaining these are also here.
+ * 
+ * 
+ */ 
+
+using System;
 using Serilog;
 using System.Threading.Tasks;
 using System.Collections.Generic;

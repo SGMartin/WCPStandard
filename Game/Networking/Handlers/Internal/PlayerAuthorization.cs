@@ -1,4 +1,12 @@
-﻿using System;
+﻿/*
+ * 
+ *                        Handler for the internal PlayerAuthorization packet sent by the Authentication server after GameServer request.
+ * 
+ * 
+ */
+
+
+using System;
 using Core.Networking;
 
 using Serilog;
@@ -25,7 +33,7 @@ namespace Game.Networking.Handlers.Internal
                             Entities.User u = Managers.UserManager.Instance.Get(targetId);
                             if (u != null)
                             {
-                                Log.Debug("User authorized");
+                                Log.Information("User " + u.DisplayName + " authorized.");
                                 uint userId = GetuInt(2);
                                 string userName = GetString(3);
                                 string displayName = GetString(4);

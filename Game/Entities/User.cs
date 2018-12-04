@@ -1,4 +1,13 @@
-﻿using System;
+﻿/*
+ *                                                                  User entities are a socket and a handful of variables at its core.
+ *                                                                  Lobby data, game data, statistics etc... are handled by other classes                
+ *                                                                instanciated by the User class. This reduces this class size from gargantuan to useable.     
+ *                                                                
+ *                                                                Authorization, ping and socket operations are the main responsabilities of this class.
+ */ 
+
+using System;
+using System.Linq;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -28,9 +37,6 @@ namespace Game.Entities
         public uint Ping { get; private set; }
         public bool Authorized { get; private set; }
         public uint SessionID { get; private set; }
-
-        //public ChannelType Channel { get; private set; }
-
 
         //user related objects
         public string DisplayName { get; private set; }
@@ -95,11 +101,21 @@ namespace Game.Entities
 
             Authorized = true;
 
-            //TODO: send authorization packet
+            
             Send(new Networking.Packets.Authorization(this));
             SendPing();
 
-            //TODO: update userlist
+        
+            //Updating UserList for every player //
+
+            List<User> UserList = new List<User>();
+
+            foreach (User User in Managers.UserManager.Instance.Sessions.Values.Where(n => n.LobbyState.Room == null))
+                UserList.Add(User);
+
+            foreach (User InLobby in UserList)
+                    InLobby.LobbyState.UpdateUserList();
+            
         }
 
         public void SetSession(uint sessionId)
@@ -128,7 +144,7 @@ namespace Game.Entities
                // UpdatePremiumState();
 
                 pingOk = false;
-                Send(new Packets.Ping(this));
+                Send(new Networking.Packets.Ping(this));
             }
         }
 
@@ -145,8 +161,20 @@ namespace Game.Entities
     
         public void Disconnect()
         {
+            if (_isDisconnected)
+                return;
+
             _isDisconnected = true;
+
+            if (LobbyState.Channel > Enums.ChannelType.None)
+                Managers.ChannelManager.Instance.Remove(LobbyState.Channel, this); //remove user from the channel userlist
+
+            if (SessionID > 0)
+                Managers.UserManager.Instance.Remove(SessionID); //remove this user session
+
             _socket.Close();
+
+            //TODO: UPDATE USERLIST && Save player details to DB
         }
 
         public void Send(byte[] sendBuffer)

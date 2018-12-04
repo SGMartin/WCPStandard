@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ *                                     Self explanatory
+ * 
+ */
+
+using System;
 using Serilog;
 namespace Game.Networking.Handlers
 {

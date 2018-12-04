@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+ * 
+ *                      Channel.cs keeps track of user and room count for a given channel and sends a RoomUpdate packet when necessary
+ * 
+ * 
+ */ 
+
+using System;
 using System.Linq;
 using System.Collections.Generic;
 using System.Collections.Concurrent;

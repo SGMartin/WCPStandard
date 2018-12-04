@@ -1,8 +1,16 @@
-﻿using Game.Enums;
-using Game.Managers;
+﻿/*
+ * 
+ *                                          Lobby related user data and methods are stored here.
+ * 
+ */ 
+
+using System.Collections;
+
 using Game.Entities;
-using System;
-using Serilog;
+using Game.Enums;
+using Game.Managers;
+
+
 
 namespace Game.Objects
 {
@@ -23,6 +31,7 @@ namespace Game.Objects
             Room       = null;
             LastRoomId = -1;
             RoomListPage = 0;
+            VisibleUserListPage = 0;
         }
 
 
@@ -44,10 +53,31 @@ namespace Game.Objects
                 Channel = newChannel; // change
                 RoomListPage = 0;
 
-                //TODO: Boolean and implement in User.cs
                 if (!ChannelManager.Instance.Add(Channel, Owner))
                    Owner.Disconnect(); // Failed to join :'(
             }
+        }
+
+        public void UpdateUserList() //uses default page
+        {
+            ArrayList UserList = new ArrayList();
+
+            foreach (User User in UserManager.Instance.Sessions.Values) //CP1  userlist reports all users despite their channel
+                UserList.Add(User);
+
+            Owner.Send(new Networking.Packets.UserList(VisibleUserListPage, UserList));
+        }
+
+        public void UpdateUserList(byte userListPage)
+        {
+            VisibleUserListPage = userListPage;
+
+            ArrayList UserList = new ArrayList();
+
+            foreach (User User in UserManager.Instance.Sessions.Values) //CP1  userlist reports all users despite their channel
+                UserList.Add(User);
+
+            Owner.Send(new Networking.Packets.UserList(VisibleUserListPage, UserList));
         }
     }
 }

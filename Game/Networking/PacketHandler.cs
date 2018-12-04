@@ -1,6 +1,6 @@
 ﻿/*
 
-            This is the packet handler for the Game server. It is used by the handlers to respond to incoming packets
+            This is the packet handler ABSTRACT class used by all Game server handlers.
             Allows for easy data manipulation before sending the packet.
 
 

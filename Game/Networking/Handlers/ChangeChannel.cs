@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+ * 
+ *                                      This handler is self-explanatory: two packets are sent here: one responding to the change channel request
+ *                                      and another one with RoomList data.
+ * 
+ */ 
+
+using System;
 using System.Collections;
 using System.Linq;
 using Game.Enums;

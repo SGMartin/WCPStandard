@@ -1,4 +1,12 @@
-﻿using System;
+﻿/*
+ * 
+ *                          This class  parses the configuration (CFG) file using ini-parser 2.5.2 by rickyah    
+ *                                    MITT license -see license file.
+ *                                 https://www.nuget.org/packages/ini-parser/
+ * 
+ * 
+ */
+using System;
 
 using Serilog;
 using IniParser;

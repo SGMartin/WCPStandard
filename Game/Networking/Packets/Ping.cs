@@ -1,6 +1,6 @@
 ﻿using Game.Networking;
 
-namespace Game.Packets
+namespace Game.Networking.Packets
 {
     class Ping : Core.Networking.OutPacket
     {

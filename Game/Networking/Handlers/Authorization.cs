@@ -1,4 +1,13 @@
-﻿using Game.Entities;
+﻿/*
+ * 
+ *                                                      When a player selects a GameServer to play, it sends a "login" packet
+ *                                                      asking for User data such as inventory or equipment. Instead of responding right away,
+ *                                                      this handler sends an internal packet to the Authentication server asking wether this player  
+ *                                                      has an active session there or not.
+ */                                                                         
+
+
+using Game.Entities;
 
 namespace Game.Networking.Handlers
 {

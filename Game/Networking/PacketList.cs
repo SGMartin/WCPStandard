@@ -1,4 +1,12 @@
-﻿namespace Game.Networking
+﻿/*
+ * 
+ *                                          All known packet IDs are listed here, converted to HEX. You can convert them back and forth using Google.
+ *                                          GamePacket(hex: 0x7530/ dec: 30000) is a special packet. The bytes meaning change depending on a certain byte called
+ *                                          "subpacket" byte. It is handled directly by GameDataHandler.cs
+ * 
+ */
+
+namespace Game.Networking
 {
     public enum PacketList : ushort
     {

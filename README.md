@@ -18,7 +18,7 @@ The first and foremost is to provide an open source, documented and complete ser
 
 ## History
 
-The codebase is based on an older server which is itself based on CodeDragon's AlterEmu v5.01. Major improvements have been made already, such as implementing asynchronous database queries and refactoring old messy code. All classes are being documented and a wiki is planned.
+The codebase is based on an older server which itself is based on CodeDragon's AlterEmu v5.01. Major improvements have been made already, such as implementing asynchronous database queries and refactoring old messy code. All classes are being documented and a wiki is planned.
 
 WarRock has seen a lot of private servers popping up between 2013-2016 but due to the scene's fragmentation and immaturity there isn't any open source decent server. The aim of this project is to fix that.
 

@@ -15,16 +15,13 @@ namespace Game.Networking.Handlers
 
             if (userId > 0 && username.Length > 2 && displayname.Length > 2 && sessionId > 0)
             {
-                //      if (Managers.UserManager.Instance.Add(sessionId, u))
-                //    {
-                         Program.AuthServer.Send(new Packets.Internal.PlayerAuthorization(sessionId, userId, username, _accessLevel));
-                            
-            //   }
-                // else
-                //{
-                //  u.Send(new Packets.Authorization(Packets.Authorization.ErrorCodes.NormalProcedure));
-                //u.Disconnect();
-                //   }
+               if (Managers.UserManager.Instance.Add(sessionId, u)){
+                     Program.AuthServer.Send(new Packets.Internal.PlayerAuthorization(sessionId, userId, username, _accessLevel));                
+               }
+                 else {
+                  u.Send(new Packets.Authorization(Packets.Authorization.ErrorCodes.NormalProcedure));
+                  u.Disconnect();
+                }
 
             }
             else

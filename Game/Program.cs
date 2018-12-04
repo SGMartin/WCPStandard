@@ -143,17 +143,17 @@ namespace Game
                 }
             
             
-            /*
-            if (!new UDPListener((int)Ports.UDP1).Start())
+            
+            if (!new UDPListener((int)Core.Networking.Constants.Ports.UDP1).Start())
             {
                 return;
             }
 
-            if (!new UDPListener((int)Ports.UDP2).Start())
+            if (!new UDPListener((int)Core.Networking.Constants.Ports.UDP2).Start())
             {
                 return;
             }
-            */
+            
             //SHOW THE CONFIGURATION RATES
             /*
             if (Config.SERVER_DEBUG == 1)
@@ -178,8 +178,7 @@ namespace Game
             if (isRunning)
             {
                 TimeSpan loadTime = DateTime.Now - startTime;
-        //        Log.Instance.WriteLine(string.Format("Emulator loaded in {0} milliseconds!", loadTime.TotalMilliseconds));
-          //      ServerLogger.Instance.Append(ServerLogger.AlertLevel.Information, string.Format("Emulator loaded in {0} milliseconds!", loadTime.TotalMilliseconds));
+                Log.Information(string.Format("Emulator loaded in {0} milliseconds!", loadTime.TotalMilliseconds));
             }
 
             startTime = DateTime.Now;
@@ -192,10 +191,10 @@ namespace Game
 
                 if (serverLoops % 5 == 0)
                 {
-                 //   Parallel.ForEach(Managers.UserManager.Instance.Sessions.Values, user => {
-                   //     if (user.Authorized)
-                     //       user.SendPing();
-//                    });
+                    Parallel.ForEach(Managers.UserManager.Instance.Sessions.Values, user => {
+                        if (user.Authorized)
+                            user.SendPing();
+                    });
 
                 }
 

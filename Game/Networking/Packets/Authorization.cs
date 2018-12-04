@@ -34,11 +34,9 @@ namespace Game.Networking.Packets
         {
             Append(Core.Networking.Constants.ERROR_OK);
             Append(string.Concat("Gameserver", Config.SERVER_ID));
-            //     Append(u.SessionID);
-            Append(1);
+            Append(u.SessionID);
             Append(u.ID); // User id.
-                                        //     Append(u.SessionID);        // User session id.
-            Append(1);
+            Append(u.SessionID);        // User session id.
             Append(u.DisplayName);      // User Displayname (Nickname).
 
             // CLAN BLOCKS //
@@ -68,18 +66,21 @@ namespace Game.Networking.Packets
             Append((byte)u.Premium);    // Premium Type.
             Append(0);                  // Unknown.
             Append(0);                  // Unknown.
-            Append(Core.Utils.GetLevelforExp(u.XP)); // User Level (based on XP).
-            Append(u.XP);               // User XP.
+                                        //   Append(Core.Utils.GetLevelforExp(u.XP)); // User Level (based on XP).
+            Append(Core.Utils.GetLevelforExp(0)); // User Level (based on XP).
+                                        //   Append(u.XP);               // User XP.
+            Append(0);
             Append(0);                  // Unknown.
             Append(0);                  // Unknown.
-            Append(u.Money);            // User Money
+                                        // Append(u.Money);            // User Money
+            Append(30000);
             Append(u.Stats.Kills);            // User Kills
             Append(u.Stats.Deaths);           // User Deaths
             Fill(5, 0);                 // 5 Unknown blocks
 
             // SLOT STATE //
             // Append(u.Inventory.SlotState); // T = Slot Enabled, F = Slot disabled.
-            Append("T,T,T,T");
+            Append("F,F,F,F");
             Append("DA02,DB01,DF01,DR01,^,^,^,^");
             Append("DA02,DB01,DF01,DQ01,^,^,^,^");
             Append("DA02,DB01,DG05,DN01,^,^,^,^");
@@ -93,7 +94,19 @@ namespace Game.Networking.Packets
             //  Append(u.Inventory.Equipment.ListsInternal[(byte)Classes.Heavy]);       // Equipment - Heavy
             // INVENTORY //
             // Append(u.Inventory.Itemlist);
-            Append("^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^,^"); // ItemListStr
+
+            string Itemlist = "";
+            for (sbyte i = 0; i < 32; i++)
+            {
+
+                if (i == 0)
+                    Itemlist = "^";
+                else
+                    Itemlist += ",^";
+
+               // _openSlots.Add(i);
+            }
+            Append(Itemlist); // ItemListStr
             // END INVENTORY //
             Fill(2, 0); // Two unknown blocks.
         }

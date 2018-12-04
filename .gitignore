@@ -261,3 +261,5 @@ FakesAssemblies/
 
 # Visual Studio 6 workspace options file
 *.opt
+/Game/Entities/tmpUser.cs
+/Game/Managers/ChannelManager.cs

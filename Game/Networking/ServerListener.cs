@@ -53,9 +53,6 @@ namespace Game.Networking
             {
                 throw new Exception(e.ToString());
             }
-
-
-
             if (socket != null)
                 socket.BeginAccept(new AsyncCallback(this.OnAcceptConnection), null);
         }

@@ -99,7 +99,7 @@ namespace Game.Networking
                                 Networking.PacketHandler pHandler = Managers.PacketManager.Instance.FindInternal(inPacket);
                                 if (pHandler != null)
                                 {
-                                    //try {
+                                   // try {
                                     pHandler.Handle(inPacket);
                                     //} catch { /*Disconnect(); }
                                 }

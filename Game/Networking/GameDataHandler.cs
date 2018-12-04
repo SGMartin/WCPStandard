@@ -4,7 +4,7 @@
  *                              Each "sub" handler stems from this class inheriting properties and data manipulation. Compare it to PacketHandler for
  *                              more information.
  */                                    
-
+ /*
 using System;
 using System.Linq;
 using System.Text;
@@ -13,7 +13,7 @@ namespace Game.Networking
 {
     public class GameDataHandler
     {
-        /*
+        
         public Enums.GameSubs type;
         protected ushort errorCode = 1;
         protected byte roomSlot = 0;
@@ -64,7 +64,7 @@ namespace Game.Networking
                     this.blocks = new string[blocks.Length - 4];
                     Array.Copy(blocks, 4, this.blocks, 0, this.blocks.Length);
 
-                    this.Room = u.Room;
+                    this.Room = u.LobbyState.Room;
                     Entities.Player p = null;
                     selfTarget = false;
 
@@ -271,8 +271,9 @@ namespace Game.Networking
         {
             return packet;
         }
-        */
+        
 
     
     }
 }
+*/

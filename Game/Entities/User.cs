@@ -27,6 +27,10 @@ namespace Game.Entities
 
         public uint Ping { get; private set; }
         public bool Authorized { get; private set; }
+        public uint SessionID { get; private set; }
+
+        //public ChannelType Channel { get; private set; }
+
 
         //user related objects
         public string DisplayName { get; private set; }
@@ -58,8 +62,9 @@ namespace Game.Entities
         {
             Ping = 0;
             _isDisconnected = false;
-            LobbyState      = new UserLobbyState();
-            Stats           = new UserStats();
+
+             LobbyState = new UserLobbyState();
+             Stats = new UserStats();
 
             _socket = socket;
             _socket.BeginReceive(_buffer, 0, _buffer.Length, SocketFlags.None, new AsyncCallback(OnDataReceived), null);
@@ -84,7 +89,7 @@ namespace Game.Entities
             }
 
             //Wait for stats to load
-         //    await Stats.GetDataBaseUserStats(ID);
+             await Stats.GetDataBaseUserStats(ID);
 
             //TODO: Load inventory
 
@@ -92,11 +97,23 @@ namespace Game.Entities
 
             //TODO: send authorization packet
             Send(new Networking.Packets.Authorization(this));
-          //  SendPing();
+            SendPing();
 
             //TODO: update userlist
         }
-        
+
+        public void SetSession(uint sessionId)
+        {
+            if (sessionId > 0)
+            {
+                SessionID = sessionId;
+            }
+            else
+            {
+                this.Disconnect();
+            }
+        }
+
         public void SendPing()
         {
             lock (pingLock)
@@ -104,14 +121,14 @@ namespace Game.Entities
                 if (!pingOk)
                 {
                     Disconnect();
-                    Log.Warning("Could not send ping to player" + DisplayName);
+                    Log.Warning("Could not send ping to player: " + DisplayName);
                     return;
                 }
 
                // UpdatePremiumState();
 
                 pingOk = false;
-             //   Send(new Packets.Ping(this));
+                Send(new Packets.Ping(this));
             }
         }
 

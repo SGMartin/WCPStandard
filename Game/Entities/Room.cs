@@ -6,7 +6,7 @@ namespace Game.Entities
 {
     public class Room
     {
-        public int ID { get; private set; }
+        public uint ID { get; private set; }
        // public Ch
         public Room()
         {
@@ -15,6 +15,10 @@ namespace Game.Entities
 
         public void Send(byte [] buffer)
         { 
+        }
+        public void Remove(Entities.User u)
+        {
+
         }
     }
 }

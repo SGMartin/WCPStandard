@@ -63,7 +63,7 @@ namespace Game.Entities
             Ping = 0;
             _isDisconnected = false;
 
-             LobbyState = new UserLobbyState();
+             LobbyState = new UserLobbyState(this);
              Stats = new UserStats();
 
             _socket = socket;

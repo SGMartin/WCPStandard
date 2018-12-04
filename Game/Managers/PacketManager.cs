@@ -29,16 +29,18 @@ namespace Game.Managers
             AddInternal(Core.Networking.PacketList.Ping                , new Networking.Handlers.Internal.Ping());
             AddInternal(Core.Networking.PacketList.PlayerAuthentication, new Networking.Handlers.Internal.PlayerAuthorization());
 
-
-            AddExternal(Networking.PacketList.ServerTime,    new Networking.Handlers.RequestServerTime());
-            AddExternal(Networking.PacketList.Authorization, new Networking.Handlers.Authorization());
+                
+            AddExternal(Networking.PacketList.ServerTime,       new Networking.Handlers.RequestServerTime());
+            AddExternal(Networking.PacketList.Authorization,    new Networking.Handlers.Authorization());
+            AddExternal(Networking.PacketList.ChannelSelection, new Networking.Handlers.ChangeChannel());
+            AddExternal(Networking.PacketList.Ping            , new Networking.Handlers.Ping());
+            AddExternal(Networking.PacketList.LeaveServer     , new Networking.Handlers.LeaveServer());
             // External Packets //
             /*
-            AddExternal(Enums.Packets.LeaveServer, new Handlers.LeaveServer());
-            AddExternal(Enums.Packets.ServerTime, new Handlers.RequestServerTime());
+           
             AddExternal(Enums.Packets.CMDFindPlayer, new Handlers.CMDFindPlayer());
           
-            AddExternal(Enums.Packets.ChannelSelection, new Handlers.ChangeChannel());
+
             AddExternal(Enums.Packets.RoomCreation, new Handlers.RoomCreation());
             AddExternal(Enums.Packets.RoomJoin, new Handlers.RoomJoin());
             AddExternal(Enums.Packets.RoomLeave, new Handlers.RoomLeave());
@@ -50,7 +52,7 @@ namespace Game.Managers
             AddExternal(Enums.Packets.GamePacket, new Handlers.RoomData());
             AddExternal(Enums.Packets.Explosives, new Handlers.Explosives());
             AddExternal(Enums.Packets.Scoreboard, new Handlers.Scoreboard());
-            AddExternal(Enums.Packets.Ping, new Handlers.Ping());
+
             AddExternal(Enums.Packets.UserList, new Handlers.UserList());
             AddExternal(Enums.Packets.Coupon, new Handlers.Coupons());
             AddExternal(Enums.Packets.RoomQuickJoin, new Handlers.RoomQuickJoin());

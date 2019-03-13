@@ -57,10 +57,7 @@ namespace Game
             Log.Logger = new LoggerConfiguration().MinimumLevel.ControlledBy(levelSwitch)
                         .WriteTo.Console()
                         .WriteTo.File("Game.log", rollingInterval: RollingInterval.Day).CreateLogger();
-
-            //UNIT TESTS
-            Unit_tests.WeaponTest WeaponTesting = new Unit_tests.WeaponTest();     
-
+            
             //setting up CMD reader
             var CMD = Parser.Default.ParseArguments<Options>(args)
                 .WithParsed<Options>(opts => RunOptionsAndReturnExitCode(opts))
